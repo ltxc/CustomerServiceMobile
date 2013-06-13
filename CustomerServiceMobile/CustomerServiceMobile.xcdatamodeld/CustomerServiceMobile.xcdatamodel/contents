@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ApplicationData" representedClassName="ApplicationData" syncable="YES">
+        <attribute name="attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="landscape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subcategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BinPart" representedClassName="BinPart" syncable="YES">
+        <attribute name="bin_code_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inv_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keyid" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="last_rec_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Carrier" representedClassName="Carrier" syncable="YES">
+        <attribute name="carrier_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="last_change_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Company" representedClassName="Company" syncable="YES">
+        <attribute name="company_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="last_change_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CycleCountCount" representedClassName="CycleCountCount" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="target" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="master" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCountMaster" inverseName="counts" inverseEntity="CycleCountMaster" syncable="YES"/>
+    </entity>
+    <entity name="CycleCountMaster" representedClassName="CycleCountMaster" syncable="YES">
+        <attribute name="assigneddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="bin_code_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cycle_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="process_message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_status" optional="YES" attributeType="String" defaultValueString="Pending" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="counts" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CycleCountCount" inverseName="master" inverseEntity="CycleCountCount" syncable="YES"/>
+    </entity>
+    <entity name="InventoryHeader" representedClassName="InventoryHeader" syncable="YES">
+        <attribute name="carrier_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carrier_refno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fr_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ipad_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="no_of_packages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="our_refno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pdf_attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="printer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="process_message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ref_doc_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sender_refno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ship_instructions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transaction_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vender_refno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="inventoryLineItems" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="InventoryLineItem" inverseName="header" inverseEntity="InventoryLineItem" syncable="YES"/>
+    </entity>
+    <entity name="InventoryLineItem" representedClassName="InventoryLineItem" syncable="YES">
+        <attribute name="bin_code_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cause" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inv_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lineitemnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="man_adj_reason_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial_no" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="header" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="InventoryHeader" inverseName="inventoryLineItems" inverseEntity="InventoryHeader" syncable="YES"/>
+    </entity>
+    <entity name="ManAdjustReason" representedClassName="ManAdjustReason" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reasoncode" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Queries" representedClassName="Queries" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="queryname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ShipmentInstructions" representedClassName="ShipmentInstructions" syncable="YES">
+        <attribute name="ap_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ap_table_key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ap_table_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ShippingHeader" representedClassName="ShippingHeader" syncable="YES">
+        <attribute name="carrier_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carrier_refno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="doc_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fr_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ifield1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ipad_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_vendor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isprinting" optional="YES" attributeType="String" defaultValueString="N" syncable="YES"/>
+        <attribute name="no_of_packages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pi_doc_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="printer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="process_message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="process_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sfield1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ship_instructions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shipped_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_company_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transaction_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shippingLineItems" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ShippingLineItem" inverseName="header" inverseEntity="ShippingLineItem" syncable="YES"/>
+    </entity>
+    <entity name="ShippingLineItem" representedClassName="ShippingLineItem" syncable="YES">
+        <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="demand_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="doc_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fr_bin_code_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fr_inv_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ifield1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ldmnd_stat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lineitemnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orig_doc_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pi_doc_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sfield1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shipped_qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_company_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="header" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ShippingHeader" inverseName="shippingLineItems" inverseEntity="ShippingHeader" syncable="YES"/>
+    </entity>
+    <entity name="ShippingList" representedClassName="ShippingList" syncable="YES">
+        <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="demand_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="doc_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fr_bin_code_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fr_inv_type_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_vendor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ldmnd_stat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orig_doc_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pi_doc_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sfield1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shipping_ipad_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="to_company_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserProfile" representedClassName="UserProfile" syncable="YES">
+        <attribute name="aaacount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAuthorized" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Warehouse" representedClassName="Warehouse" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="warehouse_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ApplicationData" positionX="1953" positionY="-8406" width="128" height="328"/>
+        <element name="BinPart" positionX="1260" positionY="-8091" width="128" height="148"/>
+        <element name="Carrier" positionX="1260" positionY="-7927" width="128" height="88"/>
+        <element name="Company" positionX="1251" positionY="-8289" width="128" height="88"/>
+        <element name="CycleCountCount" positionX="1602" positionY="-8170" width="128" height="103"/>
+        <element name="CycleCountMaster" positionX="1600" positionY="-8395" width="128" height="193"/>
+        <element name="InventoryHeader" positionX="1429" positionY="-8280" width="128" height="373"/>
+        <element name="InventoryLineItem" positionX="1422" positionY="-7858" width="128" height="178"/>
+        <element name="ManAdjustReason" positionX="1269" positionY="-7812" width="128" height="73"/>
+        <element name="Queries" positionX="1249" positionY="-8433" width="128" height="118"/>
+        <element name="ShipmentInstructions" positionX="1269" positionY="-7704" width="128" height="118"/>
+        <element name="ShippingHeader" positionX="1771" positionY="-8415" width="128" height="403"/>
+        <element name="ShippingLineItem" positionX="1746" positionY="-7990" width="128" height="343"/>
+        <element name="ShippingList" positionX="1602" positionY="-8047" width="128" height="343"/>
+        <element name="UserProfile" positionX="1429" positionY="-8424" width="128" height="118"/>
+        <element name="Warehouse" positionX="1260" positionY="-8181" width="128" height="73"/>
+    </elements>
+</model>

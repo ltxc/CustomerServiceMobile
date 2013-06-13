@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="ecm-FA-2ty">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Receiving Transactions-->
+        <scene sceneID="LEn-6f-2Nw">
+            <objects>
+                <viewController title="Receiving Transactions" id="5XD-rf-WPL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGf-na-Ijo">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AmM-sU-otp">
+                                <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="plw-WS-j3Q"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" id="fxa-OC-QKk">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="735" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AmM-sU-otp" firstAttribute="trailing" secondItem="XGf-na-Ijo" secondAttribute="trailing" type="default" id="l0B-3X-deH"/>
+                            <constraint firstAttribute="bottom" secondItem="AmM-sU-otp" secondAttribute="bottom" constant="6" id="qI0-gq-coC"/>
+                            <constraint firstItem="AmM-sU-otp" firstAttribute="leading" secondItem="XGf-na-Ijo" secondAttribute="leading" type="default" id="rCb-da-f7U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Repair Transactions" id="tYj-WE-Opl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgD-Nv-DM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="-345"/>
+        </scene>
+        <!--View Controller - Miscellaneous Receive-->
+        <scene sceneID="HjC-dS-u2q">
+            <objects>
+                <viewController title="Miscellaneous Receive" id="hVk-bb-Jdb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toh-JQ-Wyk">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Miscellaneous Receive" id="F8M-1K-sEx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tvd-SC-vZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-339"/>
+        </scene>
+        <!--Detail View Navigation Controller-->
+        <scene sceneID="1Q3-go-v9T">
+            <objects>
+                <navigationController id="ecm-FA-2ty" customClass="DetailViewNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TMm-w6-zUk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5XD-rf-WPL" kind="relationship" relationship="rootViewController" id="Ebz-sx-3rn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1XI-Sm-543" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-353"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,6 @@
+ [{"queryname":"Bin to receive a Part","descr":"Bin to receive a Part", "url":"flow.html?_flowId=viewReportFlow&reportUnit=%2FCS%2FLOG%2FMD%2FBP&decorate=no","groupname":"group 1","tag":"1"},
+  {"queryname":"Cycle Count","descr":"Bin Audit and Cycle Count Discrepancy", "url":"flow.html?_flowId=viewReportFlow&reportUnit=%2FCS%2FLOG%2FINV%2FCYC%2FINV1&decorate=no","groupname":"group 1","tag":"1"},
+    {"queryname":"Warehouse Inventory","descr":"Warehouse Inventory", "url":"flow.html?_flowId=viewReportFlow&reportUnit=%2FCS%2FLOG%2FINV%2FCYC%2FINV1&decorate=no","groupname":"group 1","tag":"1"},
+    {"queryname":"Miscellaneous Receive","descr":"Miscellaneous Receive", "url":"flow.html?_flowId=viewReportFlow&reportUnit=%2FCS%2FLOG%2FSTD%2FMRC&decorate=no","groupname":"group 1","tag":"1"} 
+  
+  ]
