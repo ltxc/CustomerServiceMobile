@@ -2,7 +2,7 @@
 //  CycleCountMaster.h
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 2/12/13.
+//  Created by Jinsong Lu on 6/13/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
@@ -20,8 +20,9 @@
 @property (nonatomic, retain) NSDate * process_date;
 @property (nonatomic, retain) NSString * process_message;
 @property (nonatomic, retain) NSString * process_status;
-@property (nonatomic, retain) NSNumber * server_id;
 @property (nonatomic, retain) NSString * qty;
+@property (nonatomic, retain) NSNumber * server_id;
+@property (nonatomic, retain) NSNumber * isserialized;
 @property (nonatomic, retain) NSOrderedSet *counts;
 @end
 

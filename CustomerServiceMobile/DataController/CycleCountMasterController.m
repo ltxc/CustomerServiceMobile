@@ -70,6 +70,7 @@
     [mapping mapKeyPath:kKeyPathCycleCountMasterAssignedDate toAttribute:kAttributeCycleCountMasterAssignedDate];
     [mapping mapKeyPath:kKeyPathCycleCountMasterServerID toAttribute:kAttributeCycleCountMasterServerID];
     [mapping mapKeyPath:kKeyPathCycleCountMasterQty toAttribute:kAttributeCycleCountMasterQty];
+        [mapping mapKeyPath:kKeyPathCycleCountMasterIsSerialized toAttribute:kAttributeCycleCountMasterIsSerialized];
     mapping.primaryKeyAttribute = kAttributeCycleCountMasterServerID;
     return mapping;
 }

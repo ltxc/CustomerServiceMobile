@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="ApplicationData" representedClassName="ApplicationData" syncable="YES">
         <attribute name="attachment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attribute1" optional="YES" attributeType="String" syncable="YES"/>
@@ -51,6 +51,7 @@
         <attribute name="bin_code_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="bpart_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cycle_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isserialized" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="process_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="process_message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="process_status" optional="YES" attributeType="String" defaultValueString="Pending" syncable="YES"/>
@@ -198,7 +199,7 @@
         <element name="Carrier" positionX="1260" positionY="-7927" width="128" height="88"/>
         <element name="Company" positionX="1251" positionY="-8289" width="128" height="88"/>
         <element name="CycleCountCount" positionX="1602" positionY="-8170" width="128" height="103"/>
-        <element name="CycleCountMaster" positionX="1600" positionY="-8395" width="128" height="193"/>
+        <element name="CycleCountMaster" positionX="1600" positionY="-8395" width="128" height="208"/>
         <element name="InventoryHeader" positionX="1429" positionY="-8280" width="128" height="373"/>
         <element name="InventoryLineItem" positionX="1422" positionY="-7858" width="128" height="178"/>
         <element name="ManAdjustReason" positionX="1269" positionY="-7812" width="128" height="73"/>

@@ -55,8 +55,8 @@
 		345956E416B743190048545E /* ShippingSelectedListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345956E316B743190048545E /* ShippingSelectedListTableView.m */; };
 		34615B5916CEDE020069F8C0 /* ShipmentInstructionsSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34615B5816CEDE010069F8C0 /* ShipmentInstructionsSynchController.m */; };
 		34659BD916CAB4BE009B56C8 /* BinPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 34659BD816CAB4BE009B56C8 /* BinPart.m */; };
-		34659BDC16CAB4BE009B56C8 /* CycleCountMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 34659BDB16CAB4BE009B56C8 /* CycleCountMaster.m */; };
 		346650D316EE96BE0070CA49 /* SharedConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 346650D216EE96BE0070CA49 /* SharedConstants.m */; };
+		34670F62176A83910041B0DE /* CycleCountMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 34670F61176A83910041B0DE /* CycleCountMaster.m */; };
 		346B67D516CC427100554B10 /* RPInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346B67D416CC427100554B10 /* RPInformationController.m */; };
 		346FC1BE162F6E7900600096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BD162F6E7900600096 /* UIKit.framework */; };
 		346FC1C0162F6E7900600096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BF162F6E7900600096 /* Foundation.framework */; };
@@ -315,9 +315,9 @@
 		34615B5816CEDE010069F8C0 /* ShipmentInstructionsSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipmentInstructionsSynchController.m; path = DataController/ShipmentInstructionsSynchController.m; sourceTree = "<group>"; };
 		34659BD716CAB4BE009B56C8 /* BinPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinPart.h; path = DataModel/BinPart.h; sourceTree = "<group>"; };
 		34659BD816CAB4BE009B56C8 /* BinPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinPart.m; path = DataModel/BinPart.m; sourceTree = "<group>"; };
-		34659BDA16CAB4BE009B56C8 /* CycleCountMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleCountMaster.h; path = DataModel/CycleCountMaster.h; sourceTree = "<group>"; };
-		34659BDB16CAB4BE009B56C8 /* CycleCountMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleCountMaster.m; path = DataModel/CycleCountMaster.m; sourceTree = "<group>"; };
 		346650D216EE96BE0070CA49 /* SharedConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedConstants.m; sourceTree = "<group>"; };
+		34670F60176A83910041B0DE /* CycleCountMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleCountMaster.h; path = DataModel/CycleCountMaster.h; sourceTree = "<group>"; };
+		34670F61176A83910041B0DE /* CycleCountMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleCountMaster.m; path = DataModel/CycleCountMaster.m; sourceTree = "<group>"; };
 		346B67D316CC427100554B10 /* RPInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPInformationController.h; path = DataController/RPInformationController.h; sourceTree = "<group>"; };
 		346B67D416CC427100554B10 /* RPInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPInformationController.m; path = DataController/RPInformationController.m; sourceTree = "<group>"; };
 		346FC1B9162F6E7900600096 /* CustomerServiceMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerServiceMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -584,8 +584,6 @@
 				34D49BC616C034CB00560EE8 /* Queries.m */,
 				34659BD716CAB4BE009B56C8 /* BinPart.h */,
 				34659BD816CAB4BE009B56C8 /* BinPart.m */,
-				34659BDA16CAB4BE009B56C8 /* CycleCountMaster.h */,
-				34659BDB16CAB4BE009B56C8 /* CycleCountMaster.m */,
 				342E80D916DBE4FE0009A16A /* InventoryLineItem.h */,
 				342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */,
 				342E80E016DBE4FE0009A16A /* InventoryHeader.h */,
@@ -602,6 +600,8 @@
 				34364B5A1714DCF1004950AE /* ApplicationData.m */,
 				34112A6D171CA29000B4A915 /* CycleCountCount.h */,
 				34112A6E171CA29000B4A915 /* CycleCountCount.m */,
+				34670F60176A83910041B0DE /* CycleCountMaster.h */,
+				34670F61176A83910041B0DE /* CycleCountMaster.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -609,14 +609,13 @@
 		34663E5E164341BD006CDDE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3494592A166FC46000D993E2 /* Data */,
+				346FC20B162F714000600096 /* ModelControllers */,
 				346FC212162F71A600600096 /* Receiving */,
 				346FC211162F719F00600096 /* Shipping */,
 				346FC210162F719900600096 /* Inventory */,
 				346FC20F162F719200600096 /* Repair */,
 				346FC20E162F718900600096 /* CycleCount */,
 				346FC20D162F717700600096 /* Queries */,
-				346FC20B162F714000600096 /* Synchronization */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -624,6 +623,7 @@
 		34663E5F1643428E006CDDE7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3494592A166FC46000D993E2 /* AutoComplete */,
 				3440F33B1639F9380016401D /* DetailViewNavigationController.h */,
 				3440F33C1639F9380016401D /* DetailViewNavigationController.m */,
 				34AAEE161641E72E00EE77B4 /* BeautifulTableViewController.h */,
@@ -704,12 +704,12 @@
 			isa = PBXGroup;
 			children = (
 				343CA22116559AA100D47121 /* CustomerServiceMobile.entitlements */,
+				34663E60164342D4006CDDE7 /* Main */,
+				346FC1C6162F6E7900600096 /* Supporting Files */,
 				346FC201162F700E00600096 /* Resources */,
 				34663E4816433555006CDDE7 /* DataModel */,
 				34663E5F1643428E006CDDE7 /* Utility */,
 				34663E5E164341BD006CDDE7 /* Controllers */,
-				34663E60164342D4006CDDE7 /* Main */,
-				346FC1C6162F6E7900600096 /* Supporting Files */,
 			);
 			path = CustomerServiceMobile;
 			sourceTree = "<group>";
@@ -823,7 +823,7 @@
 			name = Synchronization;
 			sourceTree = "<group>";
 		};
-		346FC20B162F714000600096 /* Synchronization */ = {
+		346FC20B162F714000600096 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
 				34AAEE2C1641E8C100EE77B4 /* SynchTableViewController.h */,
@@ -861,7 +861,7 @@
 				347879001714B60000EF9B16 /* ApplicationDataSynchController.h */,
 				347879011714B60000EF9B16 /* ApplicationDataSynchController.m */,
 			);
-			name = Synchronization;
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 		346FC20D162F717700600096 /* Queries */ = {
@@ -1019,7 +1019,7 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		3494592A166FC46000D993E2 /* Data */ = {
+		3494592A166FC46000D993E2 /* AutoComplete */ = {
 			isa = PBXGroup;
 			children = (
 				34F3B5E11730806800CEEDF4 /* AutoComplete.h */,
@@ -1031,7 +1031,7 @@
 				3405EDB416CB06BC0036DA76 /* AutoCompleteField.h */,
 				3405EDB516CB06BC0036DA76 /* AutoCompleteField.m */,
 			);
-			name = Data;
+			name = AutoComplete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1315,7 +1315,6 @@
 				34D49BC416C034CB00560EE8 /* Company.m in Sources */,
 				34D49BC716C034CB00560EE8 /* Queries.m in Sources */,
 				34659BD916CAB4BE009B56C8 /* BinPart.m in Sources */,
-				34659BDC16CAB4BE009B56C8 /* CycleCountMaster.m in Sources */,
 				3405EDB616CB06BC0036DA76 /* AutoCompleteField.m in Sources */,
 				3405EDB916CB17CC0036DA76 /* RPInformationViewController.m in Sources */,
 				3405EDBC16CB19450036DA76 /* RPInformation.m in Sources */,
@@ -1333,6 +1332,7 @@
 				34364B5B1714DCF1004950AE /* ApplicationData.m in Sources */,
 				34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */,
 				34C5CA01176A3CA400AA1904 /* ProcessResult.m in Sources */,
+				34670F62176A83910041B0DE /* CycleCountMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

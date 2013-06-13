@@ -565,6 +565,13 @@ EHBhcnQgbnVtYmVyA
                                                     <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="serialized" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bdJ-4x-VBe">
+                                                    <rect key="frame" x="547" y="11" width="93" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -888,11 +895,13 @@ EHBhcnQgbnVtYmVyA
                     <navigationItem key="navigationItem" title="Part Count" id="Ms8-9e-obv"/>
                     <connections>
                         <outlet property="activity_submit" destination="2XZ-Nl-7fW" id="DBu-gN-9kF"/>
+                        <outlet property="btnQty" destination="0lG-7M-pnq" id="v7E-yH-8di"/>
                         <outlet property="btnSaveAndNext" destination="S2Y-3e-22n" id="ueM-Rx-9GF"/>
                         <outlet property="btnSubmit" destination="mwP-5S-vjg" id="HMJ-c3-sqz"/>
                         <outlet property="cycleCountTableView" destination="xiV-Xx-cdp" id="uEj-9P-bub"/>
                         <outlet property="lblBinCode" destination="ay2-xQ-68f" id="wsu-Ii-aor"/>
                         <outlet property="lblCycleCountMasterQty" destination="tdG-CB-rHM" id="c6P-CT-2M1"/>
+                        <outlet property="lblIsSerialized" destination="bdJ-4x-VBe" id="wqr-x6-PR9"/>
                         <outlet property="lblPartNumber" destination="TbV-Er-nnQ" id="oUj-Do-pmu"/>
                         <outlet property="lblProcessMessage" destination="lpG-o9-lp7" id="BtK-sw-azP"/>
                         <outlet property="lblProcessStatus" destination="Ibx-NF-TtE" id="ccP-da-RlT"/>
@@ -907,6 +916,65 @@ EHBhcnQgbnVtYmVyA
             <point key="canvasLocation" x="1920" y="797"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CycleCountItemsCellView" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CycleCountItemsCellView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lblBPart" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblBinCode" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblQty" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblSerialNo" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CycleCountItemsTableView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CycleCountItemsTableView.h"/>
+        </class>
+        <class className="CycleCountMasterTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CycleCountMasterTableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lblAssignedDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblBPart" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblBinCode" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblCycleCountType" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblProcessMessage" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblProcessStatus" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CycleCountMasterTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CycleCountMasterTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnRefresh:"/>
+                <relationship kind="action" name="selectCycleType:"/>
+                <relationship kind="outlet" name="btnButtons" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="CycleCountViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CycleCountViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnCalculator:"/>
+                <relationship kind="action" name="btnSaveAndNext:"/>
+                <relationship kind="action" name="btnSubmit:"/>
+                <relationship kind="outlet" name="activity_submit" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="btnQty" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnSaveAndNext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnSubmit" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cycleCountTableView" candidateClass="CycleCountItemsTableView"/>
+                <relationship kind="outlet" name="lblBinCode" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblCycleCountMasterQty" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblIsSerialized" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblPartNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblProcessMessage" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lblProcessStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblTotalCounts" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="txtFieldComment" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="txtFieldQty" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtFieldTarget" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DetailViewNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewNavigationController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

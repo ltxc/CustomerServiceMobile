@@ -12,11 +12,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblBinCode;
 @property (weak, nonatomic) IBOutlet UILabel *lblPartNumber;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTarget;
+@property (weak, nonatomic) IBOutlet UILabel *lblIsSerialized;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldQty;
 @property (weak, nonatomic) IBOutlet UITextView *txtFieldComment;
 @property (weak, nonatomic) IBOutlet UILabel *lblProcessStatus;
 @property (weak, nonatomic) IBOutlet UILabel *lblTotalCounts;
 @property (weak, nonatomic) IBOutlet UILabel *lblCycleCountMasterQty;
+@property (weak, nonatomic) IBOutlet UIButton *btnQty;
 
 @property (weak, nonatomic) IBOutlet UITextView *lblProcessMessage;
 @property (weak, nonatomic) IBOutlet UIButton *btnSaveAndNext;

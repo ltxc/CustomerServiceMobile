@@ -267,6 +267,8 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kAttributeCycleCountMasterAssignedDate  @"assigneddate"
 #define kKeyPathCycleCountMasterQty  @"qty"
 #define kAttributeCycleCountMasterQty  @"qty"
+#define kAttributeCycleCountMasterIsSerialized @"isserialized"
+#define kKeyPathCycleCountMasterIsSerialized @"isserialized"
 
 //inventory mapping
 #define kKeyPathInventoryCarrier  @"carrier"
@@ -331,6 +333,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathCycleCountBpartID @"bpartId"
 #define kAttributeCycleCountIsClear @"isclear"
 #define kKeyPathCycleCountIsClear @"isclear"
+
 
 
 #define kKeyPathCycleCounts @"counts"
