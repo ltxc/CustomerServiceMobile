@@ -16,6 +16,7 @@
 #import "ShippingTransactionController.h"
 #import "RPInformationController.h"
 #import "ShipmentInstructionsSynchController.h"
+#import "ProcessResultController.h"
 
 @interface SDRestKitEngine : NSObject
 
@@ -42,6 +43,7 @@
 +(ShippingListSynchController*) sharedShippingListController;
 +(ShippingTransactionController*) sharedShippingController;
 +(RPInformationController*) sharedRPInformationController;
++(ProcessResultController*) sharedProcessResultController;
 
 -(SDRestKitEngine *) setAuthentication:(NSString*) username password:(NSString *) password;
 -(void)alert:(NSString*) message title:(NSString*) title;

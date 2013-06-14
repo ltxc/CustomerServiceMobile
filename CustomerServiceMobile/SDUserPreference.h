@@ -39,6 +39,7 @@
 
 +(SDUserPreference*) sharedUserPreference;
 +(NSString*)trim:(NSString*)value;
++(NSString*)trim:(NSString *)value size:(NSUInteger)size isLeft:(BOOL)isLeft alert:(NSString*)alert;
 +(void)addShadow:(CALayer*) layer;
 - (NSURL *) applicationDocumentsDirectory;
 //-(void) registerDefaults;

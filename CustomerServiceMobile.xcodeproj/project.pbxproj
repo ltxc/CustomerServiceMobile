@@ -57,6 +57,7 @@
 		34659BD916CAB4BE009B56C8 /* BinPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 34659BD816CAB4BE009B56C8 /* BinPart.m */; };
 		346650D316EE96BE0070CA49 /* SharedConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 346650D216EE96BE0070CA49 /* SharedConstants.m */; };
 		34670F62176A83910041B0DE /* CycleCountMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 34670F61176A83910041B0DE /* CycleCountMaster.m */; };
+		34670F65176BB7A80041B0DE /* ProcessResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34670F64176BB7A80041B0DE /* ProcessResultController.m */; };
 		346B67D516CC427100554B10 /* RPInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346B67D416CC427100554B10 /* RPInformationController.m */; };
 		346FC1BE162F6E7900600096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BD162F6E7900600096 /* UIKit.framework */; };
 		346FC1C0162F6E7900600096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BF162F6E7900600096 /* Foundation.framework */; };
@@ -318,6 +319,8 @@
 		346650D216EE96BE0070CA49 /* SharedConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedConstants.m; sourceTree = "<group>"; };
 		34670F60176A83910041B0DE /* CycleCountMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleCountMaster.h; path = DataModel/CycleCountMaster.h; sourceTree = "<group>"; };
 		34670F61176A83910041B0DE /* CycleCountMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleCountMaster.m; path = DataModel/CycleCountMaster.m; sourceTree = "<group>"; };
+		34670F63176BB7A80041B0DE /* ProcessResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessResultController.h; path = DataController/ProcessResultController.h; sourceTree = "<group>"; };
+		34670F64176BB7A80041B0DE /* ProcessResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProcessResultController.m; path = DataController/ProcessResultController.m; sourceTree = "<group>"; };
 		346B67D316CC427100554B10 /* RPInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPInformationController.h; path = DataController/RPInformationController.h; sourceTree = "<group>"; };
 		346B67D416CC427100554B10 /* RPInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPInformationController.m; path = DataController/RPInformationController.m; sourceTree = "<group>"; };
 		346FC1B9162F6E7900600096 /* CustomerServiceMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerServiceMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -860,6 +863,8 @@
 				346B67D416CC427100554B10 /* RPInformationController.m */,
 				347879001714B60000EF9B16 /* ApplicationDataSynchController.h */,
 				347879011714B60000EF9B16 /* ApplicationDataSynchController.m */,
+				34670F63176BB7A80041B0DE /* ProcessResultController.h */,
+				34670F64176BB7A80041B0DE /* ProcessResultController.m */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -1333,6 +1338,7 @@
 				34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */,
 				34C5CA01176A3CA400AA1904 /* ProcessResult.m in Sources */,
 				34670F62176A83910041B0DE /* CycleCountMaster.m in Sources */,
+				34670F65176BB7A80041B0DE /* ProcessResultController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

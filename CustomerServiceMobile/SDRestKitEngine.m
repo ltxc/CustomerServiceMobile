@@ -214,6 +214,18 @@
 }
 
 
++(ProcessResultController*) sharedProcessResultController
+{
+    static ProcessResultController *sharedController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedController = [[ProcessResultController alloc] init];
+    });
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
+
+}
+
 -(SDRestKitEngine *) setAuthentication:(NSString*) username password:(NSString *) password
 {
     self.username = username;

@@ -137,6 +137,19 @@ BOOL _isMISC;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+     if ([self.transactionType isEqualToString:kTransactionTypeRFR])
+     {
+         //receiving via rp
+         self.btnCheckRPInfo.hidden = NO;
+     }
+    else
+    {
+        self.btnCheckRPInfo.hidden = YES;
+    }
+}
+
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
@@ -155,12 +168,6 @@ BOOL _isMISC;
     [indicator startAnimating];
 }
 
--(ProcessResult*)postInventoryTransaction:(InventoryHeader*) inventoryTransaction
-{
-    ProcessResult* processResult = nil;
-    
-    return processResult;
-}
 
 
 
@@ -381,6 +388,42 @@ BOOL _isMISC;
     
 }
 
+- (IBAction)btnCheckProcessResult:(id)sender {
+    
+    //check the ipadid
+    NSString* ipadid = _inventoryHeader.ipad_id;
+    NSString* type = self.transactionType;
+    if(ipadid==nil)
+    {
+        [SDDataEngine alert:kMessageProcessResultSubmitBeforeCheck title:@"No Result" template:nil delegate:nil];
+        return;
+    }
+   
+    
+    ProcessResultController* transactionController = [SDRestKitEngine sharedProcessResultController];
+    
+    [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:self.activity_processresult];
+    sleep(1);
+    ProcessResult* processResult = [transactionController query:ipadid type:type];
+    
+    [self.activity_processresult stopAnimating];
+    if(nil==processResult||[processResult.process_status isEqualToString:kTransactionTypeNONE])
+    {
+        [SDDataEngine alert:kMessageProcessResultNotFound title:@"No Result" template:nil delegate:nil];
+    }
+    else
+    {
+        _inventoryHeader.process_status = processResult.process_status;
+        _inventoryHeader.process_message = processResult.process_message;
+        _inventoryHeader.process_date = processResult.process_date;
+        [[SDDataEngine sharedEngine] save:_inventoryHeader];
+        self.lblProcessStatus.text = processResult.process_status;
+        self.lblProcessMessage.text = processResult.process_message;
+    }
+
+    
+}
+
 
 #pragma mark - GUI Data Binding and Validation
 -(BOOL)validateInput
@@ -446,18 +489,18 @@ BOOL _isMISC;
     NSString* carrier_id = [SDUserPreference trim:self.lblCarrier.text];
     _inventoryHeader.carrier_id = carrier_id;
     
-    NSString* carrier_refno = [SDUserPreference trim:self.lblCarrierRefNo.text];
+    NSString* carrier_refno = [self trim:self.lblCarrierRefNo.text size:kMaxSizeCarrierRefNo isLeft:NO fieldName:@"Carrier Ref No"];
     _inventoryHeader.carrier_refno = carrier_refno;
     
-    NSString* sender_refno = [SDUserPreference trim:self.lblVendorRefNo.text];
+    NSString* sender_refno = [self trim:self.lblVendorRefNo.text size:kMaxSizeSenderRefNo isLeft:NO fieldName:@"Vendor Ref No"];
     _inventoryHeader.sender_refno = sender_refno;
+    _inventoryHeader.vender_refno = sender_refno;
     
-    NSString* vendor_refno =  [SDUserPreference trim:self.lblVendorRefNo.text];
-    _inventoryHeader.vender_refno = vendor_refno;
+    //NSString* vendor_refno =  [SDUserPreference trim:self.lblVendorRefNo.text];
+    //_inventoryHeader.vender_refno = vendor_refno;
     
     if ([self.transactionType isEqualToString:kTransactionTypeMRC])
-    {
-        
+    {  
         
         NSString* company = [SDUserPreference trim:self.lblFromCompany.text];
         _inventoryHeader.company_id = company;
@@ -534,7 +577,7 @@ BOOL _isMISC;
     [[self lineItemsTableView] reloadData];
 }
 
-#pragma DeleteLineItemDelegate
+#pragma mark - DeleteLineItemDelegate
 
 -(void) deleteLineItem:(NSInteger)rowIndex
 {
@@ -561,5 +604,94 @@ BOOL _isMISC;
             [self performSegueWithIdentifier:@"ShowProductSegue" sender:self];
     }
 }
+
+#pragma mark UITextFieldDelegate
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+
+    NSString* alertTemplate = kMessageFieldTruncatedTemplate;
+    NSString* alert = nil;
+    BOOL fireAlert = NO;
+    if(textField==self.lblVendorRefNo||textField==self.lblCarrierRefNo)
+    {
+        NSInteger size = [textField.text length];
+        if (textField==self.lblVendorRefNo) {
+            if (size>kMaxSizeVendorRefNo) {
+                fireAlert = YES;
+                alert = [NSString stringWithFormat:alertTemplate,@"Vendor Ref No", kMaxSizeVendorRefNo, @"right"];
+            }
+        }
+        else
+        {
+            if (size>kMaxSizeCarrierRefNo) {
+                fireAlert = YES;
+                alert = [NSString stringWithFormat:alertTemplate,@"Carrier Ref No", kMaxSizeCarrierRefNo, @"right"];
+            }
+        }
+        
+    }
+    if (fireAlert) {
+        [SDDataEngine alert:alert title:@"Field Truncated..." template:nil delegate:nil];
+    }
+
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField==self.lblVendorRefNo)
+    {
+        [self.lblCarrierRefNo becomeFirstResponder];
+    }
+    else if(textField==self.lblCarrierRefNo)
+    {
+        [self.txtOurRefNo becomeFirstResponder];
+    }
+    return YES;
+}
+
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    NSString* alertTemplate = kMessageFieldTruncatedTemplate;
+//    NSString* alert = nil;
+//    BOOL fireAlert = NO;
+//    if(textField==self.lblVendorRefNo||textField==self.lblCarrierRefNo)
+//    {
+//        NSInteger size = [textField.text length];
+//        if (textField==self.lblVendorRefNo) {
+//            if (size>kMaxSizeVendorRefNo) {
+//                fireAlert = YES;
+//                alert = [NSString stringWithFormat:alertTemplate,@"Vendor Ref No", kMaxSizeVendorRefNo, @"left"];
+//            }
+//        }
+//        else
+//        {
+//            if (size>kMaxSizeCarrierRefNo) {
+//                fireAlert = YES;
+//                alert = [NSString stringWithFormat:alertTemplate,@"Carrier Ref No", kMaxSizeCarrierRefNo, @"left"];
+//            }
+//        }
+//        
+//    }
+//    if (fireAlert) {
+//        [SDDataEngine alert:alert title:@"Field Truncated..." template:nil delegate:nil];
+//    }
+//    
+//    return YES;
+//}
+
+-(NSString*)trim:(NSString*)value size:(NSInteger)size isLeft:(BOOL)isLeft fieldName:(NSString*)fieldName
+{
+    NSString* alert = nil;
+    if(isLeft)
+    {
+        alert = [NSString stringWithFormat:kMessageFieldTruncatedTemplate,fieldName, size, @"left"];
+    }
+    else
+    {
+        alert = [NSString stringWithFormat:kMessageFieldTruncatedTemplate,fieldName, size, @"right"];
+    }
+    return [SDUserPreference trim:value size:size isLeft:isLeft alert:alert];
+}
+
 
 @end

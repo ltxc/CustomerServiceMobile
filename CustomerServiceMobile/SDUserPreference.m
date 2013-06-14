@@ -2,6 +2,8 @@
 
 #import "SDUserPreference.h"
 #import "SharedConstants.h"
+#import "SDDataEngine.h"
+
 @implementation SDUserPreference
 @synthesize user=_user;
 @synthesize Version, Printer, Landscape,LastLandscape, IsInited;
@@ -59,6 +61,31 @@
     else
         return [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
+
++(NSString*)trim:(NSString *)value size:(NSUInteger)size isLeft:(BOOL)isLeft alert:(NSString*)alert
+{
+    if (value==nil) {
+        return value;
+    }
+    value = [SDUserPreference trim:value];
+    NSUInteger len = [value length];
+    if(len>size)
+    {
+            //alert first
+        if (alert!=nil) {
+            [SDDataEngine alert:alert title:@"Truncate Warning" template:nil delegate:nil];
+        }
+        
+        if (isLeft) {
+            return [value substringToIndex:size];
+            
+        }
+        else
+            return [value substringFromIndex:(len-size)];
+    }
+    return value;
+}
+
 +(void)addShadow:(CALayer*) layer
 {
     layer.shadowColor = [UIColor blackColor].CGColor;

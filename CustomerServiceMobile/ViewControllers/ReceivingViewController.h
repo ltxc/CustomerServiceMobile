@@ -6,7 +6,7 @@
 #import "ReceivingLineItemsTableView.h"
 #import "ProductViewController.h"
 #import "ProcessResult.h"
-@interface ReceivingViewController : UITableViewController <ProductViewDelegate, ReceivingLineItemDeleteDelegate>
+@interface ReceivingViewController : UITableViewController <ProductViewDelegate, ReceivingLineItemDeleteDelegate, UITextFieldDelegate>
 +(NSString*)receivingTypeDescription:(NSString*)transactionType title:(BOOL)isTitle;
 
 @property (strong, nonatomic) InventoryHeader* inventoryHeader;
@@ -30,9 +30,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
+@property (weak, nonatomic) IBOutlet UIButton *btnCheckRPInfo;
+@property (weak, nonatomic) IBOutlet UIButton *btnCheckProcessResult;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_submit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_rpinformation;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_processresult;
 
 - (IBAction)btnToWarehouse:(id)sender;
 - (IBAction)btnFromCompany:(id)sender;
@@ -40,7 +43,6 @@
 - (IBAction)btnAdd:(id)sender;
 - (IBAction)btnSubmit:(id)sender;
 - (IBAction)btnOurRefNo:(id)sender;
+- (IBAction)btnCheckProcessResult:(id)sender;
 
-
--(ProcessResult*)postInventoryTransaction:(InventoryHeader*) inventoryTransaction;
 @end

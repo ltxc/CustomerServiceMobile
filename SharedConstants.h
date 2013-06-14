@@ -30,11 +30,18 @@
 #define kProcessStatusCOMPLETED @"COMPLETED"
 #define kTimeZone @"EST"
 
+//max field size
+#define kMaxSizeCarrierRefNo ((int)30)
+#define kMaxSizeVendorRefNo ((int)30)
+#define kMaxSizeSenderRefNo ((int)30)
+
+#define kTransactionTypeNONE @"NONE"
 //Receive Type
 #define kReceivingDescriptionTemplate @"Receive via %@"
 //miscellaneouse receive 
 #define kReceivingMiscellaneous @"Miscellaneous"
 #define kTransactionTypeMRC @"MRC"
+
 
 
 #define kReceivingShipList @"Ship List"
@@ -124,6 +131,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kUrlBaseShippingList @"/synch/shippinglistview" //@"/synch/shippinglist"
 #define kUrlBaseShippingTransaction @"/shipping/loadall"
 #define kUrlBaseRPInformation @"/views/repairinfo"
+#define kUrlBaseProcessResult @"/synch/processresult"
 
 #define kQueryParamFirstResult @"firstresult"
 #define kQueryParamMaxResult @"maxresult"
@@ -171,6 +179,8 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 //******************** Data Model and Mapping ****************************
 #define kSharedStoreFileName @"CustomerServiceMobile.sqlite"
 #define kEntityUserProfile @"UserProfile"
+#define kQueryParamIPADID @"ipadid"
+#define kQueryParamType @"type"
 
 //attribute -- sort attribute
 #define kSortAttributeValue @"value"
@@ -270,7 +280,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kAttributeCycleCountMasterIsSerialized @"isserialized"
 #define kKeyPathCycleCountMasterIsSerialized @"isserialized"
 
-//inventory mapping
+//inventory(receiving) mapping
 #define kKeyPathInventoryCarrier  @"carrier"
 //#define kKeyPathInventoryCarrierCarrier_ID  @"(carrier).carrier_id"
 #define kAttributeInventoryCarrier_ID  @"carrier_id"
@@ -304,8 +314,9 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathInventoryTransactionType @"transaction_type"
 #define kAttributeInventoryType @"transaction_type"
 #define kKeyPathInventoryOurRefNo @"our_refno"
-
 #define kKeyPathInventoryWeight @"weight"
+    
+
 
 //repair information
 #define kRootPathRPInformation @"viewRepairInfo"
@@ -421,6 +432,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kEntityShippingLineItem @"ShippingLineItem"
 #define kEntityRPInformation @"RPInformation"
 #define kEntityShipmentInstructions @"ShipmentInstructions"
+#define kEntityProcessResult @"ProcessResult"
 
 //******************************* Core Data Fetch Template *********************************
 #define kFetchTemplatePrinter @"subcategory == %@"
@@ -463,6 +475,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kMessageLoginMissMatch @"User name and password your enter do not match with what are in the system."
 #define kMessageSynchRecordTemplate @"Total %d records received..."
 #define kMessageSynchFailedTemplate @"Server may not be reachable. Detail:%@"
+#define kMessageFieldTruncatedTemplate @"Field %@ will be truncated to size %d from %@ when saved..."
 
 #define kMessageReceivingNoLineItem @"No line item is available."
 #define kMessageQtyNotNumber @"Quantity must be a number."
@@ -503,3 +516,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
     
 #define kTitleClearTable @"Remove History Data"
 #define kMessageClearTableConfirmation @"Are you sure that you want remove all the history data of %@?"
+    
+#define kMessageProcessResultSubmitBeforeCheck @"Please submit transaction first before checking the process result..."
+    
+#define kMessageProcessResultNotFound  @"No process result is availble. You may submit the transaction first..."
