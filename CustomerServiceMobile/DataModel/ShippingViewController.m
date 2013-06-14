@@ -480,6 +480,40 @@ NSString* _pi_doc_id = @"";
     }
 }
 
+- (IBAction)btnProcessResult:(id)sender {
+    //check the ipadid
+    NSString* ipadid = _shippingHeader.ipad_id;
+    NSString* type = FormatShippingTypeName[_type];
+    if(ipadid==nil)
+    {
+        [SDDataEngine alert:kMessageProcessResultSubmitBeforeCheck title:@"No Result" template:nil delegate:nil];
+        return;
+    }
+    
+    
+    ProcessResultController* transactionController = [SDRestKitEngine sharedProcessResultController];
+    
+    [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:self.activity_processresult];
+    sleep(1);
+    ProcessResult* processResult = [transactionController query:ipadid type:type];
+    
+    [self.activity_processresult stopAnimating];
+    if(nil==processResult||[processResult.process_status isEqualToString:kTransactionTypeNONE])
+    {
+        [SDDataEngine alert:kMessageProcessResultNotFound title:@"No Result" template:nil delegate:nil];
+    }
+    else
+    {
+        _shippingHeader.process_status = processResult.process_status;
+        _shippingHeader.process_message = processResult.process_message;
+        _shippingHeader.process_date = processResult.process_date;
+        [[SDDataEngine sharedEngine] save:_shippingHeader];
+        self.lblProcessStatus.text = processResult.process_status;
+        self.lblProcessMessage.text = processResult.process_message;
+    }
+
+}
+
 - (IBAction)segInvTypeClick:(id)sender {
     [self fetchAvailableShippingList];
     

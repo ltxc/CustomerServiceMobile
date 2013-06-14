@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *lblProcessMessage;
 - (IBAction)btnSubmitAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
+@property (weak, nonatomic) IBOutlet UIButton *btnProcessResult;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_processresult;
 
 //ship extra fields
 @property (weak, nonatomic) IBOutlet UITextField *lblCarrierID;
@@ -45,6 +47,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_submit;
 - (IBAction)btnShipmentInstructions:(id)sender;
 - (IBAction)switchIsPrinting:(id)sender;
+- (IBAction)btnProcessResult:(id)sender;
 @property (weak, nonatomic) IBOutlet UISwitch *switchIsPrinting;
 
 @end

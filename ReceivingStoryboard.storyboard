@@ -1448,6 +1448,7 @@
                         <outlet property="activity_submit" destination="Pad-HQ-bgY" id="mL8-Fl-TxQ"/>
                         <outlet property="btnAdd" destination="uDh-Bh-9ep" id="kg8-9V-94L"/>
                         <outlet property="btnCheckProcessResult" destination="eHi-pX-dOJ" id="OBS-6S-zMA"/>
+                        <outlet property="btnCheckRPInfo" destination="W5z-Kg-lRQ" id="icP-e6-p9r"/>
                         <outlet property="btnSubmit" destination="uwI-Lk-Ex8" id="Hi7-At-gb8"/>
                         <outlet property="lblCarrier" destination="poi-5T-uLa" id="k76-H7-Qky"/>
                         <outlet property="lblCarrierRefNo" destination="oU7-AG-k6O" id="1Pn-5h-jr3"/>
