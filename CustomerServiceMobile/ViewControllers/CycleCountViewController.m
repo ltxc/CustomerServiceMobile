@@ -51,24 +51,29 @@ BOOL _isBinCount = YES;
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    if ([self.cycleCountMaster.isserialized isEqualToNumber:[NSNumber numberWithInt:1]]){
-            //part is serialized
-        self.lblIsSerialized.text = @"serialized";
-        self.txtFieldQty.text = @"1";
-        self.txtFieldQty.enabled = NO;
-        self.txtFieldTarget.enabled = YES;
-        self.btnQty.hidden = YES;
-        [self.txtFieldTarget becomeFirstResponder];
+    if(!_isBinCount)
+    {
+        if ([self.cycleCountMaster.isserialized isEqualToNumber:[NSNumber numberWithInt:1]]){
+                //part is serialized
+            self.lblIsSerialized.text = @"serialized";
+            self.txtFieldQty.text = @"1";
+            self.txtFieldQty.enabled = NO;
+            self.txtFieldTarget.enabled = YES;
+            self.btnQty.hidden = YES;
+            [self.txtFieldTarget becomeFirstResponder];
+        }
+        else
+        {
+            self.lblIsSerialized.text = @"non serialized";
+            self.txtFieldQty.text = @"";
+            self.txtFieldQty.enabled = YES;
+            self.txtFieldTarget.enabled = NO;
+            self.btnQty.hidden = NO;
+            [self.txtFieldQty becomeFirstResponder];
+        }
     }
     else
-    {
-        self.lblIsSerialized.text = @"non serialized";
-        self.txtFieldQty.text = @"";
-        self.txtFieldQty.enabled = YES;
-        self.txtFieldTarget.enabled = NO;
-        self.btnQty.hidden = NO;
-        [self.txtFieldQty becomeFirstResponder];
-    }
+        self.txtFieldTarget.enabled = YES;
    
 }
 
