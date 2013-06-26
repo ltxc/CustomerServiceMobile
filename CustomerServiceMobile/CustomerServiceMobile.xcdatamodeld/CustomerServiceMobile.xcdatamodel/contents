@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ActionCode" representedClassName="ActionCode" syncable="YES">
+        <attribute name="activity_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code_id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="activity_id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="bpart_gcl_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="ApplicationData" representedClassName="ApplicationData" syncable="YES">
         <attribute name="attachment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attribute1" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,12 +41,12 @@
         <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Carrier" representedClassName="Carrier" syncable="YES">
-        <attribute name="carrier_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="carrier_id" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="last_change_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Company" representedClassName="Company" syncable="YES">
-        <attribute name="company_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="company_id" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="last_change_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -104,6 +114,11 @@
         <attribute name="queryname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RepairStation" representedClassName="RepairStation" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="station_id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="ShipmentInstructions" representedClassName="ShipmentInstructions" syncable="YES">
         <attribute name="ap_description" optional="YES" attributeType="String" syncable="YES"/>
@@ -182,6 +197,10 @@
         <attribute name="to_company_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="to_warehouse_id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="StopCode" representedClassName="StopCode" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stop_code_id" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
     <entity name="UserProfile" representedClassName="UserProfile" syncable="YES">
         <attribute name="aaacount" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isAuthorized" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -191,7 +210,7 @@
     </entity>
     <entity name="Warehouse" representedClassName="Warehouse" syncable="YES">
         <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="warehouse_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="warehouse_id" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="ApplicationData" positionX="1953" positionY="-8406" width="128" height="328"/>
@@ -210,5 +229,9 @@
         <element name="ShippingList" positionX="1602" positionY="-8047" width="128" height="343"/>
         <element name="UserProfile" positionX="1429" positionY="-8424" width="128" height="118"/>
         <element name="Warehouse" positionX="1260" positionY="-8181" width="128" height="73"/>
+        <element name="Activity" positionX="1926" positionY="-8064" width="128" height="88"/>
+        <element name="ActionCode" positionX="1924" positionY="-7956" width="128" height="88"/>
+        <element name="RepairStation" positionX="1924" positionY="-7855" width="128" height="88"/>
+        <element name="StopCode" positionX="1924" positionY="-7740" width="128" height="73"/>
     </elements>
 </model>

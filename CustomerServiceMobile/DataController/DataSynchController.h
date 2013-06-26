@@ -2,8 +2,10 @@
 //  DataController.h
 //  CustomerServiceMobile
 //
-
-
+//
+//  Created by Jinsong Lu on 6/25/13.
+//  Copyright (c) 2013 LTXC. All rights reserved.
+//
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 @interface DataSynchController : NSObject <RKObjectLoaderDelegate>

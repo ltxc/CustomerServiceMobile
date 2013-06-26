@@ -238,24 +238,24 @@ NSString* _pi_doc_id = @"";
     }
 
 
-    //filter picklistopen and shiplistopen based on pi_doc_id
-//    if(self.type!=PICK&&self.type!=ALLOCATEDSHIPLIST)
-//    {
-        //pick list, ship list, ship
-//        if (!(_pi_doc_id==nil||[_pi_doc_id isEqualToString:@""])) {
-//
-//            predicate = [NSPredicate predicateWithFormat:predicateExpNotSelected, _pi_doc_id];
-//
-//        }
-//        else
-//        {
-//            predicate = [NSPredicate predicateWithFormat:predicateType];
-//        }
+    //filter picklistopen on pi_doc_id
+    if(self.type==PICKLIST)
+    {
+        //pick list open
+        if (!(_pi_doc_id==nil||[_pi_doc_id isEqualToString:@""])) {
+
+            predicate = [NSPredicate predicateWithFormat:predicateExpNotSelected, _pi_doc_id];
+
+        }
+        else
+       {
+            predicate = [NSPredicate predicateWithFormat:predicateType];
+        }
         
 
-//    }
-//    else
-//    {
+    }
+    else
+    {
         //pick
         if(to_company!=nil&&![to_company isEqualToString:@""])
         {
@@ -271,7 +271,7 @@ NSString* _pi_doc_id = @"";
         {
             predicate = [NSPredicate predicateWithFormat:predicateType];
         }
-//    }
+    }
     
     
     [[self fetchedResultsController].fetchRequest setPredicate:predicate];

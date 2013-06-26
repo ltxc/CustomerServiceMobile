@@ -264,6 +264,26 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathQueriesQueryName @"queryname"
 #define kKeyPathQueriesTag @"tag"
 #define kKeyPathQueriesURL  @"url"
+    
+    
+//ActionCode
+#define kKeyPathActionCode @"actionCode"
+#define kKeyPathActionCodeCodeID @"code_id"
+#define kKeyPathActionCodeActivityID @"activity_id"    
+#define kKeyPathActionCodeDescr @"descr"
+    
+//Activity
+#define kKeyPathActivity @"activity"
+#define kKeyPathActivityActivityID @"activity_id"
+#define kKeyPathActivityBPartGCLID @"bpart_gcl_id"
+#define kKeyPathActivityDescr @"descr"
+    
+//RepairStation
+#define kKeyPathRepairStation @"repairStation"
+#define kKeyPathRepairStationStationID @"station_id"
+#define kKeyPathRepairStationDescr @"descr"
+#define kKeyPathRepairStationWarehouseID @"warehouse_id"
+    
 //cycle count master  CycleCountMaster
 #define kKeyPathCycleCountMasterBinCodeID  @"binCodeId"
 #define kAttributeCycleCountMasterBinCodeID  @"bin_code_id"
@@ -433,6 +453,10 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kEntityRPInformation @"RPInformation"
 #define kEntityShipmentInstructions @"ShipmentInstructions"
 #define kEntityProcessResult @"ProcessResult"
+#define kEntityActionCode @"ActionCode"
+#define kEntityActivity @"Activity"
+#define kEntityRepairStation @"RepairStation"
+#define kEntityStopCode @"StopCode"
 
 //******************************* Core Data Fetch Template *********************************
 #define kFetchTemplatePrinter @"subcategory == %@"
@@ -461,8 +485,10 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kNotificationNameCompany @"syncCompany"
 #define kNotificationNameBinPart @"syncBinPart"
 #define kNotificationNameManAdjustReason @"syncReasonCode"
+#define kNotificationNameShopFloorControl @"shopfloorcontrol"
 #define kNotificationReports @"syncReports"
 #define kNotificationShipmentInstructions @"shipmentInstructions"
+    
 
 //******************** Message ********************************
 #define kAlertTitleSystemError @"System Error"

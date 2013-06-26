@@ -2,8 +2,8 @@
 //  ManAdjustReasonController.h
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 12/3/12.
-//  Copyright (c) 2012 LTXC. All rights reserved.
+//  Created by Jinsong Lu on 6/25/13.
+//  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
 #import "DataSynchController.h"
