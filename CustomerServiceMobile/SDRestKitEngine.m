@@ -3,8 +3,15 @@
 #import "SharedConstants.h"
 #import "SDUserPreference.h"
 #import <RestKit/RKJSONParserJSONKit.h>
-
-
+#import "SDDataEngine.h"
+#import "ApplicationData.h"
+#import "Company.h"
+#import "Carrier.h"
+#import "Warehouse.h"
+#import "BinPart.h"
+#import "Queries.h"
+#import "ShipmentInstructions.h"
+#import "ManAdjustReason.h"
 
 @implementation SDRestKitEngine
 @synthesize objectManager=_objectManager;
@@ -12,11 +19,7 @@
 @synthesize password=_password;
 @synthesize alert=_alert;
 
-//@synthesize synchInProgressBinPart=_synchInProgressBinPart;
-//@synthesize synchInProgressCarrier=_synchInProgressCarrier;
-//@synthesize synchInProgressCompany=_synchInProgressCompany;
-//@synthesize synchInProgressQueries=_synchInProgressQueries;
-//@synthesize synchInProgressWarehouse=_synchInProgressWarehouse;
+
 
 +(SDRestKitEngine *)sharedEngine
 {
@@ -29,16 +32,45 @@
     return sharedEngine;
 }
 
-+(ApplicationDataSynchController *) sharedApplicationDataController
+//+(ApplicationDataSynchController *) sharedApplicationDataController
+//{
+//    static ApplicationDataSynchController *sharedController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedController = [[ApplicationDataSynchController alloc] init];
+//    });
+//    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedController;
+//}
+
++(CoreDataSynch *) sharedApplicationDataController
 {
-    static ApplicationDataSynchController *sharedController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedController = [[ApplicationDataSynchController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseApplicationData rootKeyPath:kKeyPathApplicationData notificationName:kNotificationNameApplicationData mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ApplicationData class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathKey,kKeyPathApplicationDataName,kKeyPathApplicationDataValue,kKeyPathApplicationDataLandscape,kKeyPathApplicationDataCategory,kKeyPathApplicationDataSubCategory,kKeyPathApplicationDataAttachment,kKeyPathApplicationDataAttribute1,kKeyPathApplicationDataAttribute10,kKeyPathApplicationDataAttribute2,kKeyPathApplicationDataAttribute3,kKeyPathApplicationDataAttribute4,kKeyPathApplicationDataAttribute5,kKeyPathApplicationDataAttribute6,kKeyPathApplicationDataAttribute7,kKeyPathApplicationDataAttribute8,kKeyPathApplicationDataAttribute9, nil];
+            [mapping mapKeyPath:kKeyPathServerID toAttribute:kAttributeServerID];
+            [mapping mapKeyPath:kKeyPathApplicationDataDescription toAttribute:kAttributeApplicationDataescription];
+            
+            mapping.primaryKeyAttribute = kKeyPathKey;
+
+            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [ApplicationData fetchRequest];
+            }
+        ];
     });
     [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
     return sharedController;
 }
+
 
 +(UserProfileController *) sharedUserProfileController
 {
@@ -51,86 +83,274 @@
     return sharedUserProfileController;
 }
 
-+(WarehouseSynchController *) sharedWarehouseController
+//+(WarehouseSynchController *) sharedWarehouseController
+//{
+//    static WarehouseSynchController *sharedWarehouseController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedWarehouseController = [[WarehouseSynchController alloc] init];
+//    });
+//    [sharedWarehouseController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedWarehouseController;
+//}
+
++(CoreDataSynch *) sharedWarehouseController
 {
-    static WarehouseSynchController *sharedWarehouseController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedWarehouseController = [[WarehouseSynchController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseWarehouse rootKeyPath:kKeyPathWarehouse notificationName:kNotificationNameWarehouse mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Warehouse class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathWarehouseWarehouseID,kKeyPathWarehouseDescr, nil];
+
+            mapping.primaryKeyAttribute = kKeyPathWarehouseWarehouseID;
+            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [Warehouse fetchRequest];   
+            }
+        ];
     });
-    [sharedWarehouseController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedWarehouseController;
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
 
-+(CompanySynchController *) sharedCompanyController
+
+//+(CompanySynchController *) sharedCompanyController
+//{
+//    static CompanySynchController *sharedCompanyController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedCompanyController = [[CompanySynchController alloc] init];
+//    });
+//    [sharedCompanyController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedCompanyController;
+//}
+
++(CoreDataSynch *) sharedCompanyController
 {
-    static CompanySynchController *sharedCompanyController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedCompanyController = [[CompanySynchController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCompany rootKeyPath:kKeyPathCompany notificationName:kNotificationNameCompany mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Company class] inManagedObjectStore:objectStore];
+            [mapping mapKeyPath:kKeyPathCompanyCompanyID toAttribute:kKeyPathCompanyCompanyID];
+            //[mapping mapKeyPath:kKeyPathLastChangeDate toAttribute:kKeyPathLastChangeDate];
+            mapping.primaryKeyAttribute = kKeyPathCompanyCompanyID;            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [Company fetchRequest];   
+            }
+        ];
     });
-    [sharedCompanyController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedCompanyController;
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
 
-+(CarrierSynchController *) sharedCarrierController
+//+(CarrierSynchController *) sharedCarrierController
+//{
+//    static CarrierSynchController *sharedCarrierController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedCarrierController = [[CarrierSynchController alloc] init];
+//    });
+//    [sharedCarrierController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedCarrierController;
+//}
+
+
++(CoreDataSynch *) sharedCarrierController
 {
-    static CarrierSynchController *sharedCarrierController = nil;
+    static CoreDataSynch *sharedCarrierController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedCarrierController = [[CarrierSynchController alloc] init];
+        sharedCarrierController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCarrier rootKeyPath:kKeyPathCarrier notificationName:kNotificationNameCarrier mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Carrier class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathCarrierCarrierID,kKeyPathLastChangeDate, nil];
+            [mapping mapKeyPath:kKeyPathServerID toAttribute:kAttributeServerID];
+            
+            mapping.primaryKeyAttribute = kKeyPathCarrierCarrierID;
+            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [Carrier fetchRequest];   
+            }
+        ];
     });
     [sharedCarrierController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
     return sharedCarrierController;
 }
 
+//+(BinPartSynchController *) sharedBinPartController
+//{
+//    static BinPartSynchController *sharedBinPartController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedBinPartController = [[BinPartSynchController alloc] init];
+//    });
+//    [sharedBinPartController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedBinPartController;
+//}
 
-
-
-+(BinPartSynchController *) sharedBinPartController
++(CoreDataSynch *) sharedBinPartController
 {
-    static BinPartSynchController *sharedBinPartController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedBinPartController = [[BinPartSynchController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseBinPart rootKeyPath:kKeyPathBinPart notificationName:kNotificationNameBinPart mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[BinPart class] inManagedObjectStore:objectStore];
+            
+            [mapping mapKeyPath:kKeyPathBinPartBinCodeID toAttribute:kAttributeBinPartBinCodeID];
+            [mapping mapKeyPath:kKeyPathBinPartBpartID toAttribute:kAttributeBinPartBpartID];
+            [mapping mapKeyPath:kKeyPathBinPartInvTypeID toAttribute:kAttributeBinPartInvTypeID];
+            [mapping mapKeyPath:kKeyPathBinPartLastRecDate toAttribute:kAttributeBinPartLastRecDate];
+            [mapping mapKeyPath:kKeyPathServerID toAttribute:kAttributeServerID];
+            [mapping mapKeyPath:kKeyPathKeyID toAttribute:kKeyPathKeyID];
+            [mapping mapKeyPath:kKeyPathBinPartQty toAttribute:kAttributeBinPartQty];
+            
+            mapping.primaryKeyAttribute = kKeyPathKeyID;
+
+            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [BinPart fetchRequest];   
+            }
+        ];
     });
-    [sharedBinPartController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedBinPartController;
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
 
-+(QueriesSynchController *) sharedQueriesController
+
+//+(QueriesSynchController *) sharedQueriesController
+//{
+//    static QueriesSynchController *sharedQueriesController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedQueriesController = [[QueriesSynchController alloc] init];
+//    });
+//    [sharedQueriesController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedQueriesController;
+//}
+
++(CoreDataSynch *) sharedQueriesController
 {
-    static QueriesSynchController *sharedQueriesController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedQueriesController = [[QueriesSynchController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseQueries rootKeyPath:kKeyPathQueries notificationName:kNotificationReports mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Queries class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathQueriesDescr,kKeyPathQueriesGroupName,kKeyPathQueriesQueryName, kKeyPathQueriesTag,kKeyPathQueriesURL, nil];
+            mapping.primaryKeyAttribute = kKeyPathQueriesQueryName;
+            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [Queries fetchRequest];
+            }
+        ];
     });
-    [sharedQueriesController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedQueriesController;
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
 
-+(ShipmentInstructionsSynchController *) sharedShipmentInstructionsController
+
+//+(ShipmentInstructionsSynchController *) sharedShipmentInstructionsController
+//{
+//    static ShipmentInstructionsSynchController *sharedShipmentInstructionController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedShipmentInstructionController = [[ShipmentInstructionsSynchController alloc] init];
+//    });
+//    [sharedShipmentInstructionController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedShipmentInstructionController;
+//
+//}
+
+
++(CoreDataSynch *) sharedShipmentInstructionsController
 {
-    static ShipmentInstructionsSynchController *sharedShipmentInstructionController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedShipmentInstructionController = [[ShipmentInstructionsSynchController alloc] init];
-    });
-    [sharedShipmentInstructionController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedShipmentInstructionController;
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseShipmentInstructions rootKeyPath:kKeyPathShipmentInstructions notificationName:kNotificationShipmentInstructions mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ShipmentInstructions class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathShipmentInstructionsDescription,kKeyPathShipmentInstructionsLastUpdated,kKeyPathShipmentInstructionsTableKey,kKeyPathShipmentInstructionsTableName, nil];
+            [mapping mapKeyPath:kKeyPathServerID toAttribute:kAttributeServerID];
+            
+            mapping.primaryKeyAttribute = kAttributeServerID;
+            return mapping;
 
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [ShipmentInstructions fetchRequest];   
+            }
+        ];
+    });
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
 
-+(ManAdjustReasonController *) sharedReasonController
+
+//+(ManAdjustReasonController *) sharedReasonController
+//{
+//    static ManAdjustReasonController *sharedReasonController = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedReasonController = [[ManAdjustReasonController alloc] init];
+//    });
+//    [sharedReasonController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+//    return sharedReasonController;
+//}
+
++(CoreDataSynch *) sharedReasonController
 {
-    static ManAdjustReasonController *sharedReasonController = nil;
+    static CoreDataSynch *sharedController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedReasonController = [[ManAdjustReasonController alloc] init];
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathManAdjustReason notificationName:kNotificationNameManAdjustReason mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ManAdjustReason class] inManagedObjectStore:objectStore];
+            [mapping mapKeyPath:kKeyPathManAdjustReasonReasonCode toAttribute:kAttributeManAdjustReasonReasonCode];
+            [mapping mapKeyPath:kKeyPathManAdjustReasonDescription toAttribute:kAttributeManAdjustReasonDescription];
+            
+            
+            mapping.primaryKeyAttribute = kKeyPathManAdjustReasonReasonCode;            return mapping;
+
+        }
+                                   
+            fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                return [ManAdjustReason fetchRequest];
+            }
+        ];
     });
-    [sharedReasonController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
-    return sharedReasonController;
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
 }
+
 
 +(InventoryTransactionController*) sharedInventoryTransactionController
 {

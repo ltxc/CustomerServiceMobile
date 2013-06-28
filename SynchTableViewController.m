@@ -119,22 +119,42 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     
 }
 
-- (IBAction)synchApplicationData:(id)sender {
-    ApplicationDataSynchController* controller = [SDRestKitEngine sharedApplicationDataController];
+//- (IBAction)synchApplicationData:(id)sender {
+//    ApplicationDataSynchController* controller = [SDRestKitEngine sharedApplicationDataController];
+//    if(!_synchInProgressApplicationData)
+//    {
+//        _synchInProgressApplicationData = YES;
+//        [activity_synchApplicationData startAnimating];
+//        [lblStatus_SynchApplicationData setText:@""];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//}
+
+-(IBAction) synchApplicationData:(id)sender{
+    CoreDataSynch* controller = [SDRestKitEngine sharedApplicationDataController];
     if(!_synchInProgressApplicationData)
     {
         _synchInProgressApplicationData = YES;
         [activity_synchApplicationData startAnimating];
         [lblStatus_SynchApplicationData setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedApplicationData:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseApplicationData appendQueryParams:dictionary];
+            }];
         });
     }
-
-
 }
+
+
+
 
 -(void) synchNotifiedApplicationData:(NSNotification *)notification
 {
@@ -149,20 +169,43 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 }
 
 
+//-(IBAction) synchCompany:(id)sender{
+//    CompanySynchController* controller = [SDRestKitEngine sharedCompanyController];
+//    if(!_synchInProgressCompany)
+//    {
+//        _synchInProgressCompany = YES;
+//        [activity_SynchCompany startAnimating];
+//        [lblStatus_SynchCompany setText:@""];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameCompany selector:@selector(synchNotifiedCompany:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//}
+
 -(IBAction) synchCompany:(id)sender{
-    CompanySynchController* controller = [SDRestKitEngine sharedCompanyController];
+    CoreDataSynch* controller = [SDRestKitEngine sharedCompanyController];
     if(!_synchInProgressCompany)
     {
         _synchInProgressCompany = YES;
         [activity_SynchCompany startAnimating];
         [lblStatus_SynchCompany setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameCompany selector:@selector(synchNotifiedCompany:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedCompany:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseCompany appendQueryParams:dictionary];
+            }];
         });
     }
 }
+
+
+
+
 
 -(void) synchNotifiedCompany:(NSNotification *)notification
 {
@@ -177,20 +220,40 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 }
 
 
+//-(IBAction) synchCarrier:(id)sender{
+//    CarrierSynchController* controller = [SDRestKitEngine sharedCarrierController];
+//    if(!_synchInProgressCarrier)
+//    {
+//        _synchInProgressCarrier = YES;
+//        [activity_SynchCarrier startAnimating];
+//         [lblStatus_SynchCarrier setText:@""];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameCarrier selector:@selector(synchNotifiedCarrier:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//}
+
 -(IBAction) synchCarrier:(id)sender{
-    CarrierSynchController* controller = [SDRestKitEngine sharedCarrierController];
+    CoreDataSynch* controller = [SDRestKitEngine sharedCarrierController];
     if(!_synchInProgressCarrier)
     {
         _synchInProgressCarrier = YES;
         [activity_SynchCarrier startAnimating];
-         [lblStatus_SynchCarrier setText:@""];
+        [lblStatus_SynchCarrier setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameCarrier selector:@selector(synchNotifiedCarrier:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedCarrier:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseCarrier appendQueryParams:dictionary];
+            }];
         });
     }
 }
+
 
 -(void) synchNotifiedCarrier:(NSNotification *)notification
 {
@@ -204,19 +267,40 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationNameCarrier];
 }
 
+//-(IBAction) synchWarehouse:(id)sender{
+//    WarehouseSynchController* controller = [SDRestKitEngine sharedWarehouseController];
+//    if(!_synchInProgressWarehouse)
+//    {
+//        _synchInProgressWarehouse = YES;
+//        [activity_SynchWarehouse startAnimating];
+//         [lblStatus_SynchWarehouse setText:@""];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }}
+
 -(IBAction) synchWarehouse:(id)sender{
-    WarehouseSynchController* controller = [SDRestKitEngine sharedWarehouseController];
+    CoreDataSynch* controller = [SDRestKitEngine sharedWarehouseController];
     if(!_synchInProgressWarehouse)
     {
         _synchInProgressWarehouse = YES;
         [activity_SynchWarehouse startAnimating];
-         [lblStatus_SynchWarehouse setText:@""];
+        [lblStatus_SynchWarehouse setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedWarehouse:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseWarehouse appendQueryParams:dictionary];
+            }];
         });
-    }}
+    }
+}
+
+
 
 
 -(void) synchNotifiedWarehouse:(NSNotification *)notification
@@ -231,20 +315,42 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationNameWarehouse];
 }
 
+//-(IBAction) synchBin:(id)sender{
+//    BinPartSynchController* controller = [SDRestKitEngine sharedBinPartController];
+//    if(!_synchInProgressBinPart)
+//    {
+//        _synchInProgressBinPart = YES;
+//         [lblStatus_SynchBin setText:@""];
+//        [activity_SynchBin startAnimating];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameBinPart selector:@selector(synchNotifiedBin:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//
+//}
+
+
 -(IBAction) synchBin:(id)sender{
-    BinPartSynchController* controller = [SDRestKitEngine sharedBinPartController];
+    CoreDataSynch* controller = [SDRestKitEngine sharedBinPartController];
     if(!_synchInProgressBinPart)
     {
         _synchInProgressBinPart = YES;
-         [lblStatus_SynchBin setText:@""];
         [activity_SynchBin startAnimating];
+        [lblStatus_SynchBin setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameBinPart selector:@selector(synchNotifiedBin:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedBin:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSString* defaultWarehouseID = [SDUserPreference sharedUserPreference].DefaultWarehouseID;
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamWarehouseId,defaultWarehouseID,kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+
+               return [kUrlBaseBinPart appendQueryParams:dictionary];
+            }];
         });
     }
-
 }
 
 
@@ -264,21 +370,42 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 
 
 
-- (IBAction)synchReason:(id)sender {
-    ManAdjustReasonController* controller = [SDRestKitEngine sharedReasonController];
+//- (IBAction)synchReason:(id)sender {
+//    ManAdjustReasonController* controller = [SDRestKitEngine sharedReasonController];
+//    if(!_synchInProgressReason)
+//    {
+//        _synchInProgressReason = YES;
+//        [lblStatus_SynchReason setText:@""];
+//        [activity_SynchReason startAnimating];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameManAdjustReason selector:@selector(synchNotifiedReason:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//
+//}
+
+-(IBAction) synchReason:(id)sender{
+    CoreDataSynch* controller = [SDRestKitEngine sharedReasonController];
     if(!_synchInProgressReason)
     {
         _synchInProgressReason = YES;
-        [lblStatus_SynchReason setText:@""];
         [activity_SynchReason startAnimating];
+        [lblStatus_SynchReason setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameManAdjustReason selector:@selector(synchNotifiedReason:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedReason:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseManAdjustReason appendQueryParams:dictionary];
+            }];
         });
     }
-
 }
+
+
 
 
 
@@ -295,22 +422,43 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 }
 
 
-- (IBAction)synchReports:(id)sender {
-    QueriesSynchController* controller = [SDRestKitEngine sharedQueriesController];
+//- (IBAction)synchReports:(id)sender {
+//    QueriesSynchController* controller = [SDRestKitEngine sharedQueriesController];
+//    if(!_synchInProgressReports)
+//    {
+//        _synchInProgressReports = YES;
+//        [lblStatus_SynchReports setText:@""];
+//        [activity_SynchReports startAnimating];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationReports selector:@selector(synchNotifiedReports:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//    
+//    
+//}
+
+-(IBAction) synchReports:(id)sender{
+    CoreDataSynch* controller = [SDRestKitEngine sharedQueriesController];
     if(!_synchInProgressReports)
     {
         _synchInProgressReports = YES;
-        [lblStatus_SynchReports setText:@""];
         [activity_SynchReports startAnimating];
+        [lblStatus_SynchReports setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationReports selector:@selector(synchNotifiedReports:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedReports:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseQueries appendQueryParams:dictionary];
+            }];
         });
     }
-    
-    
 }
+
+
 
 
 
@@ -327,23 +475,56 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 }
 
 
-- (IBAction)synchShipmentInstructions:(id)sender {
-    ShipmentInstructionsSynchController* controller = [SDRestKitEngine sharedShipmentInstructionsController];
+//- (IBAction)synchShipmentInstructions:(id)sender {
+//    ShipmentInstructionsSynchController* controller = [SDRestKitEngine sharedShipmentInstructionsController];
+//    if(!_synchInProgressShipmentInstructions)
+//    {
+//        _synchInProgressShipmentInstructions = YES;
+//        [lblStatus_SynchShipmentInstructions setText:@""];
+//        [activity_SynchShipmentInstructions startAnimating];
+//        //add observer
+//        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationShipmentInstructions selector:@selector(synchNotifiedShipmentInstructions:)];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+//    }
+//    
+//    
+//}
+
+-(IBAction) synchShipmentInstructions:(id)sender{
+    CoreDataSynch* controller = [SDRestKitEngine sharedShipmentInstructionsController];
     if(!_synchInProgressShipmentInstructions)
     {
         _synchInProgressShipmentInstructions = YES;
-        [lblStatus_SynchShipmentInstructions setText:@""];
         [activity_SynchShipmentInstructions startAnimating];
+        [lblStatus_SynchShipmentInstructions setText:@""];
         //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationShipmentInstructions selector:@selector(synchNotifiedShipmentInstructions:)];
+        [controller addNotificationObserver:self selector:@selector(synchNotifiedShipmentInstructions:)];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+               return [kUrlBaseShipmentInstructions appendQueryParams:dictionary];
+            }];
         });
     }
-    
-    
 }
 
+
+
+
+-(void) synchNotifiedShipmentInstructions:(NSNotification *)notification
+{
+    NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:kNotificationReports];
+    [lblStatus_SynchShipmentInstructions setText:info];
+    _synchInProgressShipmentInstructions= NO;
+    [activity_SynchShipmentInstructions stopAnimating];
+    [SDUserPreference sharedUserPreference].LastSynchShipmentInstructions = [NSDate date];
+    [self setDataFromUserDefault:self.dateFormatter];
+    //remove observer
+    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
+}
 
 
 - (IBAction)clearLocalDatabase:(id)sender {
@@ -363,17 +544,6 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     }
 }
 
--(void) synchNotifiedShipmentInstructions:(NSNotification *)notification
-{
-    NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:kNotificationReports];
-    [lblStatus_SynchShipmentInstructions setText:info];
-    _synchInProgressShipmentInstructions= NO;
-    [activity_SynchShipmentInstructions stopAnimating];
-    [SDUserPreference sharedUserPreference].LastSynchShipmentInstructions = [NSDate date];
-    [self setDataFromUserDefault:self.dateFormatter];
-    //remove observer
-    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
-}
 
 -(void) threadStartAnimating:(UIActivityIndicatorView*) indicator
 {

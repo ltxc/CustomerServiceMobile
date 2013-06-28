@@ -1,6 +1,7 @@
 
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
+#import "CoreDataSynch.h"
 #import "ApplicationDataSynchController.h"
 #import "UserProfileController.h"
 #import "WarehouseSynchController.h"
@@ -27,15 +28,25 @@
 @property (strong, nonatomic) UIAlertView *alert;
 +(SDRestKitEngine *) sharedEngine;
 
-+(ApplicationDataSynchController *) sharedApplicationDataController;
+//+(ApplicationDataSynchController *) sharedApplicationDataController;
++(CoreDataSynch *) sharedApplicationDataController;
 +(UserProfileController *) sharedUserProfileController;
-+(WarehouseSynchController *) sharedWarehouseController;
-+(CompanySynchController *) sharedCompanyController;
-+(CarrierSynchController *) sharedCarrierController;
-+(BinPartSynchController *) sharedBinPartController;
-+(QueriesSynchController *) sharedQueriesController;
-+(ShipmentInstructionsSynchController *) sharedShipmentInstructionsController;
-+(ManAdjustReasonController *) sharedReasonController;
+//+(WarehouseSynchController *) sharedWarehouseController;
++(CoreDataSynch *) sharedWarehouseController;
+//+(CompanySynchController *) sharedCompanyController;
++(CoreDataSynch *) sharedCompanyController;
+//+(CarrierSynchController *) sharedCarrierController;
++(CoreDataSynch *) sharedCarrierController;
+//+(BinPartSynchController *) sharedBinPartController;
++(CoreDataSynch *) sharedBinPartController;
+//+(QueriesSynchController *) sharedQueriesController;
++(CoreDataSynch *) sharedQueriesController;
+//+(ShipmentInstructionsSynchController *) sharedShipmentInstructionsController;
++(CoreDataSynch *) sharedShipmentInstructionsController;
+//+(ManAdjustReasonController *) sharedReasonController;
++(CoreDataSynch *) sharedReasonController;
+
+
 +(InventoryTransactionController*) sharedInventoryTransactionController;
 +(InventoryTransactionController*) sharedMISCInventoryTransactionController;
 +(CycleCountMasterController*) sharedCycleCountMasterController;

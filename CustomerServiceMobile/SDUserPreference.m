@@ -9,7 +9,7 @@
 @synthesize Version, Printer, Landscape,LastLandscape, IsInited;
 @synthesize keys, preferences;
 @synthesize ServiceServer, ServiceAPPName, DefaultWarehouseID, LastLogin,LastLoginAA, IsRememberUserID, BackgroundProcessInterval, MaxRows, ReportServer;
-@synthesize LastSynchApplicationData, LastSynchBin,LastSynchCarrier,LastSynchCompany,LastSynchWarehouse, LastSynchReason, LastSynchReports, LastSynchShipmentInstructions;
+@synthesize LastSynchApplicationData, LastSynchBin,LastSynchCarrier,LastSynchCompany,LastSynchWarehouse, LastSynchReason, LastSynchReports, LastSynchShipmentInstructions, LastSynchRepairMasterData;
 
 @synthesize LastLoginPassword;
 @synthesize dateFormatter=_dateFormatter;
@@ -496,6 +496,25 @@
 -(void)setLastSynchShipmentInstructions:(NSDate *)lastSynchShipmentInstructions
 {
     [[NSUserDefaults standardUserDefaults]  setObject:lastSynchShipmentInstructions forKey:kIdLastSynchShipmentInstructions];
+    [self synchronize];
+}
+
+-(NSDate *)LastSynchRepairMasterData
+{
+    NSDate* dateLastSynch =  (NSDate *)[[NSUserDefaults standardUserDefaults] objectForKey:kIdLastSynchRepairMasterData];
+    if(nil==dateLastSynch)
+    {
+        dateLastSynch = [NSDate distantPast];
+        [[NSUserDefaults standardUserDefaults] setObject:dateLastSynch forKey:kIdLastSynchRepairMasterData];
+        [self synchronize];
+    }
+    
+    return dateLastSynch;
+}
+
+-(void)setLastSynchRepairMasterData:(NSDate *)LastSynchRepairMasterData
+{
+    [[NSUserDefaults standardUserDefaults]  setObject:LastSynchRepairMasterData forKey:kIdLastSynchRepairMasterData];
     [self synchronize];
 }
 

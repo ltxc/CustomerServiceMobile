@@ -164,6 +164,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kIdLastSynchReason @"lastsynch_reason"
 #define kIdLastSynchReports @"lastsynch_reports"
 #define kIdLastSynchShipmentInstructions @"lastsynch_shipmentinstructions"
+#define kIdLastSynchRepairMasterData @"lastsynch_repairmasterdata"
 
 #define kDefaultPrinter @"\\miprint\CP03CA"
 #define kDefaultServerDomain @"srv-tpgen-nor.ltx-credence.com"
