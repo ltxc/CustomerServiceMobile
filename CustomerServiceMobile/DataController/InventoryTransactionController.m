@@ -23,7 +23,7 @@ BOOL _isOK;
 -(id)init:(BOOL)isMISC
 {
     _isMISC = isMISC;
-    if(self = [super init:kEntityInventoryHeader])
+    if(self = [super init:kEntityInventoryHeader notificationName:nil])
     {
         [self.objectManager.router routeClass:[ReceivingTransactionProxy class] toResourcePath:kUrlBaseInventory forMethod:RKRequestMethodPOST];
 

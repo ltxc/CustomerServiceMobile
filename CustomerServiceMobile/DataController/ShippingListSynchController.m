@@ -9,7 +9,7 @@
 NSInteger _total;
 -(id)init
 {
-    if(self = [super init:kEntityShippingList])
+    if(self = [super init:kEntityShippingList notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

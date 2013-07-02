@@ -10,7 +10,7 @@
 @synthesize binparts=_binparts;
 -(id)init
 {
-    if(self = [super init:kEntityBinPart])
+    if(self = [super init:kEntityBinPart notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

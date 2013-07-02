@@ -132,6 +132,11 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kUrlBaseShippingTransaction @"/shipping/loadall"
 #define kUrlBaseRPInformation @"/views/repairinfo"
 #define kUrlBaseProcessResult @"/synch/processresult"
+    
+#define kUrlBaseActionCode @"/synch/actioncode" 
+#define kUrlBaseActivity @"/synch/activity"
+#define kUrlBaseStopCode @"/synch/stopcode"
+#define kUrlBaseRepairStation @"/synch/repairstation"
 
 #define kQueryParamFirstResult @"firstresult"
 #define kQueryParamMaxResult @"maxresult"
@@ -284,6 +289,11 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathRepairStationStationID @"station_id"
 #define kKeyPathRepairStationDescr @"descr"
 #define kKeyPathRepairStationWarehouseID @"warehouse_id"
+    
+//StopCode
+#define kKeyPathStopCode @"stopCode"
+#define kKeyPathStopCodeStopCodeID @"stop_code_id"
+#define kKeyPathStopCodeDescr @"descr"
     
 //cycle count master  CycleCountMaster
 #define kKeyPathCycleCountMasterBinCodeID  @"binCodeId"
@@ -459,7 +469,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kEntityRepairStation @"RepairStation"
 #define kEntityStopCode @"StopCode"
 
-//******************************* Core Data Fetch Template *********************************
+//******************************* Core Data Fetch Template ********************************
 #define kFetchTemplatePrinter @"subcategory == %@"
 #define kFetchTemplateToCompany @"to_company_id==%@"
 #define kFetchTemplateToWarehouse @"to_warehouse_id==%@"
@@ -477,7 +487,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kPredicateServerApplicationData @"category == 'server' and subcategory IN {'applicationserver' ,'reportserver'} and landscape == %@"
 //******************** NSNotification **************************
 #define kNotificationSynchFailTemplate @"It failed to %@. Error Message:%@."
-#define kNotificationSynchSuccessTemplate @"%@ finished successfully. %@"
+#define kNotificationSynchSuccessTemplate @"%@ finished successfully.\n%@"
 #define kNotificationStatus @"status"
 #define kNotificationMessage @"message"
 #define kNotificationNameApplicationData @"applicationdata"
@@ -489,7 +499,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kNotificationNameShopFloorControl @"shopfloorcontrol"
 #define kNotificationReports @"syncReports"
 #define kNotificationShipmentInstructions @"shipmentInstructions"
-    
+#define kNotificationRepairMasterData @"repairmasterdata"
 
 //******************** Message ********************************
 #define kAlertTitleSystemError @"System Error"

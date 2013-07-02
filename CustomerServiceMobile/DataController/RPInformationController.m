@@ -5,7 +5,7 @@
 RPInformation* _rpInformation;
 -(id)init
 {
-    if(self = [super init:kEntityRPInformation])
+    if(self = [super init:kEntityRPInformation notificationName:nil])
     {
         //register the mapping provider
         RKObjectMapping* mapping = [self entityMapping];

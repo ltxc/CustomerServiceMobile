@@ -13,7 +13,7 @@ CycleCountProxy* _cycleCountProxy;
 
 -(id)init
 {
-    if(self = [super init:@"CycleCount"])
+    if(self = [super init:@"CycleCount" notificationName:nil])
     {
         [self.objectManager.router routeClass:[CycleCountProxy class] toResourcePath:kUrlBaseCycleCount forMethod:RKRequestMethodPOST];
         

@@ -49,7 +49,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseApplicationData rootKeyPath:kKeyPathApplicationData notificationName:kNotificationNameApplicationData mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Application Data" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseApplicationData rootKeyPath:kKeyPathApplicationData notificationName:kNotificationNameApplicationData mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ApplicationData class] inManagedObjectStore:objectStore];
             [mapping mapAttributes:kKeyPathKey,kKeyPathApplicationDataName,kKeyPathApplicationDataValue,kKeyPathApplicationDataLandscape,kKeyPathApplicationDataCategory,kKeyPathApplicationDataSubCategory,kKeyPathApplicationDataAttachment,kKeyPathApplicationDataAttribute1,kKeyPathApplicationDataAttribute10,kKeyPathApplicationDataAttribute2,kKeyPathApplicationDataAttribute3,kKeyPathApplicationDataAttribute4,kKeyPathApplicationDataAttribute5,kKeyPathApplicationDataAttribute6,kKeyPathApplicationDataAttribute7,kKeyPathApplicationDataAttribute8,kKeyPathApplicationDataAttribute9, nil];
@@ -100,7 +100,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseWarehouse rootKeyPath:kKeyPathWarehouse notificationName:kNotificationNameWarehouse mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Warehouse" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseWarehouse rootKeyPath:kKeyPathWarehouse notificationName:kNotificationNameWarehouse mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Warehouse class] inManagedObjectStore:objectStore];
             [mapping mapAttributes:kKeyPathWarehouseWarehouseID,kKeyPathWarehouseDescr, nil];
@@ -137,7 +137,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCompany rootKeyPath:kKeyPathCompany notificationName:kNotificationNameCompany mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Company" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCompany rootKeyPath:kKeyPathCompany notificationName:kNotificationNameCompany mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Company class] inManagedObjectStore:objectStore];
             [mapping mapKeyPath:kKeyPathCompanyCompanyID toAttribute:kKeyPathCompanyCompanyID];
@@ -172,7 +172,7 @@
     static CoreDataSynch *sharedCarrierController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedCarrierController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCarrier rootKeyPath:kKeyPathCarrier notificationName:kNotificationNameCarrier mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedCarrierController = [[CoreDataSynch alloc] init:@"Carrier" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseCarrier rootKeyPath:kKeyPathCarrier notificationName:kNotificationNameCarrier mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Carrier class] inManagedObjectStore:objectStore];
             [mapping mapAttributes:kKeyPathCarrierCarrierID,kKeyPathLastChangeDate, nil];
@@ -209,7 +209,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseBinPart rootKeyPath:kKeyPathBinPart notificationName:kNotificationNameBinPart mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Bin Part" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseBinPart rootKeyPath:kKeyPathBinPart notificationName:kNotificationNameBinPart mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[BinPart class] inManagedObjectStore:objectStore];
             
@@ -254,7 +254,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseQueries rootKeyPath:kKeyPathQueries notificationName:kNotificationReports mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Reports" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseQueries rootKeyPath:kKeyPathQueries notificationName:kNotificationReports mapBlock:^(RKManagedObjectStore *objectStore) {
             
 
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[Queries class] inManagedObjectStore:objectStore];
@@ -293,7 +293,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseShipmentInstructions rootKeyPath:kKeyPathShipmentInstructions notificationName:kNotificationShipmentInstructions mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Shipment Instructions" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseShipmentInstructions rootKeyPath:kKeyPathShipmentInstructions notificationName:kNotificationShipmentInstructions mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ShipmentInstructions class] inManagedObjectStore:objectStore];
             [mapping mapAttributes:kKeyPathShipmentInstructionsDescription,kKeyPathShipmentInstructionsLastUpdated,kKeyPathShipmentInstructionsTableKey,kKeyPathShipmentInstructionsTableName, nil];
@@ -331,7 +331,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataSynch alloc] init:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathManAdjustReason notificationName:kNotificationNameManAdjustReason mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataSynch alloc] init:@"Reason" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathManAdjustReason notificationName:kNotificationNameManAdjustReason mapBlock:^(RKManagedObjectStore *objectStore) {
             
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ManAdjustReason class] inManagedObjectStore:objectStore];
             [mapping mapKeyPath:kKeyPathManAdjustReasonReasonCode toAttribute:kAttributeManAdjustReasonReasonCode];
@@ -351,6 +351,23 @@
     return sharedController;
 }
 
+
++(RepairMasterDataSynch *)sharedRepairMasterDataController
+{
+    static RepairMasterDataSynch *sharedController = nil;
+   
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedController = [[RepairMasterDataSynch alloc] init:kNotificationRepairMasterData objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore]];
+    });
+    
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
+}
+
+
+
+/**************** non master data transaction ******************************/
 
 +(InventoryTransactionController*) sharedInventoryTransactionController
 {

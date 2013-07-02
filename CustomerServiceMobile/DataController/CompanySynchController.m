@@ -15,7 +15,7 @@
 
 -(id)init
 {
-    if(self = [super init:kEntityCompany])
+    if(self = [super init:kEntityCompany  notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

@@ -54,7 +54,6 @@
 		345956D816B34F370048545E /* iconGreenCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 345956D716B34F370048545E /* iconGreenCheck.png */; };
 		345956DB16B726B90048545E /* ShippingRootViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345956DA16B726B90048545E /* ShippingRootViewTableViewCell.m */; };
 		345956E416B743190048545E /* ShippingSelectedListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345956E316B743190048545E /* ShippingSelectedListTableView.m */; };
-		34615B5916CEDE020069F8C0 /* ShipmentInstructionsSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34615B5816CEDE010069F8C0 /* ShipmentInstructionsSynchController.m */; };
 		34659BD916CAB4BE009B56C8 /* BinPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 34659BD816CAB4BE009B56C8 /* BinPart.m */; };
 		346650D316EE96BE0070CA49 /* SharedConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 346650D216EE96BE0070CA49 /* SharedConstants.m */; };
 		34670F62176A83910041B0DE /* CycleCountMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 34670F61176A83910041B0DE /* CycleCountMaster.m */; };
@@ -84,7 +83,6 @@
 		3474AAE41726F7B80034A318 /* CSMobile1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 3474AAE21726F7B80034A318 /* CSMobile1024.png */; };
 		3474AAEB17272CC70034A318 /* CSMobile57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3474AAE917272CC70034A318 /* CSMobile57.png */; };
 		3474AAEC17272CC70034A318 /* CSMobile512.png in Resources */ = {isa = PBXBuildFile; fileRef = 3474AAEA17272CC70034A318 /* CSMobile512.png */; };
-		347879021714B60000EF9B16 /* ApplicationDataSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347879011714B60000EF9B16 /* ApplicationDataSynchController.m */; };
 		3483F9B91637458500306DFF /* BlueBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9B81637458500306DFF /* BlueBackground.png */; };
 		3483F9BC16375A2B00306DFF /* iconRepair.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9BB16375A2B00306DFF /* iconRepair.png */; };
 		3483F9BE16375E8E00306DFF /* iconInventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9BD16375E8E00306DFF /* iconInventory.png */; };
@@ -113,13 +111,7 @@
 		3483F9FA1638B34000306DFF /* iconSubmit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F11638B34000306DFF /* iconSubmit.png */; };
 		3483F9FB1638B34000306DFF /* iconSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F21638B34000306DFF /* iconSuccess.png */; };
 		348B0FA316657A5100FD2E14 /* iconLogout.png in Resources */ = {isa = PBXBuildFile; fileRef = 348B0FA216657A5100FD2E14 /* iconLogout.png */; };
-		348B0FA6166688A000FD2E14 /* WarehouseSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B0FA5166688A000FD2E14 /* WarehouseSynchController.m */; };
-		348B0FE1166821C600FD2E14 /* CompanySynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B0FE0166821C500FD2E14 /* CompanySynchController.m */; };
-		348B0FE4166821DA00FD2E14 /* CarrierSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B0FE3166821DA00FD2E14 /* CarrierSynchController.m */; };
-		348B0FE71668227100FD2E14 /* BinPartSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B0FE61668227100FD2E14 /* BinPartSynchController.m */; };
-		348B0FEA1668229400FD2E14 /* QueriesSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B0FE91668229300FD2E14 /* QueriesSynchController.m */; };
 		349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349458E1166D545800D993E2 /* InventoryTransactionController.m */; };
-		349458EE166D695C00D993E2 /* ManAdjustReasonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349458ED166D695C00D993E2 /* ManAdjustReasonController.m */; };
 		34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34945906166E7A9B00D993E2 /* ReceivingViewController.m */; };
 		3494593E16701CB000D993E2 /* AutoCompleteDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3494593D16701CAF00D993E2 /* AutoCompleteDataHelper.m */; };
 		3499FD4216DECC92008C8526 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD4016DECC92008C8526 /* CalculatorViewController.xib */; };
@@ -176,10 +168,6 @@
 		34FA4205177A4E9900A86105 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA4204177A4E9900A86105 /* Activity.m */; };
 		34FA4208177A4E9900A86105 /* RepairStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA4207177A4E9900A86105 /* RepairStation.m */; };
 		34FA420B177A4E9900A86105 /* ActionCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA420A177A4E9900A86105 /* ActionCode.m */; };
-		34FA420F177A5E7E00A86105 /* SFActionCodeSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA420E177A5E7E00A86105 /* SFActionCodeSynchController.m */; };
-		34FA4212177A5E9B00A86105 /* SFActivitySynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA4211177A5E9B00A86105 /* SFActivitySynchController.m */; };
-		34FA4218177A5ED000A86105 /* SFRepairStationSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA4217177A5ED000A86105 /* SFRepairStationSynchController.m */; };
-		34FA421B177A5EF300A86105 /* SFStopCodeSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA421A177A5EF300A86105 /* SFStopCodeSynchController.m */; };
 		34FAC37C165AB42D007A3F01 /* SDRestKitEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FAC37B165AB42D007A3F01 /* SDRestKitEngine.m */; };
 		34FC528A16FBC4C300AE08F3 /* iconDeleteTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FC528916FBC4C300AE08F3 /* iconDeleteTable.png */; };
 		34FEACF316F926760094FD01 /* ShippingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEACF216F926760094FD01 /* ShippingList.m */; };
@@ -324,8 +312,6 @@
 		345956DA16B726B90048545E /* ShippingRootViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingRootViewTableViewCell.m; path = ViewControllers/ShippingRootViewTableViewCell.m; sourceTree = "<group>"; };
 		345956E216B743190048545E /* ShippingSelectedListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingSelectedListTableView.h; path = ViewControllers/ShippingSelectedListTableView.h; sourceTree = "<group>"; };
 		345956E316B743190048545E /* ShippingSelectedListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingSelectedListTableView.m; path = ViewControllers/ShippingSelectedListTableView.m; sourceTree = "<group>"; };
-		34615B5716CEDE010069F8C0 /* ShipmentInstructionsSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipmentInstructionsSynchController.h; path = DataController/ShipmentInstructionsSynchController.h; sourceTree = "<group>"; };
-		34615B5816CEDE010069F8C0 /* ShipmentInstructionsSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipmentInstructionsSynchController.m; path = DataController/ShipmentInstructionsSynchController.m; sourceTree = "<group>"; };
 		34659BD716CAB4BE009B56C8 /* BinPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinPart.h; path = DataModel/BinPart.h; sourceTree = "<group>"; };
 		34659BD816CAB4BE009B56C8 /* BinPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinPart.m; path = DataModel/BinPart.m; sourceTree = "<group>"; };
 		346650D216EE96BE0070CA49 /* SharedConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedConstants.m; sourceTree = "<group>"; };
@@ -365,8 +351,6 @@
 		3474AAE21726F7B80034A318 /* CSMobile1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CSMobile1024.png; sourceTree = "<group>"; };
 		3474AAE917272CC70034A318 /* CSMobile57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CSMobile57.png; sourceTree = "<group>"; };
 		3474AAEA17272CC70034A318 /* CSMobile512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CSMobile512.png; sourceTree = "<group>"; };
-		347879001714B60000EF9B16 /* ApplicationDataSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationDataSynchController.h; path = DataController/ApplicationDataSynchController.h; sourceTree = "<group>"; };
-		347879011714B60000EF9B16 /* ApplicationDataSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationDataSynchController.m; path = DataController/ApplicationDataSynchController.m; sourceTree = "<group>"; };
 		3483F9B81637458500306DFF /* BlueBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBackground.png; sourceTree = "<group>"; };
 		3483F9BB16375A2B00306DFF /* iconRepair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconRepair.png; sourceTree = "<group>"; };
 		3483F9BD16375E8E00306DFF /* iconInventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconInventory.png; sourceTree = "<group>"; };
@@ -397,21 +381,9 @@
 		3483F9F11638B34000306DFF /* iconSubmit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSubmit.png; sourceTree = "<group>"; };
 		3483F9F21638B34000306DFF /* iconSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSuccess.png; sourceTree = "<group>"; };
 		348B0FA216657A5100FD2E14 /* iconLogout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconLogout.png; sourceTree = "<group>"; };
-		348B0FA4166688A000FD2E14 /* WarehouseSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WarehouseSynchController.h; path = DataController/WarehouseSynchController.h; sourceTree = "<group>"; };
-		348B0FA5166688A000FD2E14 /* WarehouseSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WarehouseSynchController.m; path = DataController/WarehouseSynchController.m; sourceTree = "<group>"; };
-		348B0FDF166821C500FD2E14 /* CompanySynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanySynchController.h; path = DataController/CompanySynchController.h; sourceTree = "<group>"; };
-		348B0FE0166821C500FD2E14 /* CompanySynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompanySynchController.m; path = DataController/CompanySynchController.m; sourceTree = "<group>"; };
-		348B0FE2166821DA00FD2E14 /* CarrierSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarrierSynchController.h; path = DataController/CarrierSynchController.h; sourceTree = "<group>"; };
-		348B0FE3166821DA00FD2E14 /* CarrierSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarrierSynchController.m; path = DataController/CarrierSynchController.m; sourceTree = "<group>"; };
-		348B0FE51668227000FD2E14 /* BinPartSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinPartSynchController.h; path = DataController/BinPartSynchController.h; sourceTree = "<group>"; };
-		348B0FE61668227100FD2E14 /* BinPartSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinPartSynchController.m; path = DataController/BinPartSynchController.m; sourceTree = "<group>"; };
-		348B0FE81668229300FD2E14 /* QueriesSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueriesSynchController.h; path = DataController/QueriesSynchController.h; sourceTree = "<group>"; };
-		348B0FE91668229300FD2E14 /* QueriesSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueriesSynchController.m; path = DataController/QueriesSynchController.m; sourceTree = "<group>"; };
 		348B0FEB166952B400FD2E14 /* MyRestkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRestkit.h; sourceTree = "<group>"; };
 		349458E0166D545800D993E2 /* InventoryTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTransactionController.h; path = DataController/InventoryTransactionController.h; sourceTree = "<group>"; };
 		349458E1166D545800D993E2 /* InventoryTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryTransactionController.m; path = DataController/InventoryTransactionController.m; sourceTree = "<group>"; };
-		349458EC166D695C00D993E2 /* ManAdjustReasonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManAdjustReasonController.h; path = DataController/ManAdjustReasonController.h; sourceTree = "<group>"; };
-		349458ED166D695C00D993E2 /* ManAdjustReasonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManAdjustReasonController.m; path = DataController/ManAdjustReasonController.m; sourceTree = "<group>"; };
 		34945905166E7A9B00D993E2 /* ReceivingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivingViewController.h; path = ViewControllers/ReceivingViewController.h; sourceTree = "<group>"; };
 		34945906166E7A9B00D993E2 /* ReceivingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceivingViewController.m; path = ViewControllers/ReceivingViewController.m; sourceTree = "<group>"; };
 		3494593C16701CAF00D993E2 /* AutoCompleteDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoCompleteDataHelper.h; path = DataController/AutoCompleteDataHelper.h; sourceTree = "<group>"; };
@@ -508,14 +480,6 @@
 		34FA4207177A4E9900A86105 /* RepairStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairStation.m; path = DataModel/RepairStation.m; sourceTree = "<group>"; };
 		34FA4209177A4E9900A86105 /* ActionCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionCode.h; path = DataModel/ActionCode.h; sourceTree = "<group>"; };
 		34FA420A177A4E9900A86105 /* ActionCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionCode.m; path = DataModel/ActionCode.m; sourceTree = "<group>"; };
-		34FA420D177A5E7E00A86105 /* SFActionCodeSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFActionCodeSynchController.h; path = DataController/SFActionCodeSynchController.h; sourceTree = "<group>"; };
-		34FA420E177A5E7E00A86105 /* SFActionCodeSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFActionCodeSynchController.m; path = DataController/SFActionCodeSynchController.m; sourceTree = "<group>"; };
-		34FA4210177A5E9B00A86105 /* SFActivitySynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFActivitySynchController.h; path = DataController/SFActivitySynchController.h; sourceTree = "<group>"; };
-		34FA4211177A5E9B00A86105 /* SFActivitySynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFActivitySynchController.m; path = DataController/SFActivitySynchController.m; sourceTree = "<group>"; };
-		34FA4216177A5ED000A86105 /* SFRepairStationSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFRepairStationSynchController.h; path = DataController/SFRepairStationSynchController.h; sourceTree = "<group>"; };
-		34FA4217177A5ED000A86105 /* SFRepairStationSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFRepairStationSynchController.m; path = DataController/SFRepairStationSynchController.m; sourceTree = "<group>"; };
-		34FA4219177A5EF300A86105 /* SFStopCodeSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFStopCodeSynchController.h; path = DataController/SFStopCodeSynchController.h; sourceTree = "<group>"; };
-		34FA421A177A5EF300A86105 /* SFStopCodeSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFStopCodeSynchController.m; path = DataController/SFStopCodeSynchController.m; sourceTree = "<group>"; };
 		34FAC37A165AB42D007A3F01 /* SDRestKitEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRestKitEngine.h; sourceTree = "<group>"; };
 		34FAC37B165AB42D007A3F01 /* SDRestKitEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRestKitEngine.m; sourceTree = "<group>"; };
 		34FC528916FBC4C300AE08F3 /* iconDeleteTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDeleteTable.png; sourceTree = "<group>"; };
@@ -880,7 +844,6 @@
 		346FC20B162F714000600096 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				34E3005A177E095B00DFFB11 /* SynchOld */,
 				34128E3C165C035A000102F5 /* UserProfileController.h */,
 				34128E3D165C035A000102F5 /* UserProfileController.m */,
 				34670F63176BB7A80041B0DE /* ProcessResultController.h */,
@@ -1061,37 +1024,6 @@
 			name = AutoComplete;
 			sourceTree = "<group>";
 		};
-		34E3005A177E095B00DFFB11 /* SynchOld */ = {
-			isa = PBXGroup;
-			children = (
-				347879001714B60000EF9B16 /* ApplicationDataSynchController.h */,
-				347879011714B60000EF9B16 /* ApplicationDataSynchController.m */,
-				348B0FDF166821C500FD2E14 /* CompanySynchController.h */,
-				348B0FE0166821C500FD2E14 /* CompanySynchController.m */,
-				348B0FA4166688A000FD2E14 /* WarehouseSynchController.h */,
-				348B0FA5166688A000FD2E14 /* WarehouseSynchController.m */,
-				348B0FE2166821DA00FD2E14 /* CarrierSynchController.h */,
-				348B0FE3166821DA00FD2E14 /* CarrierSynchController.m */,
-				348B0FE51668227000FD2E14 /* BinPartSynchController.h */,
-				348B0FE61668227100FD2E14 /* BinPartSynchController.m */,
-				348B0FE81668229300FD2E14 /* QueriesSynchController.h */,
-				348B0FE91668229300FD2E14 /* QueriesSynchController.m */,
-				34615B5716CEDE010069F8C0 /* ShipmentInstructionsSynchController.h */,
-				34615B5816CEDE010069F8C0 /* ShipmentInstructionsSynchController.m */,
-				349458EC166D695C00D993E2 /* ManAdjustReasonController.h */,
-				349458ED166D695C00D993E2 /* ManAdjustReasonController.m */,
-				34FA420D177A5E7E00A86105 /* SFActionCodeSynchController.h */,
-				34FA420E177A5E7E00A86105 /* SFActionCodeSynchController.m */,
-				34FA4210177A5E9B00A86105 /* SFActivitySynchController.h */,
-				34FA4211177A5E9B00A86105 /* SFActivitySynchController.m */,
-				34FA4216177A5ED000A86105 /* SFRepairStationSynchController.h */,
-				34FA4217177A5ED000A86105 /* SFRepairStationSynchController.m */,
-				34FA4219177A5EF300A86105 /* SFStopCodeSynchController.h */,
-				34FA421A177A5EF300A86105 /* SFStopCodeSynchController.m */,
-			);
-			name = SynchOld;
-			sourceTree = "<group>";
-		};
 		34E3005F177E4CE000DFFB11 /* Warehouse */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,8 +1046,6 @@
 		34E30060177E4D1200DFFB11 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
-				34E30061177E4D8E00DFFB11 /* RepairMasterDataSynch.h */,
-				34E30062177E4D8E00DFFB11 /* RepairMasterDataSynch.m */,
 			);
 			name = Repair;
 			sourceTree = "<group>";
@@ -1125,6 +1055,8 @@
 			children = (
 				34AAEE2C1641E8C100EE77B4 /* SynchTableViewController.h */,
 				34AAEE2D1641E8C100EE77B4 /* SynchTableViewController.m */,
+				34E30061177E4D8E00DFFB11 /* RepairMasterDataSynch.h */,
+				34E30062177E4D8E00DFFB11 /* RepairMasterDataSynch.m */,
 			);
 			name = Synch;
 			sourceTree = "<group>";
@@ -1366,13 +1298,7 @@
 				34FAC37C165AB42D007A3F01 /* SDRestKitEngine.m in Sources */,
 				34128E3E165C035A000102F5 /* UserProfileController.m in Sources */,
 				34128E41165C0391000102F5 /* DataSynchController.m in Sources */,
-				348B0FA6166688A000FD2E14 /* WarehouseSynchController.m in Sources */,
-				348B0FE1166821C600FD2E14 /* CompanySynchController.m in Sources */,
-				348B0FE4166821DA00FD2E14 /* CarrierSynchController.m in Sources */,
-				348B0FE71668227100FD2E14 /* BinPartSynchController.m in Sources */,
-				348B0FEA1668229400FD2E14 /* QueriesSynchController.m in Sources */,
 				349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */,
-				349458EE166D695C00D993E2 /* ManAdjustReasonController.m in Sources */,
 				34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */,
 				3494593E16701CB000D993E2 /* AutoCompleteDataHelper.m in Sources */,
 				34358F0216711BD2001DC5B3 /* AutoCompleteController.m in Sources */,
@@ -1414,7 +1340,6 @@
 				3405EDB916CB17CC0036DA76 /* RPInformationViewController.m in Sources */,
 				3405EDBC16CB19450036DA76 /* RPInformation.m in Sources */,
 				346B67D516CC427100554B10 /* RPInformationController.m in Sources */,
-				34615B5916CEDE020069F8C0 /* ShipmentInstructionsSynchController.m in Sources */,
 				342E80DB16DBE4FE0009A16A /* InventoryLineItem.m in Sources */,
 				342E80E216DBE4FE0009A16A /* InventoryHeader.m in Sources */,
 				34E5B3BC16E06050004849F9 /* CalculatorViewController.m in Sources */,
@@ -1423,7 +1348,6 @@
 				34FEACF616F926770094FD01 /* ShipmentInstructions.m in Sources */,
 				34FEACF916F926770094FD01 /* ShippingLineItem.m in Sources */,
 				34FEACFC16F926770094FD01 /* ShippingHeader.m in Sources */,
-				347879021714B60000EF9B16 /* ApplicationDataSynchController.m in Sources */,
 				34364B5B1714DCF1004950AE /* ApplicationData.m in Sources */,
 				34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */,
 				34C5CA01176A3CA400AA1904 /* ProcessResult.m in Sources */,
@@ -1433,10 +1357,6 @@
 				34FA4205177A4E9900A86105 /* Activity.m in Sources */,
 				34FA4208177A4E9900A86105 /* RepairStation.m in Sources */,
 				34FA420B177A4E9900A86105 /* ActionCode.m in Sources */,
-				34FA420F177A5E7E00A86105 /* SFActionCodeSynchController.m in Sources */,
-				34FA4212177A5E9B00A86105 /* SFActivitySynchController.m in Sources */,
-				34FA4218177A5ED000A86105 /* SFRepairStationSynchController.m in Sources */,
-				34FA421B177A5EF300A86105 /* SFStopCodeSynchController.m in Sources */,
 				3455B5B7177B57750034C843 /* CoreDataSynch.m in Sources */,
 				34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */,
 			);

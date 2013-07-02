@@ -147,13 +147,13 @@ BOOL _isPickerShow;
 - (IBAction)btnBin:(id)sender {
     [self hideKeyBoard];
     NSString* bpart_id = self.txtProduct.text;
-    if(nil==bpart_id||[bpart_id isEqualToString:@""])
-    {
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bin Search Failure" message:kMessageReceivingBinSearchFailure delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        return;
-    }
+//    if(nil==bpart_id||[bpart_id isEqualToString:@""])
+//    {
+//        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bin Search Failure" message:kMessageReceivingBinSearchFailure delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alert show];
+//        return;
+//    }
     AutoCompleteDataHelper* helper = [[AutoCompleteDataHelper alloc] initWithEntityName:kEntityBinPart                           withDisplayBlock:^(id object){
             BinPart* binPart = (BinPart*)object;
             NSString* display = [NSString stringWithFormat:kBinPartDisplayTemplate, [binPart  bin_code_id], [binPart qty], [binPart inv_type_id]];
@@ -168,9 +168,10 @@ BOOL _isPickerShow;
                                           [self dismissViewControllerAnimated:YES completion:nil];
                                       }
                                       ];
+    
     //helper.template=@"bpart_id=%@";
     //helper.value = bpart_id;
-    [helper setPredicateWithTemplate:@"bpart_id=%@" value:bpart_id];
+    [helper setPredicateWithTemplate:@"(bpart_id=%@) OR (bpart_id='all')" value:bpart_id];
     [helper addSortDescript:kSortAttributeBinPart ascending:YES];
     
     // self.modalPresentationStyle = UIModalPresentationFormSheet;

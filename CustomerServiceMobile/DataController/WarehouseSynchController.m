@@ -14,7 +14,7 @@
 @synthesize warehouses=_warehouses;
 -(id)init
 {
-    if(self = [super init:kEntityWarehouse])
+    if(self = [super init:kEntityWarehouse notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

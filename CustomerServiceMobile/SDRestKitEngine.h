@@ -2,21 +2,24 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 #import "CoreDataSynch.h"
-#import "ApplicationDataSynchController.h"
-#import "UserProfileController.h"
-#import "WarehouseSynchController.h"
-#import "CompanySynchController.h"
-#import "CarrierSynchController.h"
-#import "BinPartSynchController.h"
-#import "QueriesSynchController.h"
-#import "ManAdjustReasonController.h"
+//#import "ApplicationDataSynchController.h"
+//#import "WarehouseSynchController.h"
+//#import "CompanySynchController.h"
+//#import "CarrierSynchController.h"
+//#import "BinPartSynchController.h"
+//#import "QueriesSynchController.h"
+//#import "ManAdjustReasonController.h"
+//#import "ShipmentInstructionsSynchController.h"
+#import "RepairMasterDataSynch.h"
+
 #import "InventoryTransactionController.h"
+#import "UserProfileController.h"
 #import "CycleCountMasterController.h"
 #import "CycleCountController.h"
 #import "ShippingListSynchController.h"
 #import "ShippingTransactionController.h"
 #import "RPInformationController.h"
-#import "ShipmentInstructionsSynchController.h"
+
 #import "ProcessResultController.h"
 
 @interface SDRestKitEngine : NSObject
@@ -46,6 +49,7 @@
 //+(ManAdjustReasonController *) sharedReasonController;
 +(CoreDataSynch *) sharedReasonController;
 
++(RepairMasterDataSynch *) sharedRepairMasterDataController;
 
 +(InventoryTransactionController*) sharedInventoryTransactionController;
 +(InventoryTransactionController*) sharedMISCInventoryTransactionController;

@@ -12,7 +12,6 @@
 @synthesize objectStore=_objectStore;
 @synthesize baseURL=_baseURL;
 @synthesize rootKeyPath=_rootKeyPath;
-@synthesize notificationName=_notificationName;
 @synthesize notificationMessageBlock=_notificationMessageBlock;
 @synthesize result=_result;
 @synthesize isASynch=_isASynch;
@@ -20,15 +19,14 @@
 DataSynchEntityMappingBlock _mapBlock;
 
 
--(id)init:(RKManagedObjectStore*) objectStore baseURL:(NSString*)baseURL rootKeyPath:(NSString*)rootKeyPath notificationName:(NSString*)notificationName  mapBlock:(DataSynchEntityMappingBlock)mapBlock fetchBlock:(RKObjectMappingProviderFetchRequestBlock)fetchRequestBlock
+-(id)init:(NSString*)controllerName objectStore:(RKManagedObjectStore*) objectStore baseURL:(NSString*)baseURL rootKeyPath:(NSString*)rootKeyPath notificationName:(NSString*)notificationName  mapBlock:(DataSynchEntityMappingBlock)mapBlock fetchBlock:(RKObjectMappingProviderFetchRequestBlock)fetchRequestBlock
 {
-    if(self = [super init:@"CoreDataSynch"])
+    if(self = [super init:controllerName notificationName:notificationName])
     {
         _isASynch = YES;
         _objectStore = objectStore;
         _baseURL = baseURL;
         _rootKeyPath = rootKeyPath;
-        _notificationName = notificationName;
         _mapBlock = mapBlock;
         
         //register the mapping provider
@@ -44,7 +42,7 @@ DataSynchEntityMappingBlock _mapBlock;
     if(_isASynch)
     {
         //notify synch finished
-        [self notify:_notificationName status:self.status message:self.message object:nil];
+        [super notify:self.notificationName status:self.status message:self.message object:nil];
     }
 }
 
@@ -61,17 +59,13 @@ DataSynchEntityMappingBlock _mapBlock;
         }
         else
         {
-            NSUInteger count = 0;
-            if ([objects isKindOfClass:[NSArray class]]) {
-                count = [(NSDictionary*)objects count];
-            }
-           
-            self.message = [NSString stringWithFormat:kCoreDataSynchNotificationRecordTemplate, count];
+            NSUInteger count = [objects count];
+            self.message = [NSString stringWithFormat:kCoreDataSynchNotificationRecordTemplate,self.controllerName, count];
         }
         if(_isASynch)
         {
         //notify synch finished
-        [self notify:_notificationName status:self.status message:self.message object:objects];
+        [self notify:super.notificationName status:self.status message:self.message object:objects];
         }
         [self saveRKCache];
         
@@ -98,6 +92,7 @@ DataSynchEntityMappingBlock _mapBlock;
         [loader send];
     }
     else{
+        
        [loader sendSynchronously];
     }
 
@@ -110,41 +105,6 @@ DataSynchEntityMappingBlock _mapBlock;
     self.objectManager.objectStore = _objectStore;
     return _mapBlock(_objectStore);
 }
-
-
-#pragma mark - Notification
-
--(void)notify:(NSString*) notificationName status:(NSNumber*) status message:(NSString*) message object:(id) object
-{
-    
-    if(notificationName!=nil)
-    {
-        
-        NSDictionary *userInfo = [NSDictionary dictionaryWithKeysAndObjects:kCoreDataSynchNotificationStatusKey,status,kCoreDataSynchNotificationMessageKey, message, nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:object userInfo:userInfo];
-    }
-}
-
-
--(void)addNotificationObserver:(id) observer selector:(SEL)selector
-{
-    if(nil!=observer)
-    {
-        [self removeNotificationObserver:observer notificationName:_notificationName];
-        [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:_notificationName object:nil];
-    }
-    
-    
-}
--(void)removeNotificationObserver:(id) observer notificationName:(NSString*)notificationName
-{
-    
-    if(nil!=observer)
-    {
-        [[NSNotificationCenter defaultCenter] removeObserver:observer name:notificationName object:nil];
-    }
-}
-
 
 -(void)saveRKCache
 {

@@ -9,7 +9,7 @@
 
 -(id)init
 {
-    if(self = [super init:kEntityCycleCountMaster])
+    if(self = [super init:kEntityCycleCountMaster notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

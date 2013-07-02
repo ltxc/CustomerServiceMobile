@@ -10,7 +10,7 @@
 @synthesize reasons=_reasons;
 -(id)init
 {
-    if(self = [super init:kEntityManAdjustReason])
+    if(self = [super init:kEntityManAdjustReason notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

@@ -6,8 +6,6 @@
 #import "Warehouse.h"
 #import "ApplicationData.h"
 #import "SDDataEngine.h"
-#import "WarehouseSynchController.h"
-#import "ApplicationDataSynchController.h"
 #import "SDRestKitEngine.h"
 
 @interface DetailViewController ()
@@ -370,18 +368,23 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 
 -(void) synchWarehouse
 {
-    WarehouseSynchController* controller = [SDRestKitEngine sharedWarehouseController];
+
+    CoreDataSynch* controller = [SDRestKitEngine sharedWarehouseController];
     if(!_synchInProgressWarehouse)
     {
         _synchInProgressWarehouse = YES;
-        //add observer
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
         [self.activity_SynchWarehouse startAnimating];
+        //add observer
+        [controller addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+                return [kUrlBaseWarehouse appendQueryParams:dictionary];
+            }];
         });
     }
-    
+
 }
 
 -(void) synchNotifiedWarehouse:(NSNotification *)notification
@@ -396,16 +399,22 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 //only called when the landscape has been changed.
 -(void) synchApplicationData
 {
-    ApplicationDataSynchController* controller = [SDRestKitEngine sharedApplicationDataController];
-    if (!_synchInProgressApplicationData) {
+    
+    CoreDataSynch* controller = [SDRestKitEngine sharedApplicationDataController];
+    if(!_synchInProgressApplicationData)
+    {
         _synchInProgressApplicationData = YES;
-        [[SDRestKitEngine sharedEngine] addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
         [self.activity_SynchApplicationData startAnimating];
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load];
-        });
+        //add observer
+        [controller addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
         
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [controller load:^(NSString* baseUrl){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+                return [kUrlBaseApplicationData appendQueryParams:dictionary];
+            }];
+        });
     }
     
 }

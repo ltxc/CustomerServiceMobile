@@ -54,6 +54,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblStatus_SynchShipmentInstructions;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_SynchShipmentInstructions;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblLastUpdated_SynchRepairMasterData;
+@property (weak, nonatomic) IBOutlet UITextView *lblStatus_SynchRepairMasterData;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity_SynchRepairMasterData;
 
 -(IBAction) synchAll:(id)sender;
 - (IBAction)resetAll:(id)sender;
@@ -65,6 +68,7 @@
 - (IBAction)synchReason:(id)sender;
 - (IBAction)synchReports:(id)sender;
 - (IBAction)synchShipmentInstructions:(id)sender;
+- (IBAction)synchRepairMasterData:(id)sender;
 
 
 - (IBAction)clearLocalDatabase:(id)sender;

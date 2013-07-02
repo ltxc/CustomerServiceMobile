@@ -7,11 +7,6 @@
 #import "SynchTableViewController.h"
 #import "SDUserPreference.h"
 #import "SharedConstants.h"
-#import "WarehouseSynchController.h"
-#import "CompanySynchController.h"
-#import "CarrierSynchController.h"
-#import "BinPartSynchController.h"
-#import "QueriesSynchController.h"
 #import "ManAdjustReason.h"
 #import "Queries.h"
 #import "SDRestKitEngine.h"
@@ -29,13 +24,14 @@ BOOL _synchInProgressQueries;
 BOOL _synchInProgressReason;
 BOOL _synchInProgressReports;
 BOOL _synchInProgressShipmentInstructions;
+BOOL _synchInProcessRepairMasterData;
 
 @implementation SynchTableViewController
 @synthesize lblLastUpdate_SynchApplicationData, lblLastUpdated_SynchBin,lblLastUpdated_SynchCarrier,lblLastUpdated_SynchCompany,
-lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchReports;
-@synthesize lblStatus_SynchApplicationData,lblStatus_SynchBin,lblStatus_SynchCarrier,lblStatus_SynchCompany,lblStatus_SynchWarehouse,lblStatus_SynchReason, lblStatus_SynchReports,lblLastUpdated_SynchShipmentInstructions,lblStatus_SynchShipmentInstructions;
+lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchReports,lblLastUpdated_SynchRepairMasterData;
+@synthesize lblStatus_SynchApplicationData,lblStatus_SynchBin,lblStatus_SynchCarrier,lblStatus_SynchCompany,lblStatus_SynchWarehouse,lblStatus_SynchReason, lblStatus_SynchReports,lblLastUpdated_SynchShipmentInstructions,lblStatus_SynchShipmentInstructions, lblStatus_SynchRepairMasterData;
 @synthesize dateFormatter;
-@synthesize activity_synchApplicationData, activity_SynchBin,activity_SynchCarrier,activity_SynchCompany,activity_SynchWarehouse,activity_SynchReason, activity_SynchReports,activity_SynchShipmentInstructions;
+@synthesize activity_synchApplicationData, activity_SynchBin,activity_SynchCarrier,activity_SynchCompany,activity_SynchWarehouse,activity_SynchReason, activity_SynchReports,activity_SynchShipmentInstructions, activity_SynchRepairMasterData;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -75,6 +71,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     lblLastUpdated_SynchReason.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchReason]] ;
     lblLastUpdated_SynchReports.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchReports]] ;
     lblLastUpdated_SynchShipmentInstructions.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchShipmentInstructions]] ;
+    lblLastUpdated_SynchRepairMasterData.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchRepairMasterData]];
     //last update status
     
 }
@@ -89,6 +86,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [SDUserPreference sharedUserPreference].LastSynchReason = [NSDate distantPast];
     [SDUserPreference sharedUserPreference].LastSynchReports = [NSDate distantPast];
     [SDUserPreference sharedUserPreference].LastSynchShipmentInstructions = [NSDate distantPast];
+    [SDUserPreference sharedUserPreference].LastSynchRepairMasterData = [NSDate distantPast];
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,7 +140,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_synchApplicationData startAnimating];
         [lblStatus_SynchApplicationData setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedApplicationData:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -192,7 +190,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchCompany startAnimating];
         [lblStatus_SynchCompany setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedCompany:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameCompany selector:@selector(synchNotifiedCompany:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -243,7 +241,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchCarrier startAnimating];
         [lblStatus_SynchCarrier setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedCarrier:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameCarrier selector:@selector(synchNotifiedCarrier:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -289,7 +287,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchWarehouse startAnimating];
         [lblStatus_SynchWarehouse setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedWarehouse:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -340,7 +338,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchBin startAnimating];
         [lblStatus_SynchBin setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedBin:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameBinPart selector:@selector(synchNotifiedBin:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -394,7 +392,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchReason startAnimating];
         [lblStatus_SynchReason setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedReason:)];
+        [controller addNotificationObserver:self notificationName:kNotificationNameManAdjustReason selector:@selector(synchNotifiedReason:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -447,7 +445,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchReports startAnimating];
         [lblStatus_SynchReports setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedReports:)];
+        [controller addNotificationObserver:self notificationName:kNotificationReports selector:@selector(synchNotifiedReports:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -500,7 +498,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
         [activity_SynchShipmentInstructions startAnimating];
         [lblStatus_SynchShipmentInstructions setText:@""];
         //add observer
-        [controller addNotificationObserver:self selector:@selector(synchNotifiedShipmentInstructions:)];
+        [controller addNotificationObserver:self notificationName:kNotificationShipmentInstructions  selector:@selector(synchNotifiedShipmentInstructions:)];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             [controller load:^(NSString* baseUrl){
@@ -524,6 +522,44 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [self setDataFromUserDefault:self.dateFormatter];
     //remove observer
     [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
+}
+
+
+- (IBAction)synchRepairMasterData:(id)sender {
+    
+    [self synchApplicationData:sender];
+    [self synchWarehouse:sender];
+    [self synchReports:sender];
+    sleep(1);
+    //synch the master data of repair
+    RepairMasterDataSynch* controller = [SDRestKitEngine sharedRepairMasterDataController];
+    if (!_synchInProcessRepairMasterData) {
+        _synchInProcessRepairMasterData = YES;
+        //[activity_SynchRepairMasterData startAnimating];
+        [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:activity_SynchRepairMasterData];
+        sleep(1);
+        [lblStatus_SynchRepairMasterData setText:@""];        
+        //add observer
+        [controller addNotificationObserver:self notificationName:kNotificationRepairMasterData  selector:@selector(synchNotifiedRepairMasterData:)];
+//Restful requires the synch run in the main thread. RepairMasterDataSynch has already forked the extra threads.
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [controller load];
+//        });
+        [controller load];
+    }
+    
+}
+
+-(void)synchNotifiedRepairMasterData:(NSNotification *)notification
+{
+    NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:@"Repair Master Data"];
+    [lblStatus_SynchRepairMasterData setText:info];
+    _synchInProcessRepairMasterData= NO;
+    [activity_SynchRepairMasterData stopAnimating];
+    [SDUserPreference sharedUserPreference].LastSynchRepairMasterData = [NSDate date];
+    [self setDataFromUserDefault:self.dateFormatter];
+    //remove observer
+    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationRepairMasterData];
 }
 
 

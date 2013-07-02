@@ -15,7 +15,7 @@ ProcessResult* _processResult;
 
 -(id)init
 {
-    if(self = [super init:kEntityProcessResult])
+    if(self = [super init:kEntityProcessResult  notificationName:nil])
     {
         //register the mapping provider
         RKManagedObjectMapping* mapping = [self entityMapping];

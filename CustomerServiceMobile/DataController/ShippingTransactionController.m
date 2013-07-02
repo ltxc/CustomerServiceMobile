@@ -15,7 +15,7 @@ ShippingHeader* _shippingHeader;
 BOOL _isOK;
 -(id)init
 {
-    if(self = [super init:@"CycleCount"])
+    if(self = [super init:@"CycleCount" notificationName:nil])
     {
         [self.objectManager.router routeClass:[ShippingTransactionProxy class] toResourcePath:kUrlBaseShippingTransaction forMethod:RKRequestMethodPOST];
         
