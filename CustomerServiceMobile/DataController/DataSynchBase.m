@@ -2,11 +2,11 @@
 //  DataController.m
 //  CustomerServiceMobile
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "SDUserPreference.h"
 #import "SharedConstants.h"
 
-@implementation DataSynchController
+@implementation DataSynchBase
 @synthesize objectManager=_objectManager;
 @synthesize controllerName=_controllerName;
 @synthesize status=_status;

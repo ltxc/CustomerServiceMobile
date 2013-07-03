@@ -1,7 +1,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 
 
 #pragma mark - Protocol

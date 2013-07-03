@@ -14,7 +14,11 @@
 #define kCoreDataSynchNotificationRecordTemplate @"%@: %d records received..."
 #define kCoreDataSynchNotificationFailedTemplate @"Server may not be reachable. Detail:%@"
 
-@interface DataSynchController : NSObject <RKObjectLoaderDelegate>
+typedef RKManagedObjectMapping*(^DataSynchEntityMappingBlock)(RKManagedObjectStore*);
+typedef NSString*(^DataSynchResourcePathBlock)(NSString* baseUrl);
+typedef NSString*(^DataSynchNotificationMessageBlock)(id objects);
+
+@interface DataSynchBase : NSObject <RKObjectLoaderDelegate>
 @property (strong,atomic) RKObjectManager* objectManager;
 @property (strong,atomic) NSString* controllerName;
 @property (atomic) NSNumber* status;

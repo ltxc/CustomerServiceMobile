@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "InventoryHeader.h"
 #import "ProcessResult.h"
-@interface InventoryTransactionController : DataSynchController
+@interface InventoryTransactionController : DataSynchBase
 @property (nonatomic) BOOL isMISC;
 -(id)init:(BOOL)isMISC;
 -(BOOL)post:(InventoryHeader*)inventoryHeader;

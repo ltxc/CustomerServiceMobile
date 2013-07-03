@@ -7,9 +7,9 @@
 //
 
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 
-@interface RepairMasterDataSynch : DataSynchController
+@interface RepairMasterDataSynch : DataSynchBase
 @property (strong,nonatomic) NSString* notificationName;
 @property (strong,nonatomic) RKManagedObjectStore* objectStore;
 @property (strong,nonatomic) NSArray* coreDataSynchObjects;

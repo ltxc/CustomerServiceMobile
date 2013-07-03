@@ -18,7 +18,7 @@
 		340B438E167589DA00524E9F /* CompanyProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 340B438D167589DA00524E9F /* CompanyProxy.m */; };
 		34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 34112A6E171CA29000B4A915 /* CycleCountCount.m */; };
 		34128E3E165C035A000102F5 /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34128E3D165C035A000102F5 /* UserProfileController.m */; };
-		34128E41165C0391000102F5 /* DataSynchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34128E40165C0391000102F5 /* DataSynchController.m */; };
+		34128E41165C0391000102F5 /* DataSynchBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 34128E40165C0391000102F5 /* DataSynchBase.m */; };
 		342E80DB16DBE4FE0009A16A /* InventoryLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */; };
 		342E80E216DBE4FE0009A16A /* InventoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 342E80E116DBE4FE0009A16A /* InventoryHeader.m */; };
 		3433A39316E7C38400BB5DD2 /* iconPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3433A39216E7C38400BB5DD2 /* iconPicker.png */; };
@@ -160,6 +160,7 @@
 		34D49BC416C034CB00560EE8 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D49BC316C034CB00560EE8 /* Company.m */; };
 		34D49BC716C034CB00560EE8 /* Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D49BC616C034CB00560EE8 /* Queries.m */; };
 		34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30062177E4D8E00DFFB11 /* RepairMasterDataSynch.m */; };
+		34E3134E1784D22000EBC961 /* CoreDataPostSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E3134D1784D22000EBC961 /* CoreDataPostSynch.m */; };
 		34E5B3BC16E06050004849F9 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E5B3BB16E06050004849F9 /* CalculatorViewController.m */; };
 		34F70D1916FB601E004EBA8E /* iconHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F70D1816FB601E004EBA8E /* iconHome.png */; };
 		34F9E86E16726A34003203EC /* ReceivingLineItemCellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F9E86D16726A34003203EC /* ReceivingLineItemCellViewCell.m */; };
@@ -264,8 +265,8 @@
 		34112A6E171CA29000B4A915 /* CycleCountCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleCountCount.m; path = DataModel/CycleCountCount.m; sourceTree = "<group>"; };
 		34128E3C165C035A000102F5 /* UserProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileController.h; path = DataController/UserProfileController.h; sourceTree = "<group>"; };
 		34128E3D165C035A000102F5 /* UserProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileController.m; path = DataController/UserProfileController.m; sourceTree = "<group>"; };
-		34128E3F165C0391000102F5 /* DataSynchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSynchController.h; path = DataController/DataSynchController.h; sourceTree = "<group>"; };
-		34128E40165C0391000102F5 /* DataSynchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSynchController.m; path = DataController/DataSynchController.m; sourceTree = "<group>"; };
+		34128E3F165C0391000102F5 /* DataSynchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSynchBase.h; path = DataController/DataSynchBase.h; sourceTree = "<group>"; };
+		34128E40165C0391000102F5 /* DataSynchBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSynchBase.m; path = DataController/DataSynchBase.m; sourceTree = "<group>"; };
 		342E80D916DBE4FE0009A16A /* InventoryLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryLineItem.h; path = DataModel/InventoryLineItem.h; sourceTree = "<group>"; };
 		342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryLineItem.m; path = DataModel/InventoryLineItem.m; sourceTree = "<group>"; };
 		342E80E016DBE4FE0009A16A /* InventoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryHeader.h; path = DataModel/InventoryHeader.h; sourceTree = "<group>"; };
@@ -463,6 +464,8 @@
 		34D49BC616C034CB00560EE8 /* Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queries.m; path = DataModel/Queries.m; sourceTree = "<group>"; };
 		34E30061177E4D8E00DFFB11 /* RepairMasterDataSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairMasterDataSynch.h; path = DataController/RepairMasterDataSynch.h; sourceTree = "<group>"; };
 		34E30062177E4D8E00DFFB11 /* RepairMasterDataSynch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairMasterDataSynch.m; path = DataController/RepairMasterDataSynch.m; sourceTree = "<group>"; };
+		34E3134C1784D22000EBC961 /* CoreDataPostSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataPostSynch.h; path = DataController/CoreDataPostSynch.h; sourceTree = "<group>"; };
+		34E3134D1784D22000EBC961 /* CoreDataPostSynch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataPostSynch.m; path = DataController/CoreDataPostSynch.m; sourceTree = "<group>"; };
 		34E5B3BA16E06050004849F9 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculatorViewController.h; path = ViewControllers/CalculatorViewController.h; sourceTree = "<group>"; };
 		34E5B3BB16E06050004849F9 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorViewController.m; path = ViewControllers/CalculatorViewController.m; sourceTree = "<group>"; };
 		34F3740F163714A700FF372F /* SharedConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedConstants.h; path = ../SharedConstants.h; sourceTree = "<group>"; };
@@ -563,10 +566,14 @@
 		3455B5B0177B57160034C843 /* CoreDataSynch */ = {
 			isa = PBXGroup;
 			children = (
-				34128E3F165C0391000102F5 /* DataSynchController.h */,
-				34128E40165C0391000102F5 /* DataSynchController.m */,
+				34128E3F165C0391000102F5 /* DataSynchBase.h */,
+				34128E40165C0391000102F5 /* DataSynchBase.m */,
 				3455B5B5177B57750034C843 /* CoreDataSynch.h */,
 				3455B5B6177B57750034C843 /* CoreDataSynch.m */,
+				34C5C9FF176A3CA400AA1904 /* ProcessResult.h */,
+				34C5CA00176A3CA400AA1904 /* ProcessResult.m */,
+				34E3134C1784D22000EBC961 /* CoreDataPostSynch.h */,
+				34E3134D1784D22000EBC961 /* CoreDataPostSynch.m */,
 			);
 			name = CoreDataSynch;
 			sourceTree = "<group>";
@@ -574,8 +581,6 @@
 		34663E4816433555006CDDE7 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				34C5C9FF176A3CA400AA1904 /* ProcessResult.h */,
-				34C5CA00176A3CA400AA1904 /* ProcessResult.m */,
 				346FC1DA162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld */,
 				3494593F1670209C00D993E2 /* MyEntities.h */,
 				34D49BA716C034CA00560EE8 /* Warehouse.h */,
@@ -1297,7 +1302,7 @@
 				343CA21C165173E900D47121 /* SDDataEngine.m in Sources */,
 				34FAC37C165AB42D007A3F01 /* SDRestKitEngine.m in Sources */,
 				34128E3E165C035A000102F5 /* UserProfileController.m in Sources */,
-				34128E41165C0391000102F5 /* DataSynchController.m in Sources */,
+				34128E41165C0391000102F5 /* DataSynchBase.m in Sources */,
 				349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */,
 				34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */,
 				3494593E16701CB000D993E2 /* AutoCompleteDataHelper.m in Sources */,
@@ -1359,6 +1364,7 @@
 				34FA420B177A4E9900A86105 /* ActionCode.m in Sources */,
 				3455B5B7177B57750034C843 /* CoreDataSynch.m in Sources */,
 				34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */,
+				34E3134E1784D22000EBC961 /* CoreDataPostSynch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,9 +4,9 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "CycleCountMaster.h"
-@interface CycleCountController : DataSynchController
+@interface CycleCountController : DataSynchBase
 @property (nonatomic) BOOL isBinCount;
 -(BOOL)post:(CycleCountMaster*)cycleCountMaster;
 -(RKObjectMapping *) cycleCountMapping;

@@ -3,9 +3,9 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "ShippingHeader.h"
-@interface ShippingTransactionController : DataSynchController
+@interface ShippingTransactionController : DataSynchBase
 @property (nonatomic) BOOL isPart;
 -(BOOL)post:(ShippingHeader*)shippingHeader;
 -(RKObjectMapping *) shippingMapping;

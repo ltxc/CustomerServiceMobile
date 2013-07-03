@@ -3,9 +3,9 @@
 //  Created by Jinsong Lu on 6/25/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 
-@interface ShippingListSynchController : DataSynchController
+@interface ShippingListSynchController : DataSynchBase
 @property (weak,readonly, nonatomic) NSArray* shippingLists;
 -(id)init;
 -(NSInteger)load;

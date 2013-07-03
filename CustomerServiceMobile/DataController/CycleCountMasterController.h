@@ -3,9 +3,9 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 
-@interface CycleCountMasterController : DataSynchController
+@interface CycleCountMasterController : DataSynchBase
 @property (weak,readonly, nonatomic) NSArray* cycleCountMasters;
 -(id)init;
 -(void)load;

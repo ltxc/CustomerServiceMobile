@@ -6,16 +6,13 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 
-
-
-
-typedef RKManagedObjectMapping*(^DataSynchEntityMappingBlock)(RKManagedObjectStore*);
-typedef NSString*(^DataSynchResourcePathBlock)(NSString* baseUrl);
-typedef NSString*(^DataSynchNotificationMessageBlock)(id objects);
-
-@interface CoreDataSynch : DataSynchController<RKObjectLoaderDelegate>
+/**
+ * CoreDataSynch is used to synch by calling a simple get http call.
+ * 
+ */
+@interface CoreDataSynch : DataSynchBase<RKObjectLoaderDelegate>
 @property (weak,readonly, nonatomic) id result;
 @property (nonatomic)BOOL isASynch;
 @property (strong,nonatomic) NSString* entityName;

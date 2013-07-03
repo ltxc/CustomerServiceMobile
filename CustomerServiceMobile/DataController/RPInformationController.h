@@ -3,9 +3,9 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "RPInformation.h"
-@interface RPInformationController : DataSynchController
+@interface RPInformationController : DataSynchBase
 -(id)init;
 
 -(RPInformation *)query:(NSString*)request_id;

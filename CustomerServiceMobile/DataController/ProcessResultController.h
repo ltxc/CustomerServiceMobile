@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import "ProcessResult.h"
 
-@interface ProcessResultController : DataSynchController<RKObjectLoaderDelegate>
+@interface ProcessResultController : DataSynchBase<RKObjectLoaderDelegate>
 
 -(id)init;
 -(ProcessResult*)query:(NSString*)ipad_id type:(NSString*)type;

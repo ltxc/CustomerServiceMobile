@@ -7,10 +7,10 @@
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "DataSynchController.h"
+#import "DataSynchBase.h"
 #import <RestKit/RestKit.h>
 #import "UserProfile.h"
-@interface UserProfileController : DataSynchController<RKObjectLoaderDelegate>
+@interface UserProfileController : DataSynchBase<RKObjectLoaderDelegate>
 @property (strong, atomic) UserProfile* userProfile;
 -(id)init;
 //-(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error;
