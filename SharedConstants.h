@@ -84,6 +84,16 @@ enum ShippingTypeEnum:NSInteger
     };
 extern NSString *const FormatShippingTypeName[ShippingTypeCount];
     
+//Title
+#define kTitleRepairStation @"Station"
+#define kTitleRepairAssignment @"Assign Board"
+#define kTitleRepairSearch @"Search"
+#define kTitleRepairMyList @"My List"
+    
+    
+//Icons
+#define kIconRepairStation @"iconStation.png"
+#define kIconRepairAssignment @"iconAssignment.png"
     
 //Menu Item
 #define kMenuSpace @""

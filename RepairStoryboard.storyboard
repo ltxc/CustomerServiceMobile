@@ -28,7 +28,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLo-l1-j5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3190" y="-2532"/>
+            <point key="canvasLocation" x="2790" y="-2592"/>
         </scene>
         <!--Table View Controller - Search-->
         <scene sceneID="R0B-lZ-OeW">
@@ -94,7 +94,7 @@
             <objects>
                 <tabBarController title="Repair" modalTransitionStyle="partialCurl" id="APg-2I-54Y" customClass="RepairTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="k0e-wM-XSP">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

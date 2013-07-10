@@ -1,25 +1,24 @@
 //
-//  RepairAssignmentNavController.m
+//  RepairStationViewController.m
 //  CustomerServiceMobile
 //
-//  Created by Jinsong Lu on 7/9/13.
+//  Created by Jinsong Lu on 7/10/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
-#import "RepairAssignmentNavController.h"
+#import "RepairStationViewController.h"
 
-@interface RepairAssignmentNavController ()
+@interface RepairStationViewController ()
 
 @end
 
-@implementation RepairAssignmentNavController
+@implementation RepairStationViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        UITabBarItem * item = [[UITabBarItem alloc] initWithTitle:@"Assign Board" image:[UIImage imageNamed:@"iconAssignment.png"] tag:4];
-        self.tabBarItem = item;
+        // Custom initialization
     }
     return self;
 }

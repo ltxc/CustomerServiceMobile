@@ -111,6 +111,7 @@
             if ([self.message length]==0) {
                 self.message = coreDataSynch.message;
             }
+            else
             {
                 self.message = [NSString stringWithFormat:template,self.message,coreDataSynch.message];
             }

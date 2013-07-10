@@ -125,7 +125,6 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 }
 
 #pragma mark - Split view
-
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
     barButtonItem.title = NSLocalizedString(@"Menu", @"Menu");
