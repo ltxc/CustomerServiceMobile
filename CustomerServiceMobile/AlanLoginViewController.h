@@ -4,11 +4,11 @@
 //
 //  Created by LTXC on 10/18/12.
 //  Copyright (c) 2012 LTXC. All rights reserved.
-//
+//  Alan Lee
 
 #import <UIKit/UIKit.h>
 @class AppDelegate;
-@interface LoginViewController : UIViewController <UITextFieldDelegate>
+@interface AlanLoginViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, assign) AppDelegate *myAppDelegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;

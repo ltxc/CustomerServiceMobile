@@ -7,14 +7,14 @@
 
 
 
-@class LoginViewController;
+@class AlanLoginViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 
 @property (readonly, strong, nonatomic) UISplitViewController* rootViewController;
-@property (readonly, strong, nonatomic) LoginViewController* loginViewController;
+@property (readonly, strong, nonatomic) AlanLoginViewController* loginViewController;
 @property (nonatomic) BOOL isLogin;
 @property (strong, nonatomic) UIAlertView *alert;
 - (void)saveContext;
