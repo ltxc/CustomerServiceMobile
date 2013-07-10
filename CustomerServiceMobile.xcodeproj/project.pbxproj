@@ -123,8 +123,8 @@
 		3499FD5416DEDE94008C8526 /* iconBGBrown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD5316DEDE94008C8526 /* iconBGBrown.jpg */; };
 		3499FD5616DEDF9A008C8526 /* iconBGDarkBlue.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD5516DEDF9A008C8526 /* iconBGDarkBlue.jpeg */; };
 		349B7F1516B1E8D300D99BE3 /* iconChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 349B7F1416B1E8D300D99BE3 /* iconChecked.png */; };
-		34A9413316307AAC0095FD66 /* AlanLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A9413216307AAC0095FD66 /* AlanLoginViewController.m */; };
-		34A9418F1630A3840095FD66 /* AlanLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A9418E1630A3840095FD66 /* AlanLoginViewController.xib */; };
+		34A9413316307AAC0095FD66 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A9413216307AAC0095FD66 /* LoginViewController.m */; };
+		34A9418F1630A3840095FD66 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A9418E1630A3840095FD66 /* LoginViewController.xib */; };
 		34AAEE181641E72E00EE77B4 /* BeautifulTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE171641E72E00EE77B4 /* BeautifulTableViewController.m */; };
 		34AAEE211641E75200EE77B4 /* Table_bottom_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 34AAEE191641E75200EE77B4 /* Table_bottom_sel.png */; };
 		34AAEE221641E75200EE77B4 /* Table_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 34AAEE1A1641E75200EE77B4 /* Table_bottom.png */; };
@@ -408,9 +408,9 @@
 		3499FD5316DEDE94008C8526 /* iconBGBrown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iconBGBrown.jpg; sourceTree = "<group>"; };
 		3499FD5516DEDF9A008C8526 /* iconBGDarkBlue.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iconBGDarkBlue.jpeg; sourceTree = "<group>"; };
 		349B7F1416B1E8D300D99BE3 /* iconChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconChecked.png; sourceTree = "<group>"; };
-		34A9413116307AAC0095FD66 /* AlanLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlanLoginViewController.h; sourceTree = "<group>"; };
-		34A9413216307AAC0095FD66 /* AlanLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlanLoginViewController.m; sourceTree = "<group>"; };
-		34A9418E1630A3840095FD66 /* AlanLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlanLoginViewController.xib; path = ../AlanLoginViewController.xib; sourceTree = "<group>"; };
+		34A9413116307AAC0095FD66 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		34A9413216307AAC0095FD66 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		34A9418E1630A3840095FD66 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
 		34AAEE161641E72E00EE77B4 /* BeautifulTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeautifulTableViewController.h; sourceTree = "<group>"; };
 		34AAEE171641E72E00EE77B4 /* BeautifulTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautifulTableViewController.m; sourceTree = "<group>"; };
 		34AAEE191641E75200EE77B4 /* Table_bottom_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Table_bottom_sel.png; sourceTree = "<group>"; };
@@ -689,9 +689,9 @@
 				346FC1DE162F6E7900600096 /* MasterViewController.m */,
 				346FC1E0162F6E7900600096 /* HomeViewController.h */,
 				346FC1E1162F6E7900600096 /* HomeViewController.m */,
-				34A9418E1630A3840095FD66 /* AlanLoginViewController.xib */,
-				34A9413116307AAC0095FD66 /* AlanLoginViewController.h */,
-				34A9413216307AAC0095FD66 /* AlanLoginViewController.m */,
+				34A9418E1630A3840095FD66 /* LoginViewController.xib */,
+				34A9413116307AAC0095FD66 /* LoginViewController.h */,
+				34A9413216307AAC0095FD66 /* LoginViewController.m */,
 				34F3740F163714A700FF372F /* SharedConstants.h */,
 				346650D216EE96BE0070CA49 /* SharedConstants.m */,
 				3440F340163F1A970016401D /* SDUserPreference.h */,
@@ -1221,7 +1221,7 @@
 				346FC1D4162F6E7900600096 /* Default@2x.png in Resources */,
 				346FC1D6162F6E7900600096 /* Default-568h@2x.png in Resources */,
 				346FC1D9162F6E7900600096 /* MainStoryboard.storyboard in Resources */,
-				34A9418F1630A3840095FD66 /* AlanLoginViewController.xib in Resources */,
+				34A9418F1630A3840095FD66 /* LoginViewController.xib in Resources */,
 				3483F9B91637458500306DFF /* BlueBackground.png in Resources */,
 				3483F9BC16375A2B00306DFF /* iconRepair.png in Resources */,
 				3483F9BE16375E8E00306DFF /* iconInventory.png in Resources */,
@@ -1331,7 +1331,7 @@
 				346FC1DC162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld in Sources */,
 				346FC1DF162F6E7900600096 /* MasterViewController.m in Sources */,
 				346FC1E2162F6E7900600096 /* HomeViewController.m in Sources */,
-				34A9413316307AAC0095FD66 /* AlanLoginViewController.m in Sources */,
+				34A9413316307AAC0095FD66 /* LoginViewController.m in Sources */,
 				3483F9E11638A2D000306DFF /* QueryViewController.m in Sources */,
 				3483F9E41638A77000306DFF /* QueriesViewController.m in Sources */,
 				3440F33D1639F9380016401D /* DetailViewNavigationController.m in Sources */,

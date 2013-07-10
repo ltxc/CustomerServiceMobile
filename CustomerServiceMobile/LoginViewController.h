@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class AppDelegate;
-@interface AlanLoginViewController : UIViewController <UITextFieldDelegate>
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, assign) AppDelegate *myAppDelegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;

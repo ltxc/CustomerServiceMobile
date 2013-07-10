@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 LTXC. All rights reserved.
 //  Alan Lee
 
-#import "AlanLoginViewController.h"
+#import "LoginViewController.h"
 #import "MasterViewController.h"
 #import "AppDelegate.h"
 #import "SDUserPreference.h"
@@ -15,11 +15,11 @@
 #import "SDRestKitEngine.h"
 
 
-@interface AlanLoginViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation AlanLoginViewController
+@implementation LoginViewController
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //{

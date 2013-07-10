@@ -7,7 +7,7 @@
 #import "AppDelegate.h"
 
 #import "MasterViewController.h"
-#import "AlanLoginViewController.h"
+#import "LoginViewController.h"
 #import "SDUserPreference.h"
 #import "SDDataEngine.h"
 #import "SharedConstants.h"
@@ -108,7 +108,7 @@ void SignalHandler(int sig) {
     self.isLogin = NO;   
     
     //Now replace the rootViewController with the LoginViewController
-    _loginViewController = [[AlanLoginViewController alloc] initWithNibName:nil bundle:nil];
+    _loginViewController = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
     _loginViewController.myAppDelegate = self;
     self.window.rootViewController = _loginViewController;
     
