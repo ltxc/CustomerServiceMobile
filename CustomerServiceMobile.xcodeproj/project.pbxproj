@@ -72,7 +72,7 @@
 		346FC1D9162F6E7900600096 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346FC1D7162F6E7900600096 /* MainStoryboard.storyboard */; };
 		346FC1DC162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 346FC1DA162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld */; };
 		346FC1DF162F6E7900600096 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346FC1DE162F6E7900600096 /* MasterViewController.m */; };
-		346FC1E2162F6E7900600096 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346FC1E1162F6E7900600096 /* DetailViewController.m */; };
+		346FC1E2162F6E7900600096 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346FC1E1162F6E7900600096 /* HomeViewController.m */; };
 		346FC1EA162F6E7900600096 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1E9162F6E7900600096 /* SenTestingKit.framework */; };
 		346FC1EB162F6E7900600096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BD162F6E7900600096 /* UIKit.framework */; };
 		346FC1EC162F6E7900600096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FC1BF162F6E7900600096 /* Foundation.framework */; };
@@ -144,6 +144,15 @@
 		34AFADC7169E1E080020064F /* CycleCountItemsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFADC6169E1E080020064F /* CycleCountItemsTableView.m */; };
 		34AFADDD16A093920020064F /* CycleCountProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFADDC16A093920020064F /* CycleCountProxy.m */; };
 		34AFADED16A9CCB90020064F /* ShippingRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFADEC16A9CCB90020064F /* ShippingRootViewController.m */; };
+		34B1BBA2178CC675003BB44D /* IconAssignment.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BB9E178CC675003BB44D /* IconAssignment.png */; };
+		34B1BBA3178CC675003BB44D /* iconMyList.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BB9F178CC675003BB44D /* iconMyList.png */; };
+		34B1BBA4178CC675003BB44D /* iconSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBA0178CC675003BB44D /* iconSearch.png */; };
+		34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBA6178CC71E003BB44D /* iconStation.png */; };
+		34B1BBB6178CCF5B003BB44D /* RepairStationNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B1BBB4178CCF5B003BB44D /* RepairStationNavController.m */; };
+		34B1BBB7178CCF5B003BB44D /* RepairStationNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBB5178CCF5B003BB44D /* RepairStationNavController.xib */; };
+		34B1BBBB178CD3DD003BB44D /* RepairAssignmentNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B1BBB9178CD3DD003BB44D /* RepairAssignmentNavController.m */; };
+		34B1BBBC178CD3DD003BB44D /* RepairAssignmentNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBBA178CD3DD003BB44D /* RepairAssignmentNavController.xib */; };
+		34B1BBBF178CD713003BB44D /* RepairTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B1BBBE178CD713003BB44D /* RepairTabBarController.m */; };
 		34C5CA01176A3CA400AA1904 /* ProcessResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C5CA00176A3CA400AA1904 /* ProcessResult.m */; };
 		34C8709216717C0B00C446F2 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C8709016717C0B00C446F2 /* ProductViewController.m */; };
 		34D48D1016ADE806003E5917 /* ShippingScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D48D0F16ADE806003E5917 /* ShippingScanViewController.m */; };
@@ -340,8 +349,8 @@
 		346FC1DB162F6E7900600096 /* CustomerServiceMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomerServiceMobile.xcdatamodel; sourceTree = "<group>"; };
 		346FC1DD162F6E7900600096 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		346FC1DE162F6E7900600096 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		346FC1E0162F6E7900600096 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		346FC1E1162F6E7900600096 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		346FC1E0162F6E7900600096 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		346FC1E1162F6E7900600096 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		346FC1E8162F6E7900600096 /* CustomerServiceMobileTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerServiceMobileTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		346FC1E9162F6E7900600096 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		346FC1F2162F6E7900600096 /* CustomerServiceMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomerServiceMobileTests-Info.plist"; sourceTree = "<group>"; };
@@ -432,6 +441,18 @@
 		34AFADDC16A093920020064F /* CycleCountProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleCountProxy.m; path = DataController/CycleCountProxy.m; sourceTree = "<group>"; };
 		34AFADEB16A9CCB90020064F /* ShippingRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingRootViewController.h; path = ViewControllers/ShippingRootViewController.h; sourceTree = "<group>"; };
 		34AFADEC16A9CCB90020064F /* ShippingRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingRootViewController.m; path = ViewControllers/ShippingRootViewController.m; sourceTree = "<group>"; };
+		34B1BB9E178CC675003BB44D /* IconAssignment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconAssignment.png; sourceTree = "<group>"; };
+		34B1BB9F178CC675003BB44D /* iconMyList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconMyList.png; sourceTree = "<group>"; };
+		34B1BBA0178CC675003BB44D /* iconSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSearch.png; sourceTree = "<group>"; };
+		34B1BBA6178CC71E003BB44D /* iconStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStation.png; sourceTree = "<group>"; };
+		34B1BBB3178CCF5B003BB44D /* RepairStationNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairStationNavController.h; path = ViewControllers/RepairStationNavController.h; sourceTree = "<group>"; };
+		34B1BBB4178CCF5B003BB44D /* RepairStationNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairStationNavController.m; path = ViewControllers/RepairStationNavController.m; sourceTree = "<group>"; };
+		34B1BBB5178CCF5B003BB44D /* RepairStationNavController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepairStationNavController.xib; path = ViewControllers/RepairStationNavController.xib; sourceTree = "<group>"; };
+		34B1BBB8178CD3DD003BB44D /* RepairAssignmentNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairAssignmentNavController.h; path = ViewControllers/RepairAssignmentNavController.h; sourceTree = "<group>"; };
+		34B1BBB9178CD3DD003BB44D /* RepairAssignmentNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairAssignmentNavController.m; path = ViewControllers/RepairAssignmentNavController.m; sourceTree = "<group>"; };
+		34B1BBBA178CD3DD003BB44D /* RepairAssignmentNavController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepairAssignmentNavController.xib; path = ViewControllers/RepairAssignmentNavController.xib; sourceTree = "<group>"; };
+		34B1BBBD178CD713003BB44D /* RepairTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairTabBarController.h; path = ViewControllers/RepairTabBarController.h; sourceTree = "<group>"; };
+		34B1BBBE178CD713003BB44D /* RepairTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairTabBarController.m; path = ViewControllers/RepairTabBarController.m; sourceTree = "<group>"; };
 		34C5C9FF176A3CA400AA1904 /* ProcessResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessResult.h; path = DataModel/ProcessResult.h; sourceTree = "<group>"; };
 		34C5CA00176A3CA400AA1904 /* ProcessResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProcessResult.m; path = DataModel/ProcessResult.m; sourceTree = "<group>"; };
 		34C8708F16717C0B00C446F2 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductViewController.h; path = DataController/ProductViewController.h; sourceTree = "<group>"; };
@@ -666,8 +687,8 @@
 				346FC1D7162F6E7900600096 /* MainStoryboard.storyboard */,
 				346FC1DD162F6E7900600096 /* MasterViewController.h */,
 				346FC1DE162F6E7900600096 /* MasterViewController.m */,
-				346FC1E0162F6E7900600096 /* DetailViewController.h */,
-				346FC1E1162F6E7900600096 /* DetailViewController.m */,
+				346FC1E0162F6E7900600096 /* HomeViewController.h */,
+				346FC1E1162F6E7900600096 /* HomeViewController.m */,
 				34A9418E1630A3840095FD66 /* LoginViewController.xib */,
 				34A9413116307AAC0095FD66 /* LoginViewController.h */,
 				34A9413216307AAC0095FD66 /* LoginViewController.m */,
@@ -960,6 +981,10 @@
 		3483F9E71638B31900306DFF /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				34B1BBA6178CC71E003BB44D /* iconStation.png */,
+				34B1BB9E178CC675003BB44D /* IconAssignment.png */,
+				34B1BB9F178CC675003BB44D /* iconMyList.png */,
+				34B1BBA0178CC675003BB44D /* iconSearch.png */,
 				3474AAE917272CC70034A318 /* CSMobile57.png */,
 				3474AAEA17272CC70034A318 /* CSMobile512.png */,
 				3474AAE11726F7B80034A318 /* CSMobile72.png */,
@@ -1051,6 +1076,14 @@
 		34E30060177E4D1200DFFB11 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
+				34B1BBBD178CD713003BB44D /* RepairTabBarController.h */,
+				34B1BBBE178CD713003BB44D /* RepairTabBarController.m */,
+				34B1BBB3178CCF5B003BB44D /* RepairStationNavController.h */,
+				34B1BBB4178CCF5B003BB44D /* RepairStationNavController.m */,
+				34B1BBB5178CCF5B003BB44D /* RepairStationNavController.xib */,
+				34B1BBB8178CD3DD003BB44D /* RepairAssignmentNavController.h */,
+				34B1BBB9178CD3DD003BB44D /* RepairAssignmentNavController.m */,
+				34B1BBBA178CD3DD003BB44D /* RepairAssignmentNavController.xib */,
 			);
 			name = Repair;
 			sourceTree = "<group>";
@@ -1253,6 +1286,12 @@
 				3474AAE41726F7B80034A318 /* CSMobile1024.png in Resources */,
 				3474AAEB17272CC70034A318 /* CSMobile57.png in Resources */,
 				3474AAEC17272CC70034A318 /* CSMobile512.png in Resources */,
+				34B1BBA2178CC675003BB44D /* IconAssignment.png in Resources */,
+				34B1BBA3178CC675003BB44D /* iconMyList.png in Resources */,
+				34B1BBA4178CC675003BB44D /* iconSearch.png in Resources */,
+				34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */,
+				34B1BBB7178CCF5B003BB44D /* RepairStationNavController.xib in Resources */,
+				34B1BBBC178CD3DD003BB44D /* RepairAssignmentNavController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,7 +1330,7 @@
 				346FC1D0162F6E7900600096 /* AppDelegate.m in Sources */,
 				346FC1DC162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld in Sources */,
 				346FC1DF162F6E7900600096 /* MasterViewController.m in Sources */,
-				346FC1E2162F6E7900600096 /* DetailViewController.m in Sources */,
+				346FC1E2162F6E7900600096 /* HomeViewController.m in Sources */,
 				34A9413316307AAC0095FD66 /* LoginViewController.m in Sources */,
 				3483F9E11638A2D000306DFF /* QueryViewController.m in Sources */,
 				3483F9E41638A77000306DFF /* QueriesViewController.m in Sources */,
@@ -1365,6 +1404,9 @@
 				3455B5B7177B57750034C843 /* CoreDataSynch.m in Sources */,
 				34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */,
 				34E3134E1784D22000EBC961 /* CoreDataPostSynch.m in Sources */,
+				34B1BBB6178CCF5B003BB44D /* RepairStationNavController.m in Sources */,
+				34B1BBBB178CD3DD003BB44D /* RepairAssignmentNavController.m in Sources */,
+				34B1BBBF178CD713003BB44D /* RepairTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

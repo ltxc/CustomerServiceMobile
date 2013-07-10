@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-453" y="-1298"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Nhe-sr-yNl">
             <objects>
-                <viewController id="vKL-sX-Wio" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="vKL-sX-Wio" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ztu-R8-9ni">
                         <rect key="frame" x="0.0" y="64" width="703" height="704"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXh-vn-0cQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024" y="-99"/>
+            <point key="canvasLocation" x="672" y="-67"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="24">

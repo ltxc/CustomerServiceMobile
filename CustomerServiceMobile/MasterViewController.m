@@ -7,7 +7,7 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "HomeViewController.h"
 #import "SharedConstants.h"
 #import "DetailViewNavigationController.h"
 

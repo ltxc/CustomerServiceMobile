@@ -17,7 +17,7 @@
 - (void)invalidateRootPopoverButtonItem:(UIBarButtonItem *)barButtonItem;
 @end
 
-@class DetailViewController;
+@class HomeViewController;
 
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"

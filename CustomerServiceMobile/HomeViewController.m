@@ -1,5 +1,5 @@
 
-#import "DetailViewController.h"
+#import "HomeViewController.h"
 #import "SDUserPreference.h"
 #import "AutoComplete.h"
 #import "SharedConstants.h"
@@ -8,13 +8,13 @@
 #import "SDDataEngine.h"
 #import "SDRestKitEngine.h"
 
-@interface DetailViewController ()
+@interface HomeViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 -(void) alertWhenEnvironmentChange:(NSInteger)alertAction newLandscape:(NSString*)newLandscape oldLandscape:(NSString*)oldLandscape;
 @end
 
-@implementation DetailViewController
+@implementation HomeViewController
 BOOL _synchInProgressWarehouse = NO;
 BOOL _synchInProgressApplicationData = NO;
 BOOL _isLandscapeChanged = NO;
@@ -44,6 +44,7 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 //    if (self.detailItem) {
 //        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
 //    }
+    
 }
 
 - (void)viewDidLoad
