@@ -7,8 +7,11 @@
 #import "AutoCompleteController.h"
 
 #pragma mark - Blocks
+//call back block when user finish using the autocomplete view.
 typedef void(^AutoCompleteBlock)(BOOL,id);
+//return display string
 typedef NSString*(^AutoCompleteDisplayBlock)(id);
+//input search search, return search results
 typedef NSArray*(^AutoCompleteDataBlock)(NSString*);
 
 @interface AutoCompleteDataHelper : NSObject <AutoCompleteDelegate>

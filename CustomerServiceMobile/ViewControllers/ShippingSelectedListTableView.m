@@ -64,7 +64,7 @@
     ShippingLineItem* t = [self.deleteDelegate.shippingHeader.shippingLineItems objectAtIndex:indexPath.row];
     ShippingListCellView* listcell = (ShippingListCellView*)cell;
 
-    if ([t.ldmnd_stat_id isEqualToString:kShippingTypePickStatID]||[t.ldmnd_stat_id isEqualToString:kShippingTypePickListOpenStatID]) {
+   if (![t.severity_id hasPrefix:@"DOA"])  {
         listcell.imgPicker.hidden = YES;
     }
     else

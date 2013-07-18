@@ -2,7 +2,7 @@
 //  ShippingList.h
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 3/19/13.
+//  Created by Jinsong Lu on 7/18/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSDate * due_date;
 @property (nonatomic, retain) NSString * fr_bin_code_id;
 @property (nonatomic, retain) NSString * fr_inv_type_id;
+@property (nonatomic, retain) NSString * is_vendor;
 @property (nonatomic, retain) NSString * item_id;
 @property (nonatomic, retain) NSString * ldmnd_stat_id;
 @property (nonatomic, retain) NSString * orig_doc_id;
@@ -26,11 +27,11 @@
 @property (nonatomic, retain) NSString * qty;
 @property (nonatomic, retain) NSString * serial_no;
 @property (nonatomic, retain) NSString * server_id;
+@property (nonatomic, retain) NSString * severity_id;
 @property (nonatomic, retain) NSString * sfield1;
 @property (nonatomic, retain) NSString * shipping_ipad_id;
 @property (nonatomic, retain) NSNumber * status;
 @property (nonatomic, retain) NSString * to_company_id;
 @property (nonatomic, retain) NSString * to_warehouse_id;
-@property (nonatomic, retain) NSString * is_vendor;
 
 @end

@@ -50,13 +50,8 @@ void SignalHandler(int sig) {
 {
     //Override point for customization after application launch.
 #ifdef TESTING    
-    RKLogConfigureByName("RestKit", RKLogLevelError
-                         
-                         
-                         
-                         
-                         
-                         ); //RKLogLevelDebug
+    RKLogConfigureByName("RestKit", RKLogLevelError); 
+    //RKLogConfigureByName("RestKit", RKLogLevelDebug);
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelError);
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
 #endif   

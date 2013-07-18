@@ -953,7 +953,7 @@ NSString* _pi_doc_id = @"";
         shippingLineItem.header = self.shippingHeader;
         shippingLineItem.fr_bin_code_id = shippingList.fr_bin_code_id;
         shippingLineItem.pi_doc_id = shippingList.pi_doc_id;
-
+        shippingLineItem.severity_id = shippingList.severity_id;
         
         
         //add to the set

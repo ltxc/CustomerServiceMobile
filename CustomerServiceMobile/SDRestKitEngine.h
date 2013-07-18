@@ -1,7 +1,7 @@
 
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
-#import "CoreDataSynch.h"
+#import "CoreDataGetSynch.h"
 //#import "ApplicationDataSynchController.h"
 //#import "WarehouseSynchController.h"
 //#import "CompanySynchController.h"
@@ -32,22 +32,22 @@
 +(SDRestKitEngine *) sharedEngine;
 
 //+(ApplicationDataSynchController *) sharedApplicationDataController;
-+(CoreDataSynch *) sharedApplicationDataController;
++(CoreDataGetSynch *) sharedApplicationDataController;
 +(UserProfileController *) sharedUserProfileController;
 //+(WarehouseSynchController *) sharedWarehouseController;
-+(CoreDataSynch *) sharedWarehouseController;
++(CoreDataGetSynch *) sharedWarehouseController;
 //+(CompanySynchController *) sharedCompanyController;
-+(CoreDataSynch *) sharedCompanyController;
++(CoreDataGetSynch *) sharedCompanyController;
 //+(CarrierSynchController *) sharedCarrierController;
-+(CoreDataSynch *) sharedCarrierController;
++(CoreDataGetSynch *) sharedCarrierController;
 //+(BinPartSynchController *) sharedBinPartController;
-+(CoreDataSynch *) sharedBinPartController;
++(CoreDataGetSynch *) sharedBinPartController;
 //+(QueriesSynchController *) sharedQueriesController;
-+(CoreDataSynch *) sharedQueriesController;
++(CoreDataGetSynch *) sharedQueriesController;
 //+(ShipmentInstructionsSynchController *) sharedShipmentInstructionsController;
-+(CoreDataSynch *) sharedShipmentInstructionsController;
++(CoreDataGetSynch *) sharedShipmentInstructionsController;
 //+(ManAdjustReasonController *) sharedReasonController;
-+(CoreDataSynch *) sharedReasonController;
++(CoreDataGetSynch *) sharedReasonController;
 
 +(RepairMasterDataSynch *) sharedRepairMasterDataController;
 

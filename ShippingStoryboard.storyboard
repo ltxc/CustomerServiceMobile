@@ -348,7 +348,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="UHQ-f3-e3U">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="UHQ-f3-e3U">
                                                                         <rect key="frame" x="12" y="10" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -416,7 +416,7 @@
                                                                 </connections>
                                                             </segmentedControl>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lty-5D-0WI">
-                                                                <rect key="frame" x="20" y="31" width="119" height="21"/>
+                                                                <rect key="frame" x="38" y="31" width="119" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -424,7 +424,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tnm-vd-GjA">
-                                                                <rect key="frame" x="142" y="31" width="144" height="21"/>
+                                                                <rect key="frame" x="160" y="31" width="144" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -432,7 +432,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0tz-6X-x3A">
-                                                                <rect key="frame" x="290" y="31" width="86" height="21"/>
+                                                                <rect key="frame" x="308" y="31" width="86" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -440,7 +440,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bXn-Ts-bNM">
-                                                                <rect key="frame" x="381" y="31" width="43" height="21"/>
+                                                                <rect key="frame" x="399" y="31" width="43" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -448,7 +448,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBl-HG-urc">
-                                                                <rect key="frame" x="431" y="31" width="47" height="21"/>
+                                                                <rect key="frame" x="449" y="31" width="47" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -456,7 +456,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bSN-tZ-ezq">
-                                                                <rect key="frame" x="480" y="31" width="118" height="21"/>
+                                                                <rect key="frame" x="498" y="31" width="118" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -475,52 +475,58 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EGD-Sb-pc5">
-                                                                        <rect key="frame" x="20" y="12" width="120" height="21"/>
+                                                                        <rect key="frame" x="37" y="12" width="120" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Warehouse/Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0bV-qY-Pvg">
-                                                                        <rect key="frame" x="146" y="12" width="137" height="21"/>
+                                                                        <rect key="frame" x="163" y="12" width="137" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7vF-9F-8lv">
-                                                                        <rect key="frame" x="291" y="12" width="87" height="21"/>
+                                                                        <rect key="frame" x="308" y="12" width="87" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Ay-I3-GeK">
-                                                                        <rect key="frame" x="382" y="11" width="43" height="21"/>
+                                                                        <rect key="frame" x="399" y="11" width="43" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="66k-PN-7Ya">
-                                                                        <rect key="frame" x="431" y="11" width="42" height="21"/>
+                                                                        <rect key="frame" x="448" y="11" width="42" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Mc-ZF-kmJ">
-                                                                        <rect key="frame" x="481" y="11" width="119" height="21"/>
+                                                                        <rect key="frame" x="498" y="11" width="119" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="esw-KY-Nxu">
+                                                                        <rect key="frame" x="7" y="11" width="22" height="22"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
+                                                                    </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" red="1" green="0.93830876860000001" blue="0.84544761339999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
+                                                                <outlet property="imgPicker" destination="esw-KY-Nxu" id="rBG-qq-6Xn"/>
                                                                 <outlet property="lblBin" destination="1Ay-I3-GeK" id="TCX-Ww-at4"/>
                                                                 <outlet property="lblDestination" destination="0bV-qY-Pvg" id="oRc-GV-DYh"/>
                                                                 <outlet property="lblDueDate" destination="8Mc-ZF-kmJ" id="dT6-1h-uWM"/>
@@ -1481,7 +1487,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="0ws-dw-o76">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="0ws-dw-o76">
                                                                         <rect key="frame" x="17.5" y="11.5" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -1649,7 +1655,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="Q18-MV-ROc">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="Q18-MV-ROc">
                                                                         <rect key="frame" x="11" y="11" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -2104,7 +2110,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="pA5-GJ-xOv">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="pA5-GJ-xOv">
                                                                         <rect key="frame" x="17.5" y="11.5" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -2273,7 +2279,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="TZn-Dp-iHP">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="TZn-Dp-iHP">
                                                                         <rect key="frame" x="11" y="11" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -2614,11 +2620,11 @@
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
-                                                        <tableViewCell autoresizesSubviews="NO" opaque="NO" contentMode="center" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SelectedListCell" id="ful-IJ-Lzd" customClass="ShippingListCellView">
+                                                        <tableViewCell autoresizesSubviews="NO" opaque="NO" contentMode="center" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SelectedListCell" id="ful-IJ-Lzd" customClass="ShippingListCellView">
                                                             <rect key="frame" x="0.0" y="10" width="678" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="658" height="43"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="678" height="43"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rkc-oB-zy3">
@@ -2656,7 +2662,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="37l-Gq-Zfh">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="37l-Gq-Zfh">
                                                                         <rect key="frame" x="12" y="10" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -2725,7 +2731,7 @@
                                                                 </connections>
                                                             </segmentedControl>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9l-SK-kij">
-                                                                <rect key="frame" x="20" y="31" width="119" height="21"/>
+                                                                <rect key="frame" x="49" y="31" width="119" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2733,7 +2739,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2cg-2n-qKV">
-                                                                <rect key="frame" x="142" y="31" width="144" height="21"/>
+                                                                <rect key="frame" x="171" y="31" width="144" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2741,7 +2747,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vx1-am-All">
-                                                                <rect key="frame" x="290" y="31" width="86" height="21"/>
+                                                                <rect key="frame" x="319" y="31" width="86" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2749,7 +2755,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HxW-kJ-vCe">
-                                                                <rect key="frame" x="381" y="31" width="43" height="21"/>
+                                                                <rect key="frame" x="410" y="31" width="43" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2757,7 +2763,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PtK-Eu-Ans">
-                                                                <rect key="frame" x="431" y="31" width="47" height="21"/>
+                                                                <rect key="frame" x="460" y="31" width="47" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2765,7 +2771,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZOm-wR-9YD">
-                                                                <rect key="frame" x="480" y="31" width="119" height="21"/>
+                                                                <rect key="frame" x="509" y="31" width="119" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -2784,52 +2790,58 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SFH-hL-ykk">
-                                                                        <rect key="frame" x="20" y="12" width="120" height="21"/>
+                                                                        <rect key="frame" x="50" y="12" width="118" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Warehouse/Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qrp-e7-pWL">
-                                                                        <rect key="frame" x="146" y="12" width="137" height="21"/>
+                                                                        <rect key="frame" x="172" y="12" width="137" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1BL-vH-mbE">
-                                                                        <rect key="frame" x="291" y="12" width="87" height="21"/>
+                                                                        <rect key="frame" x="317" y="12" width="87" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nwu-ef-qA7">
-                                                                        <rect key="frame" x="382" y="11" width="43" height="21"/>
+                                                                        <rect key="frame" x="408" y="11" width="43" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qGP-as-PbF">
-                                                                        <rect key="frame" x="431" y="11" width="42" height="21"/>
+                                                                        <rect key="frame" x="457" y="11" width="42" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y3S-LC-VxD">
-                                                                        <rect key="frame" x="481" y="11" width="119" height="21"/>
+                                                                        <rect key="frame" x="507" y="11" width="119" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="SpM-Zp-oKF">
+                                                                        <rect key="frame" x="15" y="11" width="22" height="22"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
+                                                                    </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" red="1" green="0.93830876860000001" blue="0.84544761339999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
+                                                                <outlet property="imgPicker" destination="SpM-Zp-oKF" id="ovA-WF-j4s"/>
                                                                 <outlet property="lblBin" destination="Nwu-ef-qA7" id="Kh6-sx-MyZ"/>
                                                                 <outlet property="lblDestination" destination="Qrp-e7-pWL" id="E8N-Xm-zhg"/>
                                                                 <outlet property="lblDueDate" destination="Y3S-LC-VxD" id="5M7-Uh-q5P"/>
@@ -3199,7 +3211,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconPicker.png" id="wJA-LZ-Otq">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="wJA-LZ-Otq">
                                                                         <rect key="frame" x="12" y="10" width="22" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
@@ -3268,7 +3280,7 @@
                                                                 </connections>
                                                             </segmentedControl>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o1V-Od-E8h">
-                                                                <rect key="frame" x="20" y="31" width="119" height="21"/>
+                                                                <rect key="frame" x="50" y="31" width="119" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3276,7 +3288,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DO7-0t-V4P">
-                                                                <rect key="frame" x="142" y="31" width="144" height="21"/>
+                                                                <rect key="frame" x="172" y="31" width="144" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3284,7 +3296,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uaX-Go-cpf">
-                                                                <rect key="frame" x="290" y="31" width="86" height="21"/>
+                                                                <rect key="frame" x="320" y="31" width="86" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3292,7 +3304,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vyB-8b-PRZ">
-                                                                <rect key="frame" x="381" y="31" width="43" height="21"/>
+                                                                <rect key="frame" x="411" y="31" width="43" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3300,7 +3312,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xow-Np-1VR">
-                                                                <rect key="frame" x="431" y="31" width="47" height="21"/>
+                                                                <rect key="frame" x="461" y="31" width="47" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3308,7 +3320,7 @@
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2BN-RS-ADZ">
-                                                                <rect key="frame" x="480" y="31" width="119" height="21"/>
+                                                                <rect key="frame" x="510" y="31" width="119" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -3327,52 +3339,58 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Original Doc ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tqF-Um-SX4">
-                                                                        <rect key="frame" x="20" y="12" width="120" height="21"/>
+                                                                        <rect key="frame" x="49" y="12" width="120" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Warehouse/Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KCv-2k-saG">
-                                                                        <rect key="frame" x="146" y="12" width="137" height="21"/>
+                                                                        <rect key="frame" x="175" y="12" width="137" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Part Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3uP-e3-F9t">
-                                                                        <rect key="frame" x="291" y="12" width="87" height="21"/>
+                                                                        <rect key="frame" x="320" y="12" width="87" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bVW-36-SWZ">
-                                                                        <rect key="frame" x="382" y="11" width="43" height="21"/>
+                                                                        <rect key="frame" x="411" y="11" width="43" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gXc-zh-tpV">
-                                                                        <rect key="frame" x="431" y="11" width="42" height="21"/>
+                                                                        <rect key="frame" x="460" y="11" width="42" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X1Z-cZ-4g7">
-                                                                        <rect key="frame" x="481" y="11" width="119" height="21"/>
+                                                                        <rect key="frame" x="510" y="11" width="119" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconDOA.png" id="k9H-nv-6r2">
+                                                                        <rect key="frame" x="19" y="11" width="22" height="22"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="0.89999999999999991"/>
+                                                                    </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" red="1" green="0.93830876860000001" blue="0.84544761339999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
+                                                                <outlet property="imgPicker" destination="k9H-nv-6r2" id="U6M-GV-hPl"/>
                                                                 <outlet property="lblBin" destination="bVW-36-SWZ" id="aEa-vD-WVB"/>
                                                                 <outlet property="lblDestination" destination="KCv-2k-saG" id="Nm1-Kt-95i"/>
                                                                 <outlet property="lblDueDate" destination="X1Z-cZ-4g7" id="v1d-vb-gLf"/>
@@ -3419,8 +3437,8 @@
     </scenes>
     <resources>
         <image name="iconBGBrown.jpg" width="1600" height="1200"/>
+        <image name="iconDOA.png" width="48" height="48"/>
         <image name="iconDelete.png" width="16" height="16"/>
-        <image name="iconPicker.png" width="44" height="43"/>
         <image name="iconRefresh.png" width="90" height="90"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3429,6 +3447,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="S0g-Gy-3GJ"/>
+        <segue reference="sQJ-xH-cFA"/>
     </inferredMetricsTieBreakers>
 </document>

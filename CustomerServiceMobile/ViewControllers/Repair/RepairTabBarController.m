@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    return;
+
     // Dispose of any resources that can be recreated.
     NSMutableArray* tbViewControllers = [NSMutableArray arrayWithArray:self.viewControllers];
 
@@ -59,7 +59,7 @@
 {
 }
 
-/*********************** static methods ****************************/
+#pragma mark Singleton Controllers
 +(UINavigationController *)station
 {
     static UINavigationController* controller = nil;

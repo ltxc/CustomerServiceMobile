@@ -2,7 +2,7 @@
 //  ShippingList.m
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 3/19/13.
+//  Created by Jinsong Lu on 7/18/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic due_date;
 @dynamic fr_bin_code_id;
 @dynamic fr_inv_type_id;
+@dynamic is_vendor;
 @dynamic item_id;
 @dynamic ldmnd_stat_id;
 @dynamic orig_doc_id;
@@ -25,11 +26,11 @@
 @dynamic qty;
 @dynamic serial_no;
 @dynamic server_id;
+@dynamic severity_id;
 @dynamic sfield1;
 @dynamic shipping_ipad_id;
 @dynamic status;
 @dynamic to_company_id;
 @dynamic to_warehouse_id;
-@dynamic is_vendor;
 
 @end

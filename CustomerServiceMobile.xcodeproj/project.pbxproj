@@ -19,6 +19,7 @@
 		34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 34112A6E171CA29000B4A915 /* CycleCountCount.m */; };
 		34128E3E165C035A000102F5 /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34128E3D165C035A000102F5 /* UserProfileController.m */; };
 		34128E41165C0391000102F5 /* DataSynchBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 34128E40165C0391000102F5 /* DataSynchBase.m */; };
+		341E3DB71795E6DE005DF011 /* CoreDataSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 341E3DB61795E6DE005DF011 /* CoreDataSynch.m */; };
 		342E80DB16DBE4FE0009A16A /* InventoryLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */; };
 		342E80E216DBE4FE0009A16A /* InventoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 342E80E116DBE4FE0009A16A /* InventoryHeader.m */; };
 		3433A39316E7C38400BB5DD2 /* iconPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3433A39216E7C38400BB5DD2 /* iconPicker.png */; };
@@ -48,7 +49,8 @@
 		3440F33D1639F9380016401D /* DetailViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440F33C1639F9380016401D /* DetailViewNavigationController.m */; };
 		3440F33F163EF70C0016401D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3440F33E163EF70C0016401D /* Settings.bundle */; };
 		3440F342163F1A970016401D /* SDUserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440F341163F1A970016401D /* SDUserPreference.m */; };
-		3455B5B7177B57750034C843 /* CoreDataSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3455B5B6177B57750034C843 /* CoreDataSynch.m */; };
+		3450B1E7179892E200631421 /* ShippingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450B1E6179892E200631421 /* ShippingList.m */; };
+		3455B5B7177B57750034C843 /* CoreDataGetSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3455B5B6177B57750034C843 /* CoreDataGetSynch.m */; };
 		345956D416B34EF50048545E /* iconShipPick.png in Resources */ = {isa = PBXBuildFile; fileRef = 345956D316B34EF50048545E /* iconShipPick.png */; };
 		345956D616B34F040048545E /* iconShipShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 345956D516B34F040048545E /* iconShipShip.png */; };
 		345956D816B34F370048545E /* iconGreenCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 345956D716B34F370048545E /* iconGreenCheck.png */; };
@@ -114,6 +116,8 @@
 		349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349458E1166D545800D993E2 /* InventoryTransactionController.m */; };
 		34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34945906166E7A9B00D993E2 /* ReceivingViewController.m */; };
 		3494593E16701CB000D993E2 /* AutoCompleteDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3494593D16701CAF00D993E2 /* AutoCompleteDataHelper.m */; };
+		34976C201798847000ACCF1A /* ShippingLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 34976C1F1798847000ACCF1A /* ShippingLineItem.m */; };
+		34976C221798856100ACCF1A /* iconDOA.png in Resources */ = {isa = PBXBuildFile; fileRef = 34976C211798856100ACCF1A /* iconDOA.png */; };
 		3499FD4216DECC92008C8526 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD4016DECC92008C8526 /* CalculatorViewController.xib */; };
 		3499FD4416DECDEE008C8526 /* iconCalculatorBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD4316DECDEE008C8526 /* iconCalculatorBG.jpg */; };
 		3499FD4816DED0DE008C8526 /* iconCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3499FD4516DED0DE008C8526 /* iconCancel.png */; };
@@ -180,9 +184,7 @@
 		34FA420B177A4E9900A86105 /* ActionCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA420A177A4E9900A86105 /* ActionCode.m */; };
 		34FAC37C165AB42D007A3F01 /* SDRestKitEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FAC37B165AB42D007A3F01 /* SDRestKitEngine.m */; };
 		34FC528A16FBC4C300AE08F3 /* iconDeleteTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FC528916FBC4C300AE08F3 /* iconDeleteTable.png */; };
-		34FEACF316F926760094FD01 /* ShippingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEACF216F926760094FD01 /* ShippingList.m */; };
 		34FEACF616F926770094FD01 /* ShipmentInstructions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEACF516F926770094FD01 /* ShipmentInstructions.m */; };
-		34FEACF916F926770094FD01 /* ShippingLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEACF816F926770094FD01 /* ShippingLineItem.m */; };
 		34FEACFC16F926770094FD01 /* ShippingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEACFB16F926770094FD01 /* ShippingHeader.m */; };
 /* End PBXBuildFile section */
 
@@ -276,6 +278,8 @@
 		34128E3D165C035A000102F5 /* UserProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileController.m; path = DataController/UserProfileController.m; sourceTree = "<group>"; };
 		34128E3F165C0391000102F5 /* DataSynchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSynchBase.h; path = DataController/DataSynchBase.h; sourceTree = "<group>"; };
 		34128E40165C0391000102F5 /* DataSynchBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSynchBase.m; path = DataController/DataSynchBase.m; sourceTree = "<group>"; };
+		341E3DB51795E6DE005DF011 /* CoreDataSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataSynch.h; path = DataController/CoreDataSynch.h; sourceTree = "<group>"; };
+		341E3DB61795E6DE005DF011 /* CoreDataSynch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataSynch.m; path = DataController/CoreDataSynch.m; sourceTree = "<group>"; };
 		342E80D916DBE4FE0009A16A /* InventoryLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryLineItem.h; path = DataModel/InventoryLineItem.h; sourceTree = "<group>"; };
 		342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryLineItem.m; path = DataModel/InventoryLineItem.m; sourceTree = "<group>"; };
 		342E80E016DBE4FE0009A16A /* InventoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryHeader.h; path = DataModel/InventoryHeader.h; sourceTree = "<group>"; };
@@ -313,8 +317,10 @@
 		3440F33E163EF70C0016401D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3440F340163F1A970016401D /* SDUserPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUserPreference.h; sourceTree = "<group>"; };
 		3440F341163F1A970016401D /* SDUserPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUserPreference.m; sourceTree = "<group>"; };
-		3455B5B5177B57750034C843 /* CoreDataSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataSynch.h; path = DataController/CoreDataSynch.h; sourceTree = "<group>"; };
-		3455B5B6177B57750034C843 /* CoreDataSynch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataSynch.m; path = DataController/CoreDataSynch.m; sourceTree = "<group>"; };
+		3450B1E5179892E200631421 /* ShippingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingList.h; path = DataModel/ShippingList.h; sourceTree = "<group>"; };
+		3450B1E6179892E200631421 /* ShippingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingList.m; path = DataModel/ShippingList.m; sourceTree = "<group>"; };
+		3455B5B5177B57750034C843 /* CoreDataGetSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataGetSynch.h; path = DataController/CoreDataGetSynch.h; sourceTree = "<group>"; };
+		3455B5B6177B57750034C843 /* CoreDataGetSynch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataGetSynch.m; path = DataController/CoreDataGetSynch.m; sourceTree = "<group>"; };
 		345956D316B34EF50048545E /* iconShipPick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconShipPick.png; sourceTree = "<group>"; };
 		345956D516B34F040048545E /* iconShipShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconShipShip.png; sourceTree = "<group>"; };
 		345956D716B34F370048545E /* iconGreenCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconGreenCheck.png; sourceTree = "<group>"; };
@@ -399,6 +405,9 @@
 		3494593C16701CAF00D993E2 /* AutoCompleteDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoCompleteDataHelper.h; path = DataController/AutoCompleteDataHelper.h; sourceTree = "<group>"; };
 		3494593D16701CAF00D993E2 /* AutoCompleteDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoCompleteDataHelper.m; path = DataController/AutoCompleteDataHelper.m; sourceTree = "<group>"; };
 		3494593F1670209C00D993E2 /* MyEntities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyEntities.h; sourceTree = "<group>"; };
+		34976C1E1798847000ACCF1A /* ShippingLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingLineItem.h; path = DataModel/ShippingLineItem.h; sourceTree = "<group>"; };
+		34976C1F1798847000ACCF1A /* ShippingLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingLineItem.m; path = DataModel/ShippingLineItem.m; sourceTree = "<group>"; };
+		34976C211798856100ACCF1A /* iconDOA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDOA.png; sourceTree = "<group>"; };
 		3499FD4016DECC92008C8526 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalculatorViewController.xib; path = ViewControllers/CalculatorViewController.xib; sourceTree = "<group>"; };
 		3499FD4316DECDEE008C8526 /* iconCalculatorBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iconCalculatorBG.jpg; sourceTree = "<group>"; };
 		3499FD4516DED0DE008C8526 /* iconCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconCancel.png; sourceTree = "<group>"; };
@@ -507,12 +516,8 @@
 		34FAC37A165AB42D007A3F01 /* SDRestKitEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRestKitEngine.h; sourceTree = "<group>"; };
 		34FAC37B165AB42D007A3F01 /* SDRestKitEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRestKitEngine.m; sourceTree = "<group>"; };
 		34FC528916FBC4C300AE08F3 /* iconDeleteTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDeleteTable.png; sourceTree = "<group>"; };
-		34FEACF116F926760094FD01 /* ShippingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingList.h; path = DataModel/ShippingList.h; sourceTree = "<group>"; };
-		34FEACF216F926760094FD01 /* ShippingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingList.m; path = DataModel/ShippingList.m; sourceTree = "<group>"; };
 		34FEACF416F926770094FD01 /* ShipmentInstructions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShipmentInstructions.h; path = DataModel/ShipmentInstructions.h; sourceTree = "<group>"; };
 		34FEACF516F926770094FD01 /* ShipmentInstructions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShipmentInstructions.m; path = DataModel/ShipmentInstructions.m; sourceTree = "<group>"; };
-		34FEACF716F926770094FD01 /* ShippingLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingLineItem.h; path = DataModel/ShippingLineItem.h; sourceTree = "<group>"; };
-		34FEACF816F926770094FD01 /* ShippingLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingLineItem.m; path = DataModel/ShippingLineItem.m; sourceTree = "<group>"; };
 		34FEACFA16F926770094FD01 /* ShippingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingHeader.h; path = DataModel/ShippingHeader.h; sourceTree = "<group>"; };
 		34FEACFB16F926770094FD01 /* ShippingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingHeader.m; path = DataModel/ShippingHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -589,10 +594,12 @@
 			children = (
 				34128E3F165C0391000102F5 /* DataSynchBase.h */,
 				34128E40165C0391000102F5 /* DataSynchBase.m */,
-				3455B5B5177B57750034C843 /* CoreDataSynch.h */,
-				3455B5B6177B57750034C843 /* CoreDataSynch.m */,
 				34C5C9FF176A3CA400AA1904 /* ProcessResult.h */,
 				34C5CA00176A3CA400AA1904 /* ProcessResult.m */,
+				341E3DB51795E6DE005DF011 /* CoreDataSynch.h */,
+				341E3DB61795E6DE005DF011 /* CoreDataSynch.m */,
+				3455B5B5177B57750034C843 /* CoreDataGetSynch.h */,
+				3455B5B6177B57750034C843 /* CoreDataGetSynch.m */,
 				34E3134C1784D22000EBC961 /* CoreDataPostSynch.h */,
 				34E3134D1784D22000EBC961 /* CoreDataPostSynch.m */,
 			);
@@ -622,12 +629,8 @@
 				342E80DA16DBE4FE0009A16A /* InventoryLineItem.m */,
 				342E80E016DBE4FE0009A16A /* InventoryHeader.h */,
 				342E80E116DBE4FE0009A16A /* InventoryHeader.m */,
-				34FEACF116F926760094FD01 /* ShippingList.h */,
-				34FEACF216F926760094FD01 /* ShippingList.m */,
 				34FEACF416F926770094FD01 /* ShipmentInstructions.h */,
 				34FEACF516F926770094FD01 /* ShipmentInstructions.m */,
-				34FEACF716F926770094FD01 /* ShippingLineItem.h */,
-				34FEACF816F926770094FD01 /* ShippingLineItem.m */,
 				34FEACFA16F926770094FD01 /* ShippingHeader.h */,
 				34FEACFB16F926770094FD01 /* ShippingHeader.m */,
 				34364B591714DCF1004950AE /* ApplicationData.h */,
@@ -644,6 +647,10 @@
 				34FA4204177A4E9900A86105 /* Activity.m */,
 				34FA41FC177A4E9800A86105 /* StopCode.h */,
 				34FA41FD177A4E9800A86105 /* StopCode.m */,
+				34976C1E1798847000ACCF1A /* ShippingLineItem.h */,
+				34976C1F1798847000ACCF1A /* ShippingLineItem.m */,
+				3450B1E5179892E200631421 /* ShippingList.h */,
+				3450B1E6179892E200631421 /* ShippingList.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -874,8 +881,8 @@
 				34128E3D165C035A000102F5 /* UserProfileController.m */,
 				34670F63176BB7A80041B0DE /* ProcessResultController.h */,
 				34670F64176BB7A80041B0DE /* ProcessResultController.m */,
-				34E3005F177E4CE000DFFB11 /* Warehouse */,
 				34E30060177E4D1200DFFB11 /* Repair */,
+				34E3005F177E4CE000DFFB11 /* Warehouse */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -981,6 +988,7 @@
 		3483F9E71638B31900306DFF /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				34976C211798856100ACCF1A /* iconDOA.png */,
 				34B1BBA6178CC71E003BB44D /* iconStation.png */,
 				34B1BB9E178CC675003BB44D /* IconAssignment.png */,
 				34B1BB9F178CC675003BB44D /* iconMyList.png */,
@@ -1292,6 +1300,7 @@
 				34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */,
 				34B1BBCA178E1002003BB44D /* RepairStationViewController.xib in Resources */,
 				34B1BBCF178E1024003BB44D /* RepairAssignmentViewController.xib in Resources */,
+				34976C221798856100ACCF1A /* iconDOA.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1388,9 +1397,7 @@
 				342E80E216DBE4FE0009A16A /* InventoryHeader.m in Sources */,
 				34E5B3BC16E06050004849F9 /* CalculatorViewController.m in Sources */,
 				346650D316EE96BE0070CA49 /* SharedConstants.m in Sources */,
-				34FEACF316F926760094FD01 /* ShippingList.m in Sources */,
 				34FEACF616F926770094FD01 /* ShipmentInstructions.m in Sources */,
-				34FEACF916F926770094FD01 /* ShippingLineItem.m in Sources */,
 				34FEACFC16F926770094FD01 /* ShippingHeader.m in Sources */,
 				34364B5B1714DCF1004950AE /* ApplicationData.m in Sources */,
 				34112A6F171CA29000B4A915 /* CycleCountCount.m in Sources */,
@@ -1401,12 +1408,15 @@
 				34FA4205177A4E9900A86105 /* Activity.m in Sources */,
 				34FA4208177A4E9900A86105 /* RepairStation.m in Sources */,
 				34FA420B177A4E9900A86105 /* ActionCode.m in Sources */,
-				3455B5B7177B57750034C843 /* CoreDataSynch.m in Sources */,
+				3455B5B7177B57750034C843 /* CoreDataGetSynch.m in Sources */,
 				34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */,
 				34E3134E1784D22000EBC961 /* CoreDataPostSynch.m in Sources */,
 				34B1BBC9178E1002003BB44D /* RepairStationViewController.m in Sources */,
 				34B1BBCE178E1024003BB44D /* RepairAssignmentViewController.m in Sources */,
 				34B1BBD2178E1067003BB44D /* RepairTabBarController.m in Sources */,
+				341E3DB71795E6DE005DF011 /* CoreDataSynch.m in Sources */,
+				34976C201798847000ACCF1A /* ShippingLineItem.m in Sources */,
+				3450B1E7179892E200631421 /* ShippingList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

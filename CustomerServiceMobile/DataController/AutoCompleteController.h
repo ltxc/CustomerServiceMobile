@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//delegate that provides the search result, how to display and what to do after user finish the autocomplete view.
 @protocol AutoCompleteDelegate <NSObject>
 @required
 -(void)selected:(id)value status:(BOOL)status;

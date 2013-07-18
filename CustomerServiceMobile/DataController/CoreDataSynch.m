@@ -2,11 +2,13 @@
 //  CoreDataSynch.m
 //  CustomerServiceMobile
 //
-//  Created by Jinsong Lu on 6/26/13.
+//  Created by Jinsong Lu on 7/16/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
 #import "CoreDataSynch.h"
+
+
 
 @implementation CoreDataSynch
 @synthesize objectStore=_objectStore;
@@ -18,8 +20,7 @@
 
 DataSynchEntityMappingBlock _mapBlock;
 
-
--(id)init:(NSString*)controllerName objectStore:(RKManagedObjectStore*) objectStore baseURL:(NSString*)baseURL rootKeyPath:(NSString*)rootKeyPath notificationName:(NSString*)notificationName  mapBlock:(DataSynchEntityMappingBlock)mapBlock fetchBlock:(RKObjectMappingProviderFetchRequestBlock)fetchRequestBlock
+-(id)init:(NSString*)controllerName objectStore:(RKManagedObjectStore*) objectStore baseURL:(NSString*)baseURL rootKeyPath:(NSString*)rootKeyPath notificationName:(NSString*)notificationName mapBlock:(DataSynchEntityMappingBlock)mapBlock
 {
     if(self = [super init:controllerName notificationName:notificationName])
     {
@@ -29,13 +30,10 @@ DataSynchEntityMappingBlock _mapBlock;
         _rootKeyPath = rootKeyPath;
         _mapBlock = mapBlock;
         
-        //register the mapping provider
-        RKManagedObjectMapping* mapping = [self entityMapping];
-        [self.objectManager.mappingProvider registerMapping:mapping withRootKeyPath:rootKeyPath];
-        [self.objectManager.mappingProvider setObjectMapping:mapping forResourcePathPattern:_baseURL withFetchRequestBlock:fetchRequestBlock];
     }
     return self;
 }
+
 -(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
     [super objectLoader:objectLoader didFailWithError:error];
@@ -64,39 +62,14 @@ DataSynchEntityMappingBlock _mapBlock;
         }
         if(_isASynch)
         {
-        //notify synch finished
-        [self notify:super.notificationName status:self.status message:self.message object:objects];
+            //notify synch finished
+            [self notify:super.notificationName status:self.status message:self.message object:objects];
         }
-        [self saveRKCache];
-        
+        [self saveRKCache];  
     }
 }
 
--(void)load:(DataSynchResourcePathBlock)resourcePathBlock
-{
-    [self reset];
 
-    NSString *resourcePath = _baseURL;
-    if(resourcePathBlock!=nil)
-    {
-        resourcePath = resourcePathBlock(_baseURL);
-    }
-    
-    RKObjectLoader *loader = [self.objectManager loaderWithResourcePath:resourcePath];
-    
-    loader.delegate = self;
-    loader.method = RKRequestMethodGET;
-    [loader setCacheTimeoutInterval:0.1];
-    if(_isASynch)
-    {
-        [loader send];
-    }
-    else{
-        
-       [loader sendSynchronously];
-    }
-
-}
 
 
 
@@ -104,16 +77,6 @@ DataSynchEntityMappingBlock _mapBlock;
 {
     self.objectManager.objectStore = _objectStore;
     return _mapBlock(_objectStore);
-}
-
--(void)saveRKCache
-{
-    NSError* error = nil;
-    [self.objectStore.managedObjectContextForCurrentThread save:&error];
-    if(error)
-    {
-        NSLog(@"RK Cache Save failed: %@", error);
-    }
 }
 
 @end

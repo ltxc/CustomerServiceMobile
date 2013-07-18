@@ -416,6 +416,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathShippingToCompany @"to_company_id"
 #define kKeyPathShippingToWarehouseID @"to_warehouse_id"
 #define kKeyPathShippingPIDOCID @"pi_doc_id"
+#define kKeyPathShippingServerityID @"severity_id"
 
 #define kKeyPathShippingCarrierID @"carrier_id"
 #define kKeyPathShippingCarrierRefNo @"carrier_refno"

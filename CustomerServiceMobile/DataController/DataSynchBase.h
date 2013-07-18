@@ -15,8 +15,9 @@
 #define kCoreDataSynchNotificationFailedTemplate @"Server may not be reachable. Detail:%@"
 
 typedef RKManagedObjectMapping*(^DataSynchEntityMappingBlock)(RKManagedObjectStore*);
-typedef NSString*(^DataSynchResourcePathBlock)(NSString* baseUrl);
+typedef NSString*(^DataSynchResourcePathBlock)(NSString* baseUrl, id postedObject);
 typedef NSString*(^DataSynchNotificationMessageBlock)(id objects);
+typedef BOOL(^DatSynchResultHandlingBlock)(id postedObject, id result);
 
 @interface DataSynchBase : NSObject <RKObjectLoaderDelegate>
 @property (strong,atomic) RKObjectManager* objectManager;
@@ -34,4 +35,6 @@ typedef NSString*(^DataSynchNotificationMessageBlock)(id objects);
 -(void)addNotificationObserver:(id)observer notificationName:(NSString*)notificationName selector:(SEL)selector;
 -(void)removeNotificationObserver:(id) observer notificationName:(NSString*)notificationName;
 -(void)notify:(NSString*) notificationName status:(NSNumber*) status message:(NSString*) message object:(id) object;
+
+-(void)saveRKCache;
 @end

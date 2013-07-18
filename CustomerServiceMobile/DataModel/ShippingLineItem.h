@@ -2,7 +2,7 @@
 //  ShippingLineItem.h
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 3/19/13.
+//  Created by Jinsong Lu on 7/18/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
@@ -32,6 +32,7 @@
 @property (nonatomic, retain) NSString * shipped_qty;
 @property (nonatomic, retain) NSString * to_company_id;
 @property (nonatomic, retain) NSString * to_warehouse_id;
+@property (nonatomic, retain) NSString * severity_id;
 @property (nonatomic, retain) ShippingHeader *header;
 
 @end

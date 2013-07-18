@@ -172,7 +172,15 @@
 }
 
 
-
+-(void)saveRKCache
+{
+    NSError* error = nil;
+    [self.objectStore.managedObjectContextForCurrentThread save:&error];
+    if(error)
+    {
+        NSLog(@"RK Cache Save failed: %@", error);
+    }
+}
 
 
 @end

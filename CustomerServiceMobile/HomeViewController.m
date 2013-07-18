@@ -369,7 +369,7 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 -(void) synchWarehouse
 {
 
-    CoreDataSynch* controller = [SDRestKitEngine sharedWarehouseController];
+    CoreDataGetSynch* controller = [SDRestKitEngine sharedWarehouseController];
     if(!_synchInProgressWarehouse)
     {
         _synchInProgressWarehouse = YES;
@@ -378,7 +378,7 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
         [controller addNotificationObserver:self notificationName:kNotificationNameWarehouse selector:@selector(synchNotifiedWarehouse:)];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load:^(NSString* baseUrl){
+            [controller load:^(NSString* baseUrl,id postedObject){
                 NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
                 return [kUrlBaseWarehouse appendQueryParams:dictionary];
             }];
@@ -400,7 +400,7 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
 -(void) synchApplicationData
 {
     
-    CoreDataSynch* controller = [SDRestKitEngine sharedApplicationDataController];
+    CoreDataGetSynch* controller = [SDRestKitEngine sharedApplicationDataController];
     if(!_synchInProgressApplicationData)
     {
         _synchInProgressApplicationData = YES;
@@ -410,7 +410,7 @@ NSInteger _alertViewActionCode = 0; //1 - click button, 2 - changed by settings,
         [controller addNotificationObserver:self notificationName:kNotificationNameApplicationData selector:@selector(synchNotifiedApplicationData:)];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [controller load:^(NSString* baseUrl){
+            [controller load:^(NSString* baseUrl,id postedObject){
                 NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
                 return [kUrlBaseApplicationData appendQueryParams:dictionary];
             }];

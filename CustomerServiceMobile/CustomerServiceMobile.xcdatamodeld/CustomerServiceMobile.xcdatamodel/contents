@@ -169,6 +169,7 @@
         <attribute name="priority" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serial_no" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="severity_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sfield1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shipped_qty" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="to_company_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -191,6 +192,7 @@
         <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serial_no" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="severity_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sfield1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shipping_ipad_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -213,6 +215,8 @@
         <attribute name="warehouse_id" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
+        <element name="ActionCode" positionX="1924" positionY="-7956" width="128" height="88"/>
+        <element name="Activity" positionX="1926" positionY="-8064" width="128" height="88"/>
         <element name="ApplicationData" positionX="1953" positionY="-8406" width="128" height="328"/>
         <element name="BinPart" positionX="1260" positionY="-8091" width="128" height="148"/>
         <element name="Carrier" positionX="1260" positionY="-7927" width="128" height="88"/>
@@ -223,15 +227,13 @@
         <element name="InventoryLineItem" positionX="1422" positionY="-7858" width="128" height="178"/>
         <element name="ManAdjustReason" positionX="1269" positionY="-7812" width="128" height="73"/>
         <element name="Queries" positionX="1249" positionY="-8433" width="128" height="118"/>
+        <element name="RepairStation" positionX="1924" positionY="-7855" width="128" height="88"/>
         <element name="ShipmentInstructions" positionX="1269" positionY="-7704" width="128" height="118"/>
         <element name="ShippingHeader" positionX="1771" positionY="-8415" width="128" height="403"/>
-        <element name="ShippingLineItem" positionX="1746" positionY="-7990" width="128" height="343"/>
-        <element name="ShippingList" positionX="1602" positionY="-8047" width="128" height="343"/>
+        <element name="ShippingLineItem" positionX="1746" positionY="-7990" width="128" height="358"/>
+        <element name="ShippingList" positionX="1602" positionY="-8047" width="128" height="358"/>
+        <element name="StopCode" positionX="1924" positionY="-7740" width="128" height="73"/>
         <element name="UserProfile" positionX="1429" positionY="-8424" width="128" height="118"/>
         <element name="Warehouse" positionX="1260" positionY="-8181" width="128" height="73"/>
-        <element name="Activity" positionX="1926" positionY="-8064" width="128" height="88"/>
-        <element name="ActionCode" positionX="1924" positionY="-7956" width="128" height="88"/>
-        <element name="RepairStation" positionX="1924" positionY="-7855" width="128" height="88"/>
-        <element name="StopCode" positionX="1924" positionY="-7740" width="128" height="73"/>
     </elements>
 </model>

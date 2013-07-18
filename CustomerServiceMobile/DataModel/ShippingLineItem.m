@@ -2,7 +2,7 @@
 //  ShippingLineItem.m
 //  CustomerServiceMobile
 //
-//  Created by LTXC on 3/19/13.
+//  Created by Jinsong Lu on 7/18/13.
 //  Copyright (c) 2013 LTXC. All rights reserved.
 //
 
@@ -31,6 +31,7 @@
 @dynamic shipped_qty;
 @dynamic to_company_id;
 @dynamic to_warehouse_id;
+@dynamic severity_id;
 @dynamic header;
 
 @end

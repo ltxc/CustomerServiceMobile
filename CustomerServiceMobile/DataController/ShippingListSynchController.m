@@ -68,10 +68,10 @@ NSInteger _total;
     RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[ShippingList class] inManagedObjectStore:objectStore];
     
     //add all the mapping here
-    [mapping mapAttributes:kKeyPathShippingBPartID,kKeyPathShippingDemandID,kKeyPathShippingDocTypeID,kKeyPathShippingFRBinCodeID,kKeyPathShippingItemID, kKeyPathShippingLDMNDStatID,kKeyPathShippingOrigDocID,kKeyPathShippingPriority,kKeyPathShippingQty,kKeyPathShippingSerialNo,kKeyPathShippingToCompany,kKeyPathShippingToWarehouseID,kKeyPathShippingIPADID,kKeyPathShippingFRInvTypeID,kKeyPathShippingPIDOCID,kKeyPathShippingIsVendor ,nil];
+    [mapping mapAttributes:kKeyPathShippingBPartID,kKeyPathShippingDemandID,kKeyPathShippingDocTypeID,kKeyPathShippingFRBinCodeID,kKeyPathShippingItemID, kKeyPathShippingLDMNDStatID,kKeyPathShippingOrigDocID,kKeyPathShippingPriority,kKeyPathShippingQty,kKeyPathShippingSerialNo,kKeyPathShippingToCompany,kKeyPathShippingToWarehouseID,kKeyPathShippingIPADID,kKeyPathShippingFRInvTypeID,kKeyPathShippingPIDOCID,kKeyPathShippingIsVendor, nil];
     [mapping mapKeyPath:kKeyPathShippingListServerID toAttribute:kAttributeShippingListServerID];
     [mapping mapKeyPath:kKeyPathShippingListDueDate toAttribute:kAttributeShippingListDueDate];
-    
+    [mapping mapKeyPath:kKeyPathShippingServerityID toAttribute:kKeyPathShippingServerityID];
     mapping.primaryKeyAttribute = kAttributeShippingListServerID;
     return mapping;
 }
