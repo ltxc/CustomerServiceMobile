@@ -20,6 +20,8 @@ BOOL _synchInProgressApplicationData;
 BOOL _synchInProgressCompany;
 BOOL _synchInProgressCarrier;
 BOOL _synchInProgressBinPart;
+
+
 BOOL _synchInProgressQueries;
 BOOL _synchInProgressReason;
 BOOL _synchInProgressReports;

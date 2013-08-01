@@ -1542,7 +1542,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CustomerServiceMobile\"",
-					"\"$(SRCROOT)/../../../../Documents/Temp/CustomerServiceMobile/CustomerServiceMobile\"",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1571,7 +1570,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CustomerServiceMobile\"",
-					"\"$(SRCROOT)/../../../../Documents/Temp/CustomerServiceMobile/CustomerServiceMobile\"",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

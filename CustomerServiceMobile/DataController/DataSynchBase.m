@@ -83,24 +83,24 @@
     NSLog(@"Web Service %@ call response code:%d",self.controllerName, [response statusCode]);
 }
 
-//-(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
-//{
-//    if(object!=nil)
-//    {
-//        _status = [NSNumber numberWithInt:1];
-//        _message = [NSString stringWithFormat:@"Service %@ call response object:%@",self.controllerName, [object description]];
-//        
-//    }
-//    else
-//    {
-//        _status = [NSNumber numberWithInt:0];
-//        _message = [NSString stringWithFormat:@"Service %@ call return 0 object",self.controllerName];
-//        
-//    }
-//    
-//    NSLog(@"%@",_message);
-//
-//}
+-(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
+{
+    if(object!=nil)
+    {
+        _status = [NSNumber numberWithInt:1];
+        _message = [NSString stringWithFormat:@"Service %@ call response object:%@",self.controllerName, [object description]];
+        
+    }
+    else
+    {
+        _status = [NSNumber numberWithInt:0];
+        _message = [NSString stringWithFormat:@"Service %@ call return 0 object",self.controllerName];
+        
+    }
+    
+    NSLog(@"%@",_message);
+
+}
 
 -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects{
     if(objects!=nil)
