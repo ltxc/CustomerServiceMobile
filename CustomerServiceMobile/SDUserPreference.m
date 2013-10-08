@@ -103,6 +103,14 @@
     return self;
 }
 
+-(NSString *)baseURL
+{
+    NSString* hostname = [SDUserPreference sharedUserPreference].ServiceServer;
+    NSString* appname = [SDUserPreference sharedUserPreference].ServiceAPPName;
+    NSString* urlString = [NSString stringWithFormat:kWebServiceURLTemplate,hostname,appname];
+    return urlString;
+}
+
 ////Register default values for any pereferences that it expects to be presented. Only the custom one that is not in the plist
 //-(void) registerDefaultsNotInSettingBundle:(NSMutableDictionary *) localDefaults
 //                                        Keys:(NSArray*) aKeys

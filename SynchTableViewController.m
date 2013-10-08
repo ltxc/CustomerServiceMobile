@@ -27,13 +27,14 @@ BOOL _synchInProgressReason;
 BOOL _synchInProgressReports;
 BOOL _synchInProgressShipmentInstructions;
 BOOL _synchInProcessRepairMasterData;
+BOOL _synchInProcessRepairStation;
 
 @implementation SynchTableViewController
 @synthesize lblLastUpdate_SynchApplicationData, lblLastUpdated_SynchBin,lblLastUpdated_SynchCarrier,lblLastUpdated_SynchCompany,
-lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchReports,lblLastUpdated_SynchRepairMasterData;
-@synthesize lblStatus_SynchApplicationData,lblStatus_SynchBin,lblStatus_SynchCarrier,lblStatus_SynchCompany,lblStatus_SynchWarehouse,lblStatus_SynchReason, lblStatus_SynchReports,lblLastUpdated_SynchShipmentInstructions,lblStatus_SynchShipmentInstructions, lblStatus_SynchRepairMasterData;
+lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchReports,lblLastUpdated_SynchRepairMasterData,lblLastUpdated_SynchRepairStation;
+@synthesize lblStatus_SynchApplicationData,lblStatus_SynchBin,lblStatus_SynchCarrier,lblStatus_SynchCompany,lblStatus_SynchWarehouse,lblStatus_SynchReason, lblStatus_SynchReports,lblLastUpdated_SynchShipmentInstructions,lblStatus_SynchShipmentInstructions, lblStatus_SynchRepairMasterData,lblStatus_RepairStation;
 @synthesize dateFormatter;
-@synthesize activity_synchApplicationData, activity_SynchBin,activity_SynchCarrier,activity_SynchCompany,activity_SynchWarehouse,activity_SynchReason, activity_SynchReports,activity_SynchShipmentInstructions, activity_SynchRepairMasterData;
+@synthesize activity_synchApplicationData, activity_SynchBin,activity_SynchCarrier,activity_SynchCompany,activity_SynchWarehouse,activity_SynchReason, activity_SynchReports,activity_SynchShipmentInstructions, activity_SynchRepairMasterData,activity_SynchRepairStation;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -526,6 +527,20 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
 }
 
+- (IBAction)synchRepairStation:(id)sender {
+}
+
+-(void) synchNotifiedRepairStation:(NSNotification *)notification
+{
+    NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:kNotificationRepairStation];
+    [lblStatus_RepairStation setText:info];
+    _synchInProgressRepairStation= NO;
+    [activity_SynchShipmentInstructions stopAnimating];
+    [SDUserPreference sharedUserPreference].LastSynchShipmentInstructions = [NSDate date];
+    [self setDataFromUserDefault:self.dateFormatter];
+    //remove observer
+    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
+}
 
 - (IBAction)synchRepairMasterData:(id)sender {
     
@@ -551,6 +566,8 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     }
     
 }
+
+
 
 -(void)synchNotifiedRepairMasterData:(NSNotification *)notification
 {

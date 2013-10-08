@@ -29,6 +29,7 @@
 #define kProcessStatusFAILED @"FAILED"
 #define kProcessStatusCOMPLETED @"COMPLETED"
 #define kTimeZone @"EST"
+#define kDOAPrefix @"DOA-APP"
 
 //max field size
 #define kMaxSizeCarrierRefNo ((int)30)
@@ -568,3 +569,43 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kMessageProcessResultSubmitBeforeCheck @"Please submit transaction first before checking the process result..."
     
 #define kMessageProcessResultNotFound  @"No process result is availble. You may submit the transaction first..."
+    
+    
+    
+    
+    
+//Assign Station
+#define kTitleRepairStation @"Station"
+#define kIconRepairStation @"iconStation.png"
+#define kUrlBaseRepairStation @"/synch/repairstation"
+#define kUrlBaseAssignStation @"/transaction/stationassignment"
+#define kKeyPathRepairStationId @"station_id"
+    //RepairStation
+
+#define kKeyPathRepairStationStationID @"station_id"
+#define kKeyPathRepairStationDescr @"descr"
+#define kKeyPathRepairStationWarehouseID @"warehouse_id"
+    //assign station
+#define kQueryParamOrderId @"order_id"
+#define kQueryParamSerialNo @"serial_no"
+#define kQueryParamStationId @"station_id"
+#define kQueryParamClientId @"clientid"
+    
+#define kEntityRepairStation @"RepairStation"
+#define kNotificationAssignStation @"assignstation"
+#define kNotificationRepairStation @"repairstation"    
+    //Assign Station
+#define kMessageAssignStationNoValue @"Please provide either RP Number or Serial No..."
+#define kMessageAssignStationIDNoValue @"Please provide Station Id…"
+
+    //process result mapping
+#define kKeyPathProcessResult @""
+#define kKeyPathProcessResultType @"transactionType"
+#define kKeyPathProcessResultTransactionID @"transactionId"
+#define kKeyPathProcessResultStatus @"process_status"
+#define kKeyPathProcessResultMessage @"process_message"
+#define kKeyPathProcessResultDate @"process_date"
+#define kKeyPathProcessCreatedBy @"created_by"
+#define kKeyPathProcessCreatedDate @"created_date"
+    
+#define kMessageServerNotAvailable @"Server is not available..."

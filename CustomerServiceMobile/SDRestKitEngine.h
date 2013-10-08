@@ -48,7 +48,7 @@
 +(CoreDataGetSynch *) sharedShipmentInstructionsController;
 //+(ManAdjustReasonController *) sharedReasonController;
 +(CoreDataGetSynch *) sharedReasonController;
-
++(CoreDataGetSynch *) sharedRepairStationController;
 +(RepairMasterDataSynch *) sharedRepairMasterDataController;
 
 +(InventoryTransactionController*) sharedInventoryTransactionController;
@@ -59,6 +59,8 @@
 +(ShippingTransactionController*) sharedShippingController;
 +(RPInformationController*) sharedRPInformationController;
 +(ProcessResultController*) sharedProcessResultController;
+
+
 
 -(SDRestKitEngine *) setAuthentication:(NSString*) username password:(NSString *) password;
 -(void)alert:(NSString*) message title:(NSString*) title;

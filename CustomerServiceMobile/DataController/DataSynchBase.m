@@ -85,20 +85,21 @@
 
 -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
 {
+    NSString* logmessage = nil;
     if(object!=nil)
     {
         _status = [NSNumber numberWithInt:1];
-        _message = [NSString stringWithFormat:@"Service %@ call response object:%@",self.controllerName, [object description]];
+        logmessage = [NSString stringWithFormat:@"Service %@ call response object:%@",self.controllerName, [object description]];
         
     }
     else
     {
         _status = [NSNumber numberWithInt:0];
-        _message = [NSString stringWithFormat:@"Service %@ call return 0 object",self.controllerName];
+        logmessage = [NSString stringWithFormat:@"Service %@ call return 0 object",self.controllerName];
         
     }
     
-    NSLog(@"%@",_message);
+    NSLog(@"%@",logmessage);
 
 }
 

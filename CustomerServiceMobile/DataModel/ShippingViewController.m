@@ -10,6 +10,7 @@
 #import "ShippingScanViewController.h"
 #import "ShippingLineItem.h"
 #import "ShipmentInstructions.h"
+#import "SharedConstants.h"
 
 @interface ShippingViewController ()
 @property (strong, nonatomic)NSArray* sortDescriptionArray;

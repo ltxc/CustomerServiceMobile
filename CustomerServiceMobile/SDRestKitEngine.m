@@ -12,6 +12,7 @@
 #import "Queries.h"
 #import "ShipmentInstructions.h"
 #import "ManAdjustReason.h"
+#import "RepairStation.h"
 
 @implementation SDRestKitEngine
 @synthesize objectManager=_objectManager;
@@ -351,6 +352,30 @@
     return sharedController;
 }
 
++(CoreDataGetSynch *) sharedRepairStationController
+{
+    static CoreDataGetSynch *sharedController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataGetSynch alloc] init:@"Reason" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathManAdjustReason notificationName:kNotificationRepairStation mapBlock:^(RKManagedObjectStore *objectStore) {
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[RepairStation class] inManagedObjectStore:objectStore];
+            [mapping mapAttributes:kKeyPathRepairStationStationID,kKeyPathRepairStationWarehouseID, kKeyPathRepairStationDescr,nil];
+            
+            mapping.primaryKeyAttribute = kKeyPathRepairStationStationID;
+            return mapping;
+            
+        }
+                            
+                                               fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+                                                   return [ManAdjustReason fetchRequest];
+                                               }
+                            ];
+    });
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
+}
+
 
 +(RepairMasterDataSynch *)sharedRepairMasterDataController
 {
@@ -462,6 +487,8 @@
     return sharedController;
 
 }
+
+
 
 -(SDRestKitEngine *) setAuthentication:(NSString*) username password:(NSString *) password
 {

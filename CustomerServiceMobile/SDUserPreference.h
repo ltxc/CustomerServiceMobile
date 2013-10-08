@@ -39,6 +39,8 @@
 @property (strong, atomic) UserProfile* user;
 @property (strong, atomic) NSDateFormatter* dateFormatter;
 
+@property (readonly,atomic)NSString* baseURL;
+
 +(SDUserPreference*) sharedUserPreference;
 +(NSString*)trim:(NSString*)value;
 +(NSString*)trim:(NSString *)value size:(NSUInteger)size isLeft:(BOOL)isLeft alert:(NSString*)alert;
@@ -50,5 +52,7 @@
 -(NSDictionary *)registerDefaultWithKeyArray:(NSArray *)aKeys;
 -(NSDictionary *)bundleSettings;
 -(void) log;
+
+
 
 @end
