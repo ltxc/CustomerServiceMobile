@@ -358,7 +358,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //initialize the CoreDataSynch object
-        sharedController = [[CoreDataGetSynch alloc] init:@"Reason" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathManAdjustReason notificationName:kNotificationRepairStation mapBlock:^(RKManagedObjectStore *objectStore) {
+        sharedController = [[CoreDataGetSynch alloc] init:@"Reason" objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseManAdjustReason rootKeyPath:kKeyPathRepairStation notificationName:kNotificationRepairStation mapBlock:^(RKManagedObjectStore *objectStore) {
             RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[RepairStation class] inManagedObjectStore:objectStore];
             [mapping mapAttributes:kKeyPathRepairStationStationID,kKeyPathRepairStationWarehouseID, kKeyPathRepairStationDescr,nil];
             

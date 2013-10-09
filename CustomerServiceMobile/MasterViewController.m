@@ -44,9 +44,9 @@ NSMutableDictionary *detailViewControllers;
     menuTransactions = [[NSMutableArray alloc] init];
     [menuTransactions addObject:kMenuReceiving];
     [menuTransactions addObject:kMenuShipping];
-    //[menuTransactions addObject:kMenuInventory];
-    [menuTransactions addObject:kMenuRepair];
+    //[menuTransactions addObject:kMenuInventory];    
     [menuTransactions addObject:kMenuCycleCount];
+    [menuTransactions addObject:kMenuRepair];
     
     menuUtilities = [[NSMutableArray alloc] init];
     [menuUtilities addObject:kMenuQueries];

@@ -180,6 +180,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kIdLastSynchReason @"lastsynch_reason"
 #define kIdLastSynchReports @"lastsynch_reports"
 #define kIdLastSynchShipmentInstructions @"lastsynch_shipmentinstructions"
+#define kIdLastSynchRepairStation @"lastsynch_repairstation"
 #define kIdLastSynchRepairMasterData @"lastsynch_repairmasterdata"
 
 #define kDefaultPrinter @"\\miprint\CP03CA"
@@ -296,7 +297,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathActivityDescr @"descr"
     
 //RepairStation
-#define kKeyPathRepairStation @"repairStation"
+#define kKeyPathRepairStation @"repairstation"
 #define kKeyPathRepairStationStationID @"station_id"
 #define kKeyPathRepairStationDescr @"descr"
 #define kKeyPathRepairStationWarehouseID @"warehouse_id"
@@ -492,6 +493,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kPredicateSelected @"shipping_ipad_id == NULL"
 #define kPredicatePick @"(ldmnd_stat_id == '50') AND (shipping_ipad_id == NULL)"
 #define kPredicatePickList @"(ldmnd_stat_id == '80') AND (shipping_ipad_id == NULL)"
+#define kPredicateWarehouseId @"warehouse_id == %@"
 //#define kPredicateShip @"((ldmnd_stat_id == '100') OR (ldmnd_stat_id == '50')) AND (shipping_ipad_id == NULL)"
 #define kPredicateShip @"(ldmnd_stat_id == '100')  AND (shipping_ipad_id == NULL)"
 #define kFetchTemplateServerID @"server_id==%@"
@@ -575,7 +577,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
     
     
 //Assign Station
-#define kTitleRepairStation @"Station"
+#define kTitleRepairStation @"Assign Station"
 #define kIconRepairStation @"iconStation.png"
 #define kUrlBaseRepairStation @"/synch/repairstation"
 #define kUrlBaseAssignStation @"/transaction/stationassignment"

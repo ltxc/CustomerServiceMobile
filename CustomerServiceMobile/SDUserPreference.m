@@ -9,7 +9,7 @@
 @synthesize Version, Printer, Landscape,LastLandscape, IsInited;
 @synthesize keys, preferences;
 @synthesize ServiceServer, ServiceAPPName, DefaultWarehouseID, LastLogin,LastLoginAA, IsRememberUserID, BackgroundProcessInterval, MaxRows, ReportServer;
-@synthesize LastSynchApplicationData, LastSynchBin,LastSynchCarrier,LastSynchCompany,LastSynchWarehouse, LastSynchReason, LastSynchReports, LastSynchShipmentInstructions, LastSynchRepairMasterData;
+@synthesize LastSynchApplicationData, LastSynchBin,LastSynchCarrier,LastSynchCompany,LastSynchWarehouse, LastSynchReason, LastSynchReports, LastSynchShipmentInstructions, LastSynchRepairMasterData, LastSynchRepairStation;
 
 @synthesize LastLoginPassword;
 @synthesize dateFormatter=_dateFormatter;
@@ -37,7 +37,10 @@
                                     kIdLastSynchCarrier,
                                     kIdLastSynchCompany,
                                     kIdLastSynchWarehouse,
-                                    kIdLastSynchReports,kIdLastSynchShipmentInstructions                                                    ,nil]];
+                                    kIdLastSynchReports,
+                                    kIdLastSynchShipmentInstructions,
+                                    kIdLastSynchRepairStation,                                            
+                                    nil]];
         
         //init the date formatter
 //        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -504,6 +507,25 @@
 -(void)setLastSynchShipmentInstructions:(NSDate *)lastSynchShipmentInstructions
 {
     [[NSUserDefaults standardUserDefaults]  setObject:lastSynchShipmentInstructions forKey:kIdLastSynchShipmentInstructions];
+    [self synchronize];
+}
+
+-(NSDate *)LastSynchRepairStation
+{
+    NSDate* dateLastSynch =  (NSDate *)[[NSUserDefaults standardUserDefaults] objectForKey:kIdLastSynchRepairStation];
+    if(nil==dateLastSynch)
+    {
+        dateLastSynch = [NSDate distantPast];
+        [[NSUserDefaults standardUserDefaults] setObject:dateLastSynch forKey:kIdLastSynchRepairStation];
+        [self synchronize];
+    }
+    
+    return dateLastSynch;
+}
+
+-(void)setLastSynchRepairStation:(NSDate *)lastSynchRepairStation
+{
+    [[NSUserDefaults standardUserDefaults]  setObject:lastSynchRepairStation forKey:kIdLastSynchRepairStation];
     [self synchronize];
 }
 

@@ -618,7 +618,7 @@
                                             <rect key="frame" x="45" y="0.0" width="678" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Synch Sation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oDA-ra-OaF">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Synch Station" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oDA-ra-OaF">
                                                     <rect key="frame" x="3" y="30" width="210" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -636,7 +636,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="synchRepairStation:" destination="eZN-5H-OOD" eventType="touchUpInside" id="Kh3-nX-QHE"/>
-                                                        <action selector="synchShipmentInstructions:" destination="eZN-5H-OOD" eventType="touchUpInside" id="b50-aM-tFi"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Last Date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uX5-rC-Ws8">
@@ -731,62 +730,6 @@
         <image name="iconReset.png" width="90" height="90"/>
         <image name="iconSynchronization.png" width="90" height="90"/>
     </resources>
-    <classes>
-        <class className="DetailViewNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewNavigationController.h"/>
-        </class>
-        <class className="SynchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SynchTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="clearLocalDatabase:"/>
-                <relationship kind="action" name="resetAll:"/>
-                <relationship kind="action" name="synchAll:"/>
-                <relationship kind="action" name="synchApplicationData:"/>
-                <relationship kind="action" name="synchBin:"/>
-                <relationship kind="action" name="synchCarrier:"/>
-                <relationship kind="action" name="synchCompany:"/>
-                <relationship kind="action" name="synchReason:"/>
-                <relationship kind="action" name="synchRepairMasterData:"/>
-                <relationship kind="action" name="synchReports:"/>
-                <relationship kind="action" name="synchShipmentInstructions:"/>
-                <relationship kind="action" name="synchWarehouse:"/>
-                <relationship kind="outlet" name="activity_SynchBin" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchCarrier" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchCompany" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchReason" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchRepairMasterData" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchRepairStation" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchReports" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchShipmentInstructions" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_SynchWarehouse" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="activity_synchApplicationData" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="btnSynchBinPart" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnSynchCarrier" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnSynchCompany" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnSynchWarehouse" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lblLastUpdate_SynchApplicationData" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchBin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchCarrier" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchCompany" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchReason" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchRepairMasterData" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchRepairStation" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchReports" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchShipmentInstructions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastUpdated_SynchWarehosue" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_RepairStation" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchApplicationData" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchBin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchCarrier" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchCompany" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchReason" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchRepairMasterData" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="lblStatus_SynchReports" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchShipmentInstructions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblStatus_SynchWarehouse" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

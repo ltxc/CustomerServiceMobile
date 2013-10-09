@@ -170,8 +170,6 @@
 		34E30063177E4D8E00DFFB11 /* RepairMasterDataSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30062177E4D8E00DFFB11 /* RepairMasterDataSynch.m */; };
 		34E3134E1784D22000EBC961 /* CoreDataPostSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E3134D1784D22000EBC961 /* CoreDataPostSynch.m */; };
 		34E5B3BC16E06050004849F9 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E5B3BB16E06050004849F9 /* CalculatorViewController.m */; };
-		34F5D19C1804B09200C94CD5 /* RepairStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F5D1981804B09100C94CD5 /* RepairStationViewController.m */; };
-		34F5D19D1804B09200C94CD5 /* RepairStationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F5D1991804B09100C94CD5 /* RepairStationViewController.xib */; };
 		34F5D19E1804B09200C94CD5 /* RepairTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F5D19B1804B09200C94CD5 /* RepairTabBarController.m */; };
 		34F5D1DA1804BD6400C94CD5 /* ZSAutoCompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F5D1AB1804BD6400C94CD5 /* ZSAutoCompleteController.m */; };
 		34F5D1DB1804BD6400C94CD5 /* ZSAutoCompleteController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F5D1AC1804BD6400C94CD5 /* ZSAutoCompleteController.xib */; };
@@ -201,6 +199,8 @@
 		34F5D1F31804BD6400C94CD5 /* ZSTransientDataGetSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F5D1D91804BD6400C94CD5 /* ZSTransientDataGetSynch.m */; };
 		34F5D1FC1804C14200C94CD5 /* SDDataControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F5D1FB1804C14200C94CD5 /* SDDataControllers.m */; };
 		34F70D1916FB601E004EBA8E /* iconHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F70D1816FB601E004EBA8E /* iconHome.png */; };
+		34F9BC721805D4C000A0CFC1 /* RepairStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F9BC701805D4C000A0CFC1 /* RepairStationViewController.m */; };
+		34F9BC731805D4C000A0CFC1 /* RepairStationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F9BC711805D4C000A0CFC1 /* RepairStationViewController.xib */; };
 		34F9E86E16726A34003203EC /* ReceivingLineItemCellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F9E86D16726A34003203EC /* ReceivingLineItemCellViewCell.m */; };
 		34F9E87116726AE9003203EC /* ReceivingLineItemsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F9E87016726AE9003203EC /* ReceivingLineItemsTableView.m */; };
 		34FA41FE177A4E9800A86105 /* StopCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FA41FD177A4E9800A86105 /* StopCode.m */; };
@@ -517,9 +517,6 @@
 		34E5B3BB16E06050004849F9 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorViewController.m; path = ViewControllers/CalculatorViewController.m; sourceTree = "<group>"; };
 		34F3740F163714A700FF372F /* SharedConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedConstants.h; path = ../SharedConstants.h; sourceTree = "<group>"; };
 		34F3B5E11730806800CEEDF4 /* AutoComplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoComplete.h; path = DataController/AutoComplete.h; sourceTree = "<group>"; };
-		34F5D1971804B09100C94CD5 /* RepairStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairStationViewController.h; path = DataController/RepairStationViewController.h; sourceTree = "<group>"; };
-		34F5D1981804B09100C94CD5 /* RepairStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairStationViewController.m; path = DataController/RepairStationViewController.m; sourceTree = "<group>"; };
-		34F5D1991804B09100C94CD5 /* RepairStationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepairStationViewController.xib; path = DataController/RepairStationViewController.xib; sourceTree = "<group>"; };
 		34F5D19A1804B09100C94CD5 /* RepairTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairTabBarController.h; path = DataController/RepairTabBarController.h; sourceTree = "<group>"; };
 		34F5D19B1804B09200C94CD5 /* RepairTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairTabBarController.m; path = DataController/RepairTabBarController.m; sourceTree = "<group>"; };
 		34F5D1A91804BD6400C94CD5 /* ZSAutoComplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSAutoComplete.h; sourceTree = "<group>"; };
@@ -573,6 +570,9 @@
 		34F5D1FA1804C14200C94CD5 /* SDDataControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDataControllers.h; sourceTree = "<group>"; };
 		34F5D1FB1804C14200C94CD5 /* SDDataControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDataControllers.m; sourceTree = "<group>"; };
 		34F70D1816FB601E004EBA8E /* iconHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconHome.png; sourceTree = "<group>"; };
+		34F9BC6F1805D4C000A0CFC1 /* RepairStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepairStationViewController.h; path = ViewControllers/RepairStationViewController.h; sourceTree = "<group>"; };
+		34F9BC701805D4C000A0CFC1 /* RepairStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepairStationViewController.m; path = ViewControllers/RepairStationViewController.m; sourceTree = "<group>"; };
+		34F9BC711805D4C000A0CFC1 /* RepairStationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepairStationViewController.xib; path = ViewControllers/RepairStationViewController.xib; sourceTree = "<group>"; };
 		34F9E86C16726A34003203EC /* ReceivingLineItemCellViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivingLineItemCellViewCell.h; path = DataController/ReceivingLineItemCellViewCell.h; sourceTree = "<group>"; };
 		34F9E86D16726A34003203EC /* ReceivingLineItemCellViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceivingLineItemCellViewCell.m; path = DataController/ReceivingLineItemCellViewCell.m; sourceTree = "<group>"; };
 		34F9E86F16726AE9003203EC /* ReceivingLineItemsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivingLineItemsTableView.h; path = DataController/ReceivingLineItemsTableView.h; sourceTree = "<group>"; };
@@ -1159,11 +1159,11 @@
 		34E30060177E4D1200DFFB11 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
-				34F5D1971804B09100C94CD5 /* RepairStationViewController.h */,
-				34F5D1981804B09100C94CD5 /* RepairStationViewController.m */,
-				34F5D1991804B09100C94CD5 /* RepairStationViewController.xib */,
 				34F5D19A1804B09100C94CD5 /* RepairTabBarController.h */,
 				34F5D19B1804B09200C94CD5 /* RepairTabBarController.m */,
+				34F9BC6F1805D4C000A0CFC1 /* RepairStationViewController.h */,
+				34F9BC701805D4C000A0CFC1 /* RepairStationViewController.m */,
+				34F9BC711805D4C000A0CFC1 /* RepairStationViewController.xib */,
 			);
 			name = Repair;
 			sourceTree = "<group>";
@@ -1451,13 +1451,13 @@
 				34B1BBA4178CC675003BB44D /* iconSearch.png in Resources */,
 				34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */,
 				34976C221798856100ACCF1A /* iconDOA.png in Resources */,
-				34F5D19D1804B09200C94CD5 /* RepairStationViewController.xib in Resources */,
 				34F5D1DB1804BD6400C94CD5 /* ZSAutoCompleteController.xib in Resources */,
 				34F5D1DF1804BD6400C94CD5 /* ZSDynamicChoiceInputView.xib in Resources */,
 				34F5D1E11804BD6400C94CD5 /* ZSDynamicSwitchView.xib in Resources */,
 				34F5D1E31804BD6400C94CD5 /* ZSDynamicTextInputView.xib in Resources */,
 				34F5D1E91804BD6400C94CD5 /* ZSCalculatorViewController.xib in Resources */,
 				34F5D1ED1804BD6400C94CD5 /* ZSProcessResultViewController.xib in Resources */,
+				34F9BC731805D4C000A0CFC1 /* RepairStationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1571,7 +1571,6 @@
 				341E3DB71795E6DE005DF011 /* CoreDataSynch.m in Sources */,
 				34976C201798847000ACCF1A /* ShippingLineItem.m in Sources */,
 				3450B1E7179892E200631421 /* ShippingList.m in Sources */,
-				34F5D19C1804B09200C94CD5 /* RepairStationViewController.m in Sources */,
 				34F5D19E1804B09200C94CD5 /* RepairTabBarController.m in Sources */,
 				34F5D1DA1804BD6400C94CD5 /* ZSAutoCompleteController.m in Sources */,
 				34F5D1DC1804BD6400C94CD5 /* ZSAutoCompleteDataHelper.m in Sources */,
@@ -1594,6 +1593,7 @@
 				34F5D1F21804BD6400C94CD5 /* ZSStringBuilder.m in Sources */,
 				34F5D1F31804BD6400C94CD5 /* ZSTransientDataGetSynch.m in Sources */,
 				34F5D1FC1804C14200C94CD5 /* SDDataControllers.m in Sources */,
+				34F9BC721805D4C000A0CFC1 /* RepairStationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

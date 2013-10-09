@@ -33,7 +33,7 @@
 @property (strong, atomic) NSDate* LastSynchReason;
 @property (strong, atomic) NSDate* LastSynchReports;
 @property (strong, atomic) NSDate* LastSynchShipmentInstructions;
-
+@property (strong, atomic) NSDate* LastSynchRepairStation;
 @property (strong, atomic) NSDate* LastSynchRepairMasterData;
 
 @property (strong, atomic) UserProfile* user;

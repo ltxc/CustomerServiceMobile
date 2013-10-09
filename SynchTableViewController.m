@@ -27,7 +27,7 @@ BOOL _synchInProgressReason;
 BOOL _synchInProgressReports;
 BOOL _synchInProgressShipmentInstructions;
 BOOL _synchInProcessRepairMasterData;
-BOOL _synchInProcessRepairStation;
+BOOL _synchInProgressRepairStation;
 
 @implementation SynchTableViewController
 @synthesize lblLastUpdate_SynchApplicationData, lblLastUpdated_SynchBin,lblLastUpdated_SynchCarrier,lblLastUpdated_SynchCompany,
@@ -74,6 +74,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     lblLastUpdated_SynchReason.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchReason]] ;
     lblLastUpdated_SynchReports.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchReports]] ;
     lblLastUpdated_SynchShipmentInstructions.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchShipmentInstructions]] ;
+    lblLastUpdated_SynchRepairStation.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchRepairStation]] ;
     lblLastUpdated_SynchRepairMasterData.text = [formatter stringFromDate:[[SDUserPreference sharedUserPreference] LastSynchRepairMasterData]];
     //last update status
     
@@ -108,6 +109,7 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     [self synchReason:sender];
     [self synchReports:sender];
     [self synchShipmentInstructions:sender];
+    [self synchRepairStation:sender];
     sleep(1);
     [self synchBin:sender];
     
@@ -528,6 +530,22 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
 }
 
 - (IBAction)synchRepairStation:(id)sender {
+    CoreDataGetSynch* controller = [SDRestKitEngine sharedRepairStationController];
+    if(!_synchInProgressRepairStation)
+    {
+        _synchInProgressRepairStation = YES;
+        [activity_SynchRepairStation startAnimating];
+        [lblStatus_RepairStation setText:@""];
+        //add observer
+        [controller addNotificationObserver:self notificationName:kNotificationRepairStation  selector:@selector(synchNotifiedRepairStation:)];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [controller load:^(NSString* baseUrl,id postedObject){
+                NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamFirstResult,@"0", kQueryParamMaxResult, @"0", nil];
+                return [kUrlBaseRepairStation appendQueryParams:dictionary];
+            }];
+        });
+    }
 }
 
 -(void) synchNotifiedRepairStation:(NSNotification *)notification
@@ -535,11 +553,11 @@ lblLastUpdated_SynchWarehosue,lblLastUpdated_SynchReason, lblLastUpdated_SynchRe
     NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:kNotificationRepairStation];
     [lblStatus_RepairStation setText:info];
     _synchInProgressRepairStation= NO;
-    [activity_SynchShipmentInstructions stopAnimating];
-    [SDUserPreference sharedUserPreference].LastSynchShipmentInstructions = [NSDate date];
+    [activity_SynchRepairStation stopAnimating];
+    [SDUserPreference sharedUserPreference].LastSynchRepairStation = [NSDate date];
     [self setDataFromUserDefault:self.dateFormatter];
     //remove observer
-    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationShipmentInstructions];
+    [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationRepairStation];
 }
 
 - (IBAction)synchRepairMasterData:(id)sender {

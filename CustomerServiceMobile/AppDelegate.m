@@ -13,6 +13,7 @@
 #import "SharedConstants.h"
 #import <RestKit/RestKit.h>
 #import "SDRestKitEngine.h"
+#import "ZSSDDataEngine.h"
 #define TESTING 1
 
 @implementation AppDelegate
@@ -65,6 +66,9 @@ void SignalHandler(int sig) {
     [RKObjectMapping addDefaultDateFormatter:dateFormatter];
     [RKObjectMapping setPreferredDateFormatter:dateFormatter];
     
+    //initialize both SDDataEngine and ZSSDDataEngine
+    [ZSSDDataEngine sharedEngine].rkManagedObjectStore =  [SDDataEngine sharedEngine].rkManagedObjectStore;
+    [ZSSDDataEngine sharedEngine].managedObjectContext =  [SDDataEngine sharedEngine].managedObjectContext;
     //Exception Handling
     // installs HandleExceptions as the Uncaught Exception Handler
     NSSetUncaughtExceptionHandler(&HandleExceptions);
