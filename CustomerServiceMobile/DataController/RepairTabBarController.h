@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+#import "DetailViewNavigationController.h"
 //RepairTabBarController as the initial controller of RepairStoryboard is called in the MasterViewController when rotate.
 // SubstitutableDetailViewController delegate is called in (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 
-@interface RepairTabBarController : UITabBarController
-+(UINavigationController*) station;
+@interface RepairTabBarController : UITabBarController<SubstitutableDetailViewController>
++(DetailViewNavigationController*) station;
 //+(UINavigationController*) assignment;
 @property (nonatomic, assign) AppDelegate *myAppDelegate;
 @end

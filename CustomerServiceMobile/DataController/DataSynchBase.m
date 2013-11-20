@@ -65,9 +65,30 @@
 
 -(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
-    _message = [NSString stringWithFormat:kMessageSynchFailedTemplate, [error localizedDescription]];
+    RKObjectManagerNetworkStatus networkStatus =  self.objectManager.networkStatus;
+    NSData* bodyData = [objectLoader response].body;
+    
+    NSString* body = @"Server does not response. Please double check the network connection and try it again.";
+    if (bodyData!=nil) {
+        body = [NSString stringWithUTF8String:bodyData.bytes];
+        
+    }
+    if (networkStatus!=RKObjectManagerNetworkStatusOnline) {
+        //server is not available
+        _message = kMessageServerNotAvailable;
+    }
+    else
+    {
+        NSString* bodymessage = @"";
+        if ([body length]<50) {
+            bodymessage = [NSString stringWithFormat:@"Server Response:%@",body];
+        }
+        
+        _message = [NSString stringWithFormat:kMessageSynchFailedTemplate,bodymessage, [error localizedDescription]];
+    }
     NSLog(@"%@",self.message);
     self.status = [NSNumber numberWithInt:0];
+
 }
 
 -(void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error

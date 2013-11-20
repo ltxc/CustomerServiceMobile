@@ -995,6 +995,11 @@
 		346FC20F162F719200600096 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
+				34F5D19A1804B09100C94CD5 /* RepairTabBarController.h */,
+				34F5D19B1804B09200C94CD5 /* RepairTabBarController.m */,
+				34F9BC6F1805D4C000A0CFC1 /* RepairStationViewController.h */,
+				34F9BC701805D4C000A0CFC1 /* RepairStationViewController.m */,
+				34F9BC711805D4C000A0CFC1 /* RepairStationViewController.xib */,
 			);
 			name = Repair;
 			sourceTree = "<group>";
@@ -1159,11 +1164,6 @@
 		34E30060177E4D1200DFFB11 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
-				34F5D19A1804B09100C94CD5 /* RepairTabBarController.h */,
-				34F5D19B1804B09200C94CD5 /* RepairTabBarController.m */,
-				34F9BC6F1805D4C000A0CFC1 /* RepairStationViewController.h */,
-				34F9BC701805D4C000A0CFC1 /* RepairStationViewController.m */,
-				34F9BC711805D4C000A0CFC1 /* RepairStationViewController.xib */,
 			);
 			name = Repair;
 			sourceTree = "<group>";
@@ -1705,8 +1705,8 @@
 		346FC1FC162F6E7900600096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: LTX-Credence Corporation";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LTX-Credence Corporation";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jinsong lu (VV3G9CJY3W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jinsong lu (VV3G9CJY3W)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Documents/Temp/CustomerServiceMobile/RestKit/Tests/Vendor/OCHamcrest\"",
@@ -1722,8 +1722,8 @@
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AAB486F7-B2B8-43C0-B26F-B60C3716740D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AAB486F7-B2B8-43C0-B26F-B60C3716740D";
+				PROVISIONING_PROFILE = "9C5F5E31-4E32-4DC3-A279-4122499FED96";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C5F5E31-4E32-4DC3-A279-4122499FED96";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;

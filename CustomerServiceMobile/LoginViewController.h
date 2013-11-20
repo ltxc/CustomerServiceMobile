@@ -16,5 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *layoutView;
 - (IBAction)login:(id)sender;
+- (IBAction)cancel:(id)sender;
+
 - (void) clearPassword;
 @end

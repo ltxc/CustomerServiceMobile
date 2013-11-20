@@ -11,7 +11,7 @@
 //#import "RepairAssignmentViewController.h"
 #import "RepairStationViewController.h"
 #import "HomeViewController.h"
-
+#import "DetailViewNavigationController.h"
 @interface RepairTabBarController ()
 
 @end
@@ -36,7 +36,7 @@
     
     
 
-    UINavigationController* station = [RepairTabBarController station];
+    DetailViewNavigationController* station = [RepairTabBarController station];
     [tbViewControllers insertObject:station atIndex:0];
     [station setTitle:kTitleRepairStation];
     
@@ -57,14 +57,35 @@
 }
 
 
-#pragma mark Singleton Controllers
-+(UINavigationController *)station
+- (void)showRootPopoverButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    static UINavigationController* stationController = nil;
+    barButtonItem.title = @"Menu";
+
+    DetailViewNavigationController* selectedOne = (DetailViewNavigationController*)[self.viewControllers objectAtIndex:self.selectedIndex];
+    if (selectedOne!=nil) {
+        selectedOne.menuBarButtonItem = barButtonItem;
+        [selectedOne.topViewController.navigationItem setRightBarButtonItem:barButtonItem animated:YES];
+    }
+    
+}
+- (void)invalidateRootPopoverButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    DetailViewNavigationController* selectedOne = (DetailViewNavigationController*)[self.viewControllers objectAtIndex:self.selectedIndex];
+    if (selectedOne!=nil) {
+        selectedOne.menuBarButtonItem = nil;
+        [selectedOne.topViewController.navigationItem setRightBarButtonItem:nil animated:YES];
+    }
+}
+
+
+#pragma mark Singleton Controllers
++(DetailViewNavigationController *)station
+{
+    static DetailViewNavigationController* stationController = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         RepairStationViewController* viewController = [[RepairStationViewController alloc] initWithNibName:nil bundle:nil];
-        stationController = [[UINavigationController alloc]initWithRootViewController:viewController];
+        stationController = [[DetailViewNavigationController alloc]initWithRootViewController:viewController];
         [viewController setTitle:kTitleRepairStation];
         UITabBarItem * item = [[UITabBarItem alloc] initWithTitle:kTitleRepairStation image:[UIImage imageNamed:kIconRepairStation] tag:2];
         stationController.tabBarItem = item;

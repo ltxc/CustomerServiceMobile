@@ -67,7 +67,7 @@
             self.message = [NSString stringWithFormat:kZSRestDataSynchNotificationRecordTemplate,self.controllerName, count];
         }
         
-        
+        //Commit everything in context to the database
         if (_objectStore!=nil) {
             [self saveRKCache];
         }

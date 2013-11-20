@@ -117,8 +117,19 @@
         if(nil!=storedUserProfile)
             [[SDRestKitEngine sharedEngine] alert:kMessageLoginMissMatch title:kMessageLoginTitle];
         else
-            [[SDRestKitEngine sharedEngine] alert:kMessageLoginFirstTime title:kMessageLoginTitle];
+        {
+            NSString* message = kMessageLoginFirstTime;
+            if ([userProfileController.status isEqualToNumber:[NSNumber numberWithInt:0]]) {
+                message = [NSString stringWithFormat:kMessageLoginServerNotAvailable,[SDUserPreference sharedUserPreference].ServiceServer ,userProfileController.message];
+                
+            }
+            [[SDRestKitEngine sharedEngine] alert:message title:kMessageLoginTitle];
+        }
     }
+}
+
+- (IBAction)cancel:(id)sender {
+    [self.myAppDelegate logout];
 }
 
 - (void) clearPassword

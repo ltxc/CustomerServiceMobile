@@ -12,6 +12,7 @@
 #import "UserProfile.h"
 @interface UserProfileController : DataSynchBase<RKObjectLoaderDelegate>
 @property (strong, atomic) UserProfile* userProfile;
+
 -(id)init;
 //-(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error;
 //-(void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response;

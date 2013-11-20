@@ -32,12 +32,12 @@
 -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
     [super objectLoader:objectLoader didLoadObjects:objects];
-    if(nil!=objects)
-    {
+//    if(nil!=objects)
+//    {
         _cycleCountMasters = objects;
         [[SDDataEngine sharedEngine] saveRKCache];
         
-    }
+//    }
 }
 
 

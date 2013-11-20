@@ -37,6 +37,7 @@
 {
     [super objectLoader:objectLoader didFailWithError:error];
     //[[SDRestKitEngine sharedEngine] alert:@"Server Connection Failed. Please make sure that it is connected inside company network..." title:@"Connection Failure"];
+    
 }
 
 -(void)request:(RKRequest *)request didReceiveResponse:(RKResponse *)response
@@ -76,7 +77,7 @@
     loader.method = RKRequestMethodGET;
     //[loader setCacheTimeoutInterval:0];    
     [loader sendSynchronously];
-    
+
     
     if(self.userProfile!=nil)
     {

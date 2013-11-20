@@ -208,7 +208,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kSortAttributeManAdjustReason @"reasoncode"
 #define kSortAttributeBinPart @"bpart_id"
 #define kSortAttributeQueries @"queryname"
-
+#define kSortAttributeStation @"station_id"
 
 //attribute - db, keypath - json
 //userprofile
@@ -521,7 +521,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kMessageValidationRequiredTemplate @"Field %@ is required..."
 
 #define kMessageLoginTitle @"Login Failed..."
-
+#define kMessageLoginServerNotAvailable @"Server (%@) failed to respond with message:%@ You may click cancel to close the application if you need to change the server in the Settings."
 #define kMessageLoginFirstTime @"First time user must be authentiated with the server at least once. Please contact IT for help."
 #define kMessageLoginMissMatch @"User name and password your enter do not match with what are in the system."
 #define kMessageSynchRecordTemplate @"Total %d records received..."
