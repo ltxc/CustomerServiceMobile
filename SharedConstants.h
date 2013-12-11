@@ -98,7 +98,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
     
 //Menu Item
 #define kMenuSpace @""
-#define kMenuSectionTransation @"Transation"
+#define kMenuSectionTransation @"Transaction"
 #define kMenuSectionUtility @"Utility"
 #define kMenuReceiving @"Receiving"
 #define kMenuShipping @"Shipping"

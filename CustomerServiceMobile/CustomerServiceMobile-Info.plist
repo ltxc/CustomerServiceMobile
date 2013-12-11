@@ -8,8 +8,6 @@
 	<string>CS Mobile</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>CSMobile72.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>ltxc.csmobile</string>
 	<key>CFBundleInfoDictionaryVersion</key>

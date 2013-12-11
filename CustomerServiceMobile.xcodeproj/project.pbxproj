@@ -113,6 +113,7 @@
 		3483F9FA1638B34000306DFF /* iconSubmit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F11638B34000306DFF /* iconSubmit.png */; };
 		3483F9FB1638B34000306DFF /* iconSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F21638B34000306DFF /* iconSuccess.png */; };
 		348A976F18590CD300503DC0 /* iconSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 348A976E18590CD300503DC0 /* iconSearch.png */; };
+		348A977118591F4800503DC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348A977018591F4800503DC0 /* Images.xcassets */; };
 		348B0FA316657A5100FD2E14 /* iconLogout.png in Resources */ = {isa = PBXBuildFile; fileRef = 348B0FA216657A5100FD2E14 /* iconLogout.png */; };
 		349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349458E1166D545800D993E2 /* InventoryTransactionController.m */; };
 		34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34945906166E7A9B00D993E2 /* ReceivingViewController.m */; };
@@ -422,6 +423,7 @@
 		3483F9F11638B34000306DFF /* iconSubmit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSubmit.png; sourceTree = "<group>"; };
 		3483F9F21638B34000306DFF /* iconSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSuccess.png; sourceTree = "<group>"; };
 		348A976E18590CD300503DC0 /* iconSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSearch.png; sourceTree = "<group>"; };
+		348A977018591F4800503DC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		348B0FA216657A5100FD2E14 /* iconLogout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconLogout.png; sourceTree = "<group>"; };
 		348B0FEB166952B400FD2E14 /* MyRestkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRestkit.h; sourceTree = "<group>"; };
 		349458E0166D545800D993E2 /* InventoryTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTransactionController.h; path = DataController/InventoryTransactionController.h; sourceTree = "<group>"; };
@@ -836,6 +838,7 @@
 				34663E4816433555006CDDE7 /* DataModel */,
 				34663E5F1643428E006CDDE7 /* Utility */,
 				34663E5E164341BD006CDDE7 /* Controllers */,
+				348A977018591F4800503DC0 /* Images.xcassets */,
 			);
 			path = CustomerServiceMobile;
 			sourceTree = "<group>";
@@ -1398,6 +1401,7 @@
 				3483F9D21638578400306DFF /* ReceivingStoryboard.storyboard in Resources */,
 				3483F9D4163857A000306DFF /* ShippingStoryboard.storyboard in Resources */,
 				3483F9D6163857CD00306DFF /* InventoryStoryboard.storyboard in Resources */,
+				348A977118591F4800503DC0 /* Images.xcassets in Resources */,
 				3483F9D8163857DB00306DFF /* RepairStoryboard.storyboard in Resources */,
 				3483F9DA163857F000306DFF /* CycleCountStoryboard.storyboard in Resources */,
 				3483F9DC1638583100306DFF /* ReportsStoryboard.storyboard in Resources */,
@@ -1710,6 +1714,8 @@
 		346FC1FC162F6E7900600096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1738,6 +1744,8 @@
 		346FC1FD162F6E7900600096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
