@@ -112,6 +112,7 @@
 		3483F9F91638B34000306DFF /* iconStop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F01638B34000306DFF /* iconStop.png */; };
 		3483F9FA1638B34000306DFF /* iconSubmit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F11638B34000306DFF /* iconSubmit.png */; };
 		3483F9FB1638B34000306DFF /* iconSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3483F9F21638B34000306DFF /* iconSuccess.png */; };
+		348A976F18590CD300503DC0 /* iconSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 348A976E18590CD300503DC0 /* iconSearch.png */; };
 		348B0FA316657A5100FD2E14 /* iconLogout.png in Resources */ = {isa = PBXBuildFile; fileRef = 348B0FA216657A5100FD2E14 /* iconLogout.png */; };
 		349458E2166D545800D993E2 /* InventoryTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349458E1166D545800D993E2 /* InventoryTransactionController.m */; };
 		34945907166E7A9B00D993E2 /* ReceivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34945906166E7A9B00D993E2 /* ReceivingViewController.m */; };
@@ -150,7 +151,6 @@
 		34AFADED16A9CCB90020064F /* ShippingRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFADEC16A9CCB90020064F /* ShippingRootViewController.m */; };
 		34B1BBA2178CC675003BB44D /* IconAssignment.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BB9E178CC675003BB44D /* IconAssignment.png */; };
 		34B1BBA3178CC675003BB44D /* iconMyList.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BB9F178CC675003BB44D /* iconMyList.png */; };
-		34B1BBA4178CC675003BB44D /* iconSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBA0178CC675003BB44D /* iconSearch.png */; };
 		34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B1BBA6178CC71E003BB44D /* iconStation.png */; };
 		34C5CA01176A3CA400AA1904 /* ProcessResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C5CA00176A3CA400AA1904 /* ProcessResult.m */; };
 		34C8709216717C0B00C446F2 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C8709016717C0B00C446F2 /* ProductViewController.m */; };
@@ -421,6 +421,7 @@
 		3483F9F01638B34000306DFF /* iconStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStop.png; sourceTree = "<group>"; };
 		3483F9F11638B34000306DFF /* iconSubmit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSubmit.png; sourceTree = "<group>"; };
 		3483F9F21638B34000306DFF /* iconSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSuccess.png; sourceTree = "<group>"; };
+		348A976E18590CD300503DC0 /* iconSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSearch.png; sourceTree = "<group>"; };
 		348B0FA216657A5100FD2E14 /* iconLogout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconLogout.png; sourceTree = "<group>"; };
 		348B0FEB166952B400FD2E14 /* MyRestkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRestkit.h; sourceTree = "<group>"; };
 		349458E0166D545800D993E2 /* InventoryTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTransactionController.h; path = DataController/InventoryTransactionController.h; sourceTree = "<group>"; };
@@ -477,7 +478,6 @@
 		34AFADEC16A9CCB90020064F /* ShippingRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingRootViewController.m; path = ViewControllers/ShippingRootViewController.m; sourceTree = "<group>"; };
 		34B1BB9E178CC675003BB44D /* IconAssignment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconAssignment.png; sourceTree = "<group>"; };
 		34B1BB9F178CC675003BB44D /* iconMyList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconMyList.png; sourceTree = "<group>"; };
-		34B1BBA0178CC675003BB44D /* iconSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSearch.png; sourceTree = "<group>"; };
 		34B1BBA6178CC71E003BB44D /* iconStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStation.png; sourceTree = "<group>"; };
 		34C5C9FF176A3CA400AA1904 /* ProcessResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessResult.h; path = DataModel/ProcessResult.h; sourceTree = "<group>"; };
 		34C5CA00176A3CA400AA1904 /* ProcessResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProcessResult.m; path = DataModel/ProcessResult.m; sourceTree = "<group>"; };
@@ -1068,11 +1068,11 @@
 		3483F9E71638B31900306DFF /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				348A976E18590CD300503DC0 /* iconSearch.png */,
 				34976C211798856100ACCF1A /* iconDOA.png */,
 				34B1BBA6178CC71E003BB44D /* iconStation.png */,
 				34B1BB9E178CC675003BB44D /* IconAssignment.png */,
 				34B1BB9F178CC675003BB44D /* iconMyList.png */,
-				34B1BBA0178CC675003BB44D /* iconSearch.png */,
 				3474AAE917272CC70034A318 /* CSMobile57.png */,
 				3474AAEA17272CC70034A318 /* CSMobile512.png */,
 				3474AAE11726F7B80034A318 /* CSMobile72.png */,
@@ -1308,6 +1308,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = LTXC;
+				TargetAttributes = {
+					346FC1B8162F6E7900600096 = {
+						DevelopmentTeam = QFYFAM7PWW;
+					};
+				};
 			};
 			buildConfigurationList = 346FC1B3162F6E7900600096 /* Build configuration list for PBXProject "CustomerServiceMobile" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1448,7 +1453,7 @@
 				3474AAEC17272CC70034A318 /* CSMobile512.png in Resources */,
 				34B1BBA2178CC675003BB44D /* IconAssignment.png in Resources */,
 				34B1BBA3178CC675003BB44D /* iconMyList.png in Resources */,
-				34B1BBA4178CC675003BB44D /* iconSearch.png in Resources */,
+				348A976F18590CD300503DC0 /* iconSearch.png in Resources */,
 				34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */,
 				34976C221798856100ACCF1A /* iconDOA.png in Resources */,
 				34F5D1DB1804BD6400C94CD5 /* ZSAutoCompleteController.xib in Resources */,
@@ -1705,8 +1710,8 @@
 		346FC1FC162F6E7900600096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: jinsong lu (VV3G9CJY3W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jinsong lu (VV3G9CJY3W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Documents/Temp/CustomerServiceMobile/RestKit/Tests/Vendor/OCHamcrest\"",
@@ -1715,15 +1720,15 @@
 				GCC_PREFIX_HEADER = "CustomerServiceMobile/CustomerServiceMobile-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "CustomerServiceMobile/CustomerServiceMobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CustomerServiceMobile\"",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9C5F5E31-4E32-4DC3-A279-4122499FED96";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C5F5E31-4E32-4DC3-A279-4122499FED96";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1C922C46-F783-4F98-A630-812BCE670731";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
@@ -1733,8 +1738,8 @@
 		346FC1FD162F6E7900600096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: LTX-Credence Corporation";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LTX-Credence Corporation";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Documents/Temp/CustomerServiceMobile/RestKit/Tests/Vendor/OCHamcrest\"",
@@ -1743,14 +1748,14 @@
 				GCC_PREFIX_HEADER = "CustomerServiceMobile/CustomerServiceMobile-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "CustomerServiceMobile/CustomerServiceMobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CustomerServiceMobile\"",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AAB486F7-B2B8-43C0-B26F-B60C3716740D";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AAB486F7-B2B8-43C0-B26F-B60C3716740D";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;

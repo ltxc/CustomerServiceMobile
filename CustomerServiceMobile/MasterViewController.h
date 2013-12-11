@@ -23,7 +23,7 @@
 #import "AppDelegate.h"
 #import "BeautifulTableViewController.h"
 
-@interface MasterViewController : BeautifulTableViewController <NSFetchedResultsControllerDelegate, UISplitViewControllerDelegate>
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISplitViewControllerDelegate>
 {
     UIPopoverController *popoverController;
     UIBarButtonItem *rootPopoverButtonItem;

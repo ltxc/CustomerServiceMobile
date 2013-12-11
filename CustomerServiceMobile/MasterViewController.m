@@ -25,7 +25,9 @@ NSMutableDictionary *detailViewControllers;
 - (void)awakeFromNib
 {
     self.clearsSelectionOnViewWillAppear = NO;
-    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+    //depreicated: self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+    self.preferredContentSize = CGSizeMake(320.0, 600.0);
+
     [super awakeFromNib];
 }
 
@@ -140,7 +142,7 @@ NSMutableDictionary *detailViewControllers;
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MasterViewCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
-    [super beautifyCell:cell atIndexPath:indexPath];
+    //[super beautifyCell:cell atIndexPath:indexPath];
     return cell;
 }
 

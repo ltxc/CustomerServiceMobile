@@ -84,10 +84,10 @@ void SignalHandler(int sig) {
     sigaction(SIGBUS, &newSignalAction, NULL);
     //code for testflight crash report
 
-#ifdef TESTING
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-    [TestFlight takeOff:@"913ceefa2b29eb10fdd840b619d1401d_MTU1ODAzMjAxMi0xMS0xNSAxNzowMjoyMC42MTQ3NDc"];
-#endif
+//#ifdef TESTING
+//    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+//    [TestFlight takeOff:@"913ceefa2b29eb10fdd840b619d1401d_MTU1ODAzMjAxMi0xMS0xNSAxNzowMjoyMC42MTQ3NDc"];
+//#endif
 
 
     //Register the preference defaults early.
