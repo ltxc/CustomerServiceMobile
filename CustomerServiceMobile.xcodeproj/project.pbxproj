@@ -49,6 +49,33 @@
 		3440F33D1639F9380016401D /* DetailViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440F33C1639F9380016401D /* DetailViewNavigationController.m */; };
 		3440F33F163EF70C0016401D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3440F33E163EF70C0016401D /* Settings.bundle */; };
 		3440F342163F1A970016401D /* SDUserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440F341163F1A970016401D /* SDUserPreference.m */; };
+		34452C7F185FB8D100CD9680 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 34452C67185FB8D100CD9680 /* beep.wav */; };
+		34452C80185FB8D100CD9680 /* camera-swap-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C68185FB8D100CD9680 /* camera-swap-icon-pressed.png */; };
+		34452C81185FB8D100CD9680 /* camera-swap-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C69185FB8D100CD9680 /* camera-swap-icon-pressed@2x.png */; };
+		34452C82185FB8D100CD9680 /* camera-swap-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C6A185FB8D100CD9680 /* camera-swap-icon.png */; };
+		34452C83185FB8D100CD9680 /* camera-swap-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C6B185FB8D100CD9680 /* camera-swap-icon@2x.png */; };
+		34452C84185FB8D100CD9680 /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34452C6C185FB8D100CD9680 /* CHANGELOG.txt */; };
+		34452C85185FB8D100CD9680 /* scanditsdk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34452C6D185FB8D100CD9680 /* scanditsdk.strings */; };
+		34452C86185FB8D100CD9680 /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34452C6F185FB8D100CD9680 /* empty.cpp */; };
+		34452C87185FB8D100CD9680 /* flashlight-turn-off-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C71185FB8D100CD9680 /* flashlight-turn-off-icon-pressed.png */; };
+		34452C88185FB8D100CD9680 /* flashlight-turn-off-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C72185FB8D100CD9680 /* flashlight-turn-off-icon-pressed@2x.png */; };
+		34452C89185FB8D100CD9680 /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C73185FB8D100CD9680 /* flashlight-turn-off-icon.png */; };
+		34452C8A185FB8D100CD9680 /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C74185FB8D100CD9680 /* flashlight-turn-off-icon@2x.png */; };
+		34452C8B185FB8D100CD9680 /* flashlight-turn-on-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C75185FB8D100CD9680 /* flashlight-turn-on-icon-pressed.png */; };
+		34452C8C185FB8D100CD9680 /* flashlight-turn-on-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C76185FB8D100CD9680 /* flashlight-turn-on-icon-pressed@2x.png */; };
+		34452C8D185FB8D100CD9680 /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C77185FB8D100CD9680 /* flashlight-turn-on-icon.png */; };
+		34452C8E185FB8D100CD9680 /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C78185FB8D100CD9680 /* flashlight-turn-on-icon@2x.png */; };
+		34452C8F185FB8D100CD9680 /* libscanditsdk-iphone-3.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C79185FB8D100CD9680 /* libscanditsdk-iphone-3.2.1.a */; };
+		34452C90185FB8D100CD9680 /* LICENSE-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34452C7A185FB8D100CD9680 /* LICENSE-2.0.txt */; };
+		34452C91185FB8D100CD9680 /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C7B185FB8D100CD9680 /* poweredby.png */; };
+		34452C92185FB8D100CD9680 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34452C7C185FB8D100CD9680 /* poweredby@2x.png */; };
+		34452C98185FB94700CD9680 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C97185FB94700CD9680 /* libc++.dylib */; };
+		34452C9A185FB96800CD9680 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C99185FB96800CD9680 /* libiconv.dylib */; };
+		34452C9C185FB97400CD9680 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C9B185FB97400CD9680 /* CoreVideo.framework */; };
+		34452C9E185FB98900CD9680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C9D185FB98900CD9680 /* AudioToolbox.framework */; };
+		34452CA0185FB99600CD9680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452C9F185FB99600CD9680 /* AVFoundation.framework */; };
+		34452CA2185FB9A700CD9680 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452CA1185FB9A700CD9680 /* CoreMedia.framework */; };
+		34452CA4185FB9B600CD9680 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34452CA3185FB9B600CD9680 /* CoreLocation.framework */; };
 		3450B1E7179892E200631421 /* ShippingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450B1E6179892E200631421 /* ShippingList.m */; };
 		3455B5B7177B57750034C843 /* CoreDataGetSynch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3455B5B6177B57750034C843 /* CoreDataGetSynch.m */; };
 		345956D416B34EF50048545E /* iconShipPick.png in Resources */ = {isa = PBXBuildFile; fileRef = 345956D316B34EF50048545E /* iconShipPick.png */; };
@@ -343,6 +370,36 @@
 		3440F33E163EF70C0016401D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3440F340163F1A970016401D /* SDUserPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUserPreference.h; sourceTree = "<group>"; };
 		3440F341163F1A970016401D /* SDUserPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUserPreference.m; sourceTree = "<group>"; };
+		34452C67185FB8D100CD9680 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		34452C68185FB8D100CD9680 /* camera-swap-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-swap-icon-pressed.png"; sourceTree = "<group>"; };
+		34452C69185FB8D100CD9680 /* camera-swap-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-swap-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		34452C6A185FB8D100CD9680 /* camera-swap-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-swap-icon.png"; sourceTree = "<group>"; };
+		34452C6B185FB8D100CD9680 /* camera-swap-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-swap-icon@2x.png"; sourceTree = "<group>"; };
+		34452C6C185FB8D100CD9680 /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
+		34452C6E185FB8D100CD9680 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/scanditsdk.strings; sourceTree = "<group>"; };
+		34452C6F185FB8D100CD9680 /* empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = empty.cpp; sourceTree = "<group>"; };
+		34452C70185FB8D100CD9680 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/scanditsdk.strings; sourceTree = "<group>"; };
+		34452C71185FB8D100CD9680 /* flashlight-turn-off-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon-pressed.png"; sourceTree = "<group>"; };
+		34452C72185FB8D100CD9680 /* flashlight-turn-off-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		34452C73185FB8D100CD9680 /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon.png"; sourceTree = "<group>"; };
+		34452C74185FB8D100CD9680 /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; };
+		34452C75185FB8D100CD9680 /* flashlight-turn-on-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon-pressed.png"; sourceTree = "<group>"; };
+		34452C76185FB8D100CD9680 /* flashlight-turn-on-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		34452C77185FB8D100CD9680 /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon.png"; sourceTree = "<group>"; };
+		34452C78185FB8D100CD9680 /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; };
+		34452C79185FB8D100CD9680 /* libscanditsdk-iphone-3.2.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libscanditsdk-iphone-3.2.1.a"; sourceTree = "<group>"; };
+		34452C7A185FB8D100CD9680 /* LICENSE-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-2.0.txt"; sourceTree = "<group>"; };
+		34452C7B185FB8D100CD9680 /* poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredby.png; sourceTree = "<group>"; };
+		34452C7C185FB8D100CD9680 /* poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredby@2x.png"; sourceTree = "<group>"; };
+		34452C7D185FB8D100CD9680 /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKBarcodePicker.h; sourceTree = "<group>"; };
+		34452C7E185FB8D100CD9680 /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKOverlayController.h; sourceTree = "<group>"; };
+		34452C97185FB94700CD9680 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		34452C99185FB96800CD9680 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		34452C9B185FB97400CD9680 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		34452C9D185FB98900CD9680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		34452C9F185FB99600CD9680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		34452CA1185FB9A700CD9680 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		34452CA3185FB9B600CD9680 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3450B1E5179892E200631421 /* ShippingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShippingList.h; path = DataModel/ShippingList.h; sourceTree = "<group>"; };
 		3450B1E6179892E200631421 /* ShippingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShippingList.m; path = DataModel/ShippingList.m; sourceTree = "<group>"; };
 		3455B5B5177B57750034C843 /* CoreDataGetSynch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataGetSynch.h; path = DataController/CoreDataGetSynch.h; sourceTree = "<group>"; };
@@ -601,6 +658,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34452CA4185FB9B600CD9680 /* CoreLocation.framework in Frameworks */,
+				34452CA2185FB9A700CD9680 /* CoreMedia.framework in Frameworks */,
+				34452CA0185FB99600CD9680 /* AVFoundation.framework in Frameworks */,
+				34452C9E185FB98900CD9680 /* AudioToolbox.framework in Frameworks */,
+				34452C9C185FB97400CD9680 /* CoreVideo.framework in Frameworks */,
+				34452C9A185FB96800CD9680 /* libiconv.dylib in Frameworks */,
+				34452C98185FB94700CD9680 /* libc++.dylib in Frameworks */,
 				343CA2501655A80200D47121 /* SystemConfiguration.framework in Frameworks */,
 				343CA24E1655A7F900D47121 /* Security.framework in Frameworks */,
 				343CA24C1655A7F300D47121 /* QuartzCore.framework in Frameworks */,
@@ -612,6 +676,7 @@
 				343CA22C16559CDF00D47121 /* libz.dylib in Frameworks */,
 				346FC1BE162F6E7900600096 /* UIKit.framework in Frameworks */,
 				346FC1C0162F6E7900600096 /* Foundation.framework in Frameworks */,
+				34452C8F185FB8D100CD9680 /* libscanditsdk-iphone-3.2.1.a in Frameworks */,
 				346FC1C2162F6E7900600096 /* CoreGraphics.framework in Frameworks */,
 				343CA22816559C6B00D47121 /* libTestFlight.a in Frameworks */,
 			);
@@ -661,6 +726,35 @@
 				343DB27B16443806002F7E46 /* Queries.json */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		34452C66185FB8D000CD9680 /* ScanditSDK */ = {
+			isa = PBXGroup;
+			children = (
+				34452C67185FB8D100CD9680 /* beep.wav */,
+				34452C68185FB8D100CD9680 /* camera-swap-icon-pressed.png */,
+				34452C69185FB8D100CD9680 /* camera-swap-icon-pressed@2x.png */,
+				34452C6A185FB8D100CD9680 /* camera-swap-icon.png */,
+				34452C6B185FB8D100CD9680 /* camera-swap-icon@2x.png */,
+				34452C6C185FB8D100CD9680 /* CHANGELOG.txt */,
+				34452C6D185FB8D100CD9680 /* scanditsdk.strings */,
+				34452C6F185FB8D100CD9680 /* empty.cpp */,
+				34452C71185FB8D100CD9680 /* flashlight-turn-off-icon-pressed.png */,
+				34452C72185FB8D100CD9680 /* flashlight-turn-off-icon-pressed@2x.png */,
+				34452C73185FB8D100CD9680 /* flashlight-turn-off-icon.png */,
+				34452C74185FB8D100CD9680 /* flashlight-turn-off-icon@2x.png */,
+				34452C75185FB8D100CD9680 /* flashlight-turn-on-icon-pressed.png */,
+				34452C76185FB8D100CD9680 /* flashlight-turn-on-icon-pressed@2x.png */,
+				34452C77185FB8D100CD9680 /* flashlight-turn-on-icon.png */,
+				34452C78185FB8D100CD9680 /* flashlight-turn-on-icon@2x.png */,
+				34452C79185FB8D100CD9680 /* libscanditsdk-iphone-3.2.1.a */,
+				34452C7A185FB8D100CD9680 /* LICENSE-2.0.txt */,
+				34452C7B185FB8D100CD9680 /* poweredby.png */,
+				34452C7C185FB8D100CD9680 /* poweredby@2x.png */,
+				34452C7D185FB8D100CD9680 /* ScanditSDKBarcodePicker.h */,
+				34452C7E185FB8D100CD9680 /* ScanditSDKOverlayController.h */,
+			);
+			path = ScanditSDK;
 			sourceTree = "<group>";
 		};
 		3455B5B0177B57160034C843 /* CoreDataSynch */ = {
@@ -792,6 +886,7 @@
 		346FC1AE162F6E7900600096 = {
 			isa = PBXGroup;
 			children = (
+				34452C66185FB8D000CD9680 /* ScanditSDK */,
 				343CA24F1655A80200D47121 /* SystemConfiguration.framework */,
 				343CA24D1655A7F900D47121 /* Security.framework */,
 				343CA24B1655A7F300D47121 /* QuartzCore.framework */,
@@ -819,6 +914,13 @@
 		346FC1BC162F6E7900600096 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34452CA3185FB9B600CD9680 /* CoreLocation.framework */,
+				34452CA1185FB9A700CD9680 /* CoreMedia.framework */,
+				34452C9F185FB99600CD9680 /* AVFoundation.framework */,
+				34452C9D185FB98900CD9680 /* AudioToolbox.framework */,
+				34452C9B185FB97400CD9680 /* CoreVideo.framework */,
+				34452C99185FB96800CD9680 /* libiconv.dylib */,
+				34452C97185FB94700CD9680 /* libc++.dylib */,
 				346FC1BD162F6E7900600096 /* UIKit.framework */,
 				346FC1BF162F6E7900600096 /* Foundation.framework */,
 				346FC1C1162F6E7900600096 /* CoreGraphics.framework */,
@@ -1323,6 +1425,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 346FC1AE162F6E7900600096;
 			productRefGroup = 346FC1BA162F6E7900600096 /* Products */;
@@ -1386,7 +1489,9 @@
 			files = (
 				346FC1CA162F6E7900600096 /* InfoPlist.strings in Resources */,
 				346FC1D2162F6E7900600096 /* Default.png in Resources */,
+				34452C8C185FB8D100CD9680 /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
 				346FC1D4162F6E7900600096 /* Default@2x.png in Resources */,
+				34452C82185FB8D100CD9680 /* camera-swap-icon.png in Resources */,
 				346FC1D6162F6E7900600096 /* Default-568h@2x.png in Resources */,
 				346FC1D9162F6E7900600096 /* MainStoryboard.storyboard in Resources */,
 				34A9418F1630A3840095FD66 /* LoginViewController.xib in Resources */,
@@ -1401,9 +1506,11 @@
 				3483F9D21638578400306DFF /* ReceivingStoryboard.storyboard in Resources */,
 				3483F9D4163857A000306DFF /* ShippingStoryboard.storyboard in Resources */,
 				3483F9D6163857CD00306DFF /* InventoryStoryboard.storyboard in Resources */,
+				34452C8A185FB8D100CD9680 /* flashlight-turn-off-icon@2x.png in Resources */,
 				348A977118591F4800503DC0 /* Images.xcassets in Resources */,
 				3483F9D8163857DB00306DFF /* RepairStoryboard.storyboard in Resources */,
 				3483F9DA163857F000306DFF /* CycleCountStoryboard.storyboard in Resources */,
+				34452C88185FB8D100CD9680 /* flashlight-turn-off-icon-pressed@2x.png in Resources */,
 				3483F9DC1638583100306DFF /* ReportsStoryboard.storyboard in Resources */,
 				3483F9DE1638584200306DFF /* SynchronizationStoryboard.storyboard in Resources */,
 				3483F9E61638AF4000306DFF /* iconRefresh.png in Resources */,
@@ -1415,7 +1522,9 @@
 				3483F9F81638B34000306DFF /* iconProcessing.png in Resources */,
 				3483F9F91638B34000306DFF /* iconStop.png in Resources */,
 				3483F9FA1638B34000306DFF /* iconSubmit.png in Resources */,
+				34452C8D185FB8D100CD9680 /* flashlight-turn-on-icon.png in Resources */,
 				3483F9FB1638B34000306DFF /* iconSuccess.png in Resources */,
+				34452C81185FB8D100CD9680 /* camera-swap-icon-pressed@2x.png in Resources */,
 				3440F32E1639F02D0016401D /* iconReceiveRPButton.png in Resources */,
 				3440F32F1639F02D0016401D /* iconReceiveSLButton.png in Resources */,
 				3440F3301639F02D0016401D /* iconReceiveVRButton.png in Resources */,
@@ -1427,38 +1536,49 @@
 				34AAEE241641E75200EE77B4 /* Table_mid.png in Resources */,
 				34AAEE251641E75200EE77B4 /* Table_single_sel.png in Resources */,
 				34AAEE261641E75200EE77B4 /* Table_single.png in Resources */,
+				34452C89185FB8D100CD9680 /* flashlight-turn-off-icon.png in Resources */,
 				34AAEE271641E75200EE77B4 /* Table_top_sel.png in Resources */,
 				34AAEE281641E75200EE77B4 /* Table_top.png in Resources */,
 				343DB27C16443806002F7E46 /* Queries.json in Resources */,
 				343DB28416446ADE002F7E46 /* iconReset.png in Resources */,
 				343F490B164477480044F5C2 /* iconLTXC.png in Resources */,
 				343CA22916559C6B00D47121 /* README.md in Resources */,
+				34452C87185FB8D100CD9680 /* flashlight-turn-off-icon-pressed.png in Resources */,
 				343CA22A16559C6B00D47121 /* release_notes.md in Resources */,
 				348B0FA316657A5100FD2E14 /* iconLogout.png in Resources */,
+				34452C90185FB8D100CD9680 /* LICENSE-2.0.txt in Resources */,
 				34358F0316711BD2001DC5B3 /* AutoCompleteController.xib in Resources */,
 				349B7F1516B1E8D300D99BE3 /* iconChecked.png in Resources */,
 				345956D416B34EF50048545E /* iconShipPick.png in Resources */,
 				345956D616B34F040048545E /* iconShipShip.png in Resources */,
 				345956D816B34F370048545E /* iconGreenCheck.png in Resources */,
+				34452C91185FB8D100CD9680 /* poweredby.png in Resources */,
 				3499FD4216DECC92008C8526 /* CalculatorViewController.xib in Resources */,
 				3499FD4416DECDEE008C8526 /* iconCalculatorBG.jpg in Resources */,
+				34452C85185FB8D100CD9680 /* scanditsdk.strings in Resources */,
 				3499FD4816DED0DE008C8526 /* iconCancel.png in Resources */,
 				3499FD4916DED0DE008C8526 /* iconOK1.png in Resources */,
+				34452C7F185FB8D100CD9680 /* beep.wav in Resources */,
 				3499FD4A16DED0DE008C8526 /* iconOK2.png in Resources */,
 				3499FD4C16DED3F4008C8526 /* iconBKGreenMarbel.jpg in Resources */,
 				3499FD5416DEDE94008C8526 /* iconBGBrown.jpg in Resources */,
 				3499FD5616DEDF9A008C8526 /* iconBGDarkBlue.jpeg in Resources */,
+				34452C84185FB8D100CD9680 /* CHANGELOG.txt in Resources */,
 				3433A39316E7C38400BB5DD2 /* iconPicker.png in Resources */,
+				34452C92185FB8D100CD9680 /* poweredby@2x.png in Resources */,
 				34F70D1916FB601E004EBA8E /* iconHome.png in Resources */,
+				34452C8E185FB8D100CD9680 /* flashlight-turn-on-icon@2x.png in Resources */,
 				34FC528A16FBC4C300AE08F3 /* iconDeleteTable.png in Resources */,
 				3474AAE31726F7B80034A318 /* CSMobile72.png in Resources */,
 				3474AAE41726F7B80034A318 /* CSMobile1024.png in Resources */,
 				3474AAEB17272CC70034A318 /* CSMobile57.png in Resources */,
 				3474AAEC17272CC70034A318 /* CSMobile512.png in Resources */,
 				34B1BBA2178CC675003BB44D /* IconAssignment.png in Resources */,
+				34452C83185FB8D100CD9680 /* camera-swap-icon@2x.png in Resources */,
 				34B1BBA3178CC675003BB44D /* iconMyList.png in Resources */,
 				348A976F18590CD300503DC0 /* iconSearch.png in Resources */,
 				34B1BBA7178CC71E003BB44D /* iconStation.png in Resources */,
+				34452C8B185FB8D100CD9680 /* flashlight-turn-on-icon-pressed.png in Resources */,
 				34976C221798856100ACCF1A /* iconDOA.png in Resources */,
 				34F5D1DB1804BD6400C94CD5 /* ZSAutoCompleteController.xib in Resources */,
 				34F5D1DF1804BD6400C94CD5 /* ZSDynamicChoiceInputView.xib in Resources */,
@@ -1467,6 +1587,7 @@
 				34F5D1E91804BD6400C94CD5 /* ZSCalculatorViewController.xib in Resources */,
 				34F5D1ED1804BD6400C94CD5 /* ZSProcessResultViewController.xib in Resources */,
 				34F9BC731805D4C000A0CFC1 /* RepairStationViewController.xib in Resources */,
+				34452C80185FB8D100CD9680 /* camera-swap-icon-pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1506,6 +1627,7 @@
 				346FC1DC162F6E7900600096 /* CustomerServiceMobile.xcdatamodeld in Sources */,
 				346FC1DF162F6E7900600096 /* MasterViewController.m in Sources */,
 				346FC1E2162F6E7900600096 /* HomeViewController.m in Sources */,
+				34452C86185FB8D100CD9680 /* empty.cpp in Sources */,
 				34A9413316307AAC0095FD66 /* LoginViewController.m in Sources */,
 				3483F9E11638A2D000306DFF /* QueryViewController.m in Sources */,
 				3483F9E41638A77000306DFF /* QueriesViewController.m in Sources */,
@@ -1630,6 +1752,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		34452C6D185FB8D100CD9680 /* scanditsdk.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34452C6E185FB8D100CD9680 /* de */,
+				34452C70185FB8D100CD9680 /* en */,
+			);
+			name = scanditsdk.strings;
+			sourceTree = "<group>";
+		};
 		346FC1C8162F6E7900600096 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1714,8 +1845,6 @@
 		346FC1FC162F6E7900600096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1729,7 +1858,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/CustomerServiceMobile\"",
+					"\\\"$(SRCROOT)/CustomerServiceMobile\\\"",
+					/Users/ltxc/Projects/IOS/CustomerService/CustomerServiceMobile/ScanditSDK,
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1744,8 +1874,6 @@
 		346FC1FD162F6E7900600096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1759,7 +1887,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/CustomerServiceMobile\"",
+					"\\\"$(SRCROOT)/CustomerServiceMobile\\\"",
+					/Users/ltxc/Projects/IOS/CustomerService/CustomerServiceMobile/ScanditSDK,
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
