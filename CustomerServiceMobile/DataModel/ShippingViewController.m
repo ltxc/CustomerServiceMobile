@@ -653,8 +653,17 @@ NSString* _pi_doc_id = @"";
             [SDDataEngine alert:kMessageShippingInstructionsRequired title:@"Failed" template:nil delegate:nil];
             return NO;
         }
+        
+        //ship instructions must be less than 255
+        if (datasource.ship_instructions!=nil&&[datasource.ship_instructions length]>=255)
+        {
+            [SDDataEngine alert:kMessageShippingInstructionsOversize title:@"Failed" template:nil delegate:nil];
+            return NO;
+        }
+
 
     }
+    
     
     
     return YES;

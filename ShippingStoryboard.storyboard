@@ -738,7 +738,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iconBGBrown.jpg" id="XRV-75-YhJ">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="961"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1017"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="7lw-jP-CAZ">
@@ -770,7 +770,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H0v-bv-lte">
                                         <rect key="frame" x="41" y="194" width="400" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.520552923" green="0.74891138349999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Synchronize Allocated/Pick List">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

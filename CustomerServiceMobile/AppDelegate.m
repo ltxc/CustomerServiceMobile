@@ -29,17 +29,13 @@ BOOL _isDisplayedWIFIAlert = YES;
 
 UISplitViewController* _splitViewController;
 
-/*
- My Apps Custom uncaught exception catcher, we do special stuff here, and TestFlight takes care of the rest
- */
+
 void HandleExceptions(NSException *exception) {
     //NSLog(@"This is where we save the application data during a exception");
     // Save application data on crash
     
 }
-/*
- My Apps Custom signal catcher, we do special stuff here, and TestFlight takes care of the rest
- */
+
 void SignalHandler(int sig) {
     //NSLog(@"This is where we save the application data during a signal");
     // Save application data on crash
@@ -82,12 +78,7 @@ void SignalHandler(int sig) {
     sigaction(SIGABRT, &newSignalAction, NULL);
     sigaction(SIGILL, &newSignalAction, NULL);
     sigaction(SIGBUS, &newSignalAction, NULL);
-    //code for testflight crash report
-
-//#ifdef TESTING
-//    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-//    [TestFlight takeOff:@"913ceefa2b29eb10fdd840b619d1401d_MTU1ODAzMjAxMi0xMS0xNSAxNzowMjoyMC42MTQ3NDc"];
-//#endif
+    
 
 
     //Register the preference defaults early.

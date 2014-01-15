@@ -553,6 +553,8 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 
 #define kMessageShippingInstructionsRequired @"Shipping Instructions is the required field..."
 
+#define kMessageShippingInstructionsOversize @"Shipping Instructions must be less than 255 character..."
+
 #define kMessageShippingCarrierRefNoRequired @"Carrier RefNo is the required field..."
 
 #define kMessageSHippingNoDestinationValue @"Please provide either to company id or to warehouse id..."
