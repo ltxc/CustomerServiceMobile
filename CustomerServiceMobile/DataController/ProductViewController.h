@@ -21,6 +21,7 @@
 //@property (weak, nonatomic) IBOutlet UITextView *txtCause;
 @property (weak, nonatomic) IBOutlet UILabel *lblInvType;
 @property (weak, nonatomic) IBOutlet UIButton *btnHidePicker;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityBinPartQuery;
 
 @property (weak,nonatomic) id<ProductViewDelegate> delegate;
 @property (nonatomic) BOOL isMISC;

@@ -59,7 +59,7 @@
 +(ShippingTransactionController*) sharedShippingController;
 +(RPInformationController*) sharedRPInformationController;
 +(ProcessResultController*) sharedProcessResultController;
-
++(CoreDataGetSynch*) sharedBinPartQueryController;
 
 
 -(SDRestKitEngine *) setAuthentication:(NSString*) username password:(NSString *) password;

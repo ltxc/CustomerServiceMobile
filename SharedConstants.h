@@ -133,6 +133,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kUrlBaseCompany @"/synch/company"
 #define kUrlBaseCarrier @"/synch/carrier"
 #define kUrlBaseBinPart @"/synch/binpart"
+#define kUrlBaseBinPartQuery @"/synch/binquery"
 #define kUrlBaseShipmentInstructions @"/synch/shipmentinstructions"
 #define kUrlBaseQueries @"/synch/queries"
 #define kUrlBaseManAdjustReason @"/synch/manadjustreason"
@@ -153,6 +154,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kQueryParamMaxResult @"maxresult"
 #define kQueryParamWarehouseId @"warehouseid"
 #define kQueryParamLastDate @"lastdate"
+#define kQueryParamBPartId @"bpartid"
 
 
 #define kDetailViewDefault @"default"
@@ -452,6 +454,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kKeyPathCompany @"company"
 #define kKeyPathQueries @"queries"
 #define kKeyPathBinPart @"binPart"
+#define kKeyPathBinPartQuery @"binpart"
 #define kKeyPathCarrier @"carrier"
 #define kKeyPathWarehouse @"warehouse"
 #define kKeyPathManAdjustReason @"manAdjustReason"
@@ -509,6 +512,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kNotificationNameCarrier @"syncCarrier"
 #define kNotificationNameCompany @"syncCompany"
 #define kNotificationNameBinPart @"syncBinPart"
+#define kNotificationNameBinPartQuery @"syncBinPartQuery"
 #define kNotificationNameManAdjustReason @"syncReasonCode"
 #define kNotificationNameShopFloorControl @"shopfloorcontrol"
 #define kNotificationReports @"syncReports"
@@ -531,6 +535,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
 #define kMessageReceivingNoLineItem @"No line item is available."
 #define kMessageQtyNotNumber @"Quantity must be a number."
 #define kMessageReceivingBinSearchFailure @"Please enter the product information first to enable the bin code suggestion."
+#define kMessageBinPartSearchQueryFailure @"It failed to search the bin. Cached value will be used if exist. Defailed Message:%@"
 #define kMessageReceivingSerialNoRule @"If serial number is provided, the quantity can only be 1. Reset automatically."
 
 #define kMessageDataControllerCallFailed @"It failed to complete successfully. Please check the process message for the reason..."
@@ -579,7 +584,7 @@ extern NSString *const FormatShippingTypeName[ShippingTypeCount];
     
     
 //Assign Station
-#define kTitleRepairStation @"Assign Station"
+#define kTitleAssignStation @"Assign Station"
 #define kIconRepairStation @"iconStation.png"
 #define kUrlBaseRepairStation @"/synch/repairstation"
 #define kUrlBaseAssignStation @"/transaction/stationassignment"

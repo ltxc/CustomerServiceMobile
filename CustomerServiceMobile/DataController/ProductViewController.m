@@ -13,6 +13,9 @@
 #import "ManAdjustReason.h"
 #import "ReceivingViewController.h"
 #import "SDUserPreference.h"
+#import "SDRestKitEngine.h"
+#import "SDDataControllers.h"
+#import "CoreDataGetSynch.h"
 
 @interface ProductViewController ()
 -(void)invTypeTapped;-(void)showPicker;
@@ -27,9 +30,25 @@
 
 NSArray* _invTypeArray;
 BOOL _isPickerShow;
+BOOL _isSynchBinPartQuery;
+
 - (void)viewDidLoad
 {
+    BOOL isMiscTransaction = FALSE;
+    
+    if (self.delegate!=nil&&[self.delegate inventoryHeader]!=nil&&[kTransactionTypeMRC isEqualToString:[[self.delegate inventoryHeader] transaction_type]]) {
+        isMiscTransaction = TRUE;
+    }
+    
+    if (isMiscTransaction)
+    {
         _invTypeArray = [NSArray arrayWithObjects:@"good",@"bad", nil];
+    }
+    else
+    {
+        _invTypeArray = [NSArray arrayWithObjects:@"default",@"good",@"bad", nil];
+    }
+    
     if(_isNew)
     {
         //create one
@@ -41,7 +60,13 @@ BOOL _isPickerShow;
     [self.uiPickerViewInvType selectedRowInComponent:0];
     if(_isNew)
     {
-        _lineItem.inv_type_id = @"good";
+        if (isMiscTransaction) {
+            _lineItem.inv_type_id = @"good";
+        }
+        else
+        {
+            _lineItem.inv_type_id = @"default";
+        }
         self.txtQty.text = @"1";
     }
     else
@@ -58,12 +83,15 @@ BOOL _isPickerShow;
 
 
     //set picker
+    _isSynchBinPartQuery = NO;
     _isPickerShow = NO;
     self.btnHidePicker.hidden = YES;
     self.lblInvType.userInteractionEnabled=YES;
     UITapGestureRecognizer* pickTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(invTypeTapped)];
     [self.lblInvType addGestureRecognizer:pickTapRecognizer];
 }
+
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -75,6 +103,8 @@ BOOL _isPickerShow;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 - (IBAction)btnSave:(id)sender {
@@ -144,22 +174,103 @@ BOOL _isPickerShow;
     [self.delegate addLineItem:_lineItem status:NO isnew:_isNew];
 }
 
-- (IBAction)btnBin:(id)sender {
-    [self hideKeyBoard];
-    NSString* bpart_id = self.txtProduct.text;
-//    if(nil==bpart_id||[bpart_id isEqualToString:@""])
-//    {
-//        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bin Search Failure" message:kMessageReceivingBinSearchFailure delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//synch version
+//- (IBAction)btnBin:(id)sender {
+//    [self hideKeyBoard];
+//    NSString* bpart_id = self.txtProduct.text;
+//
+////query the bin part relationship based on the current warehouse, it is synch call
+//    CoreDataGetSynch* coreDataGetSynch =[SDRestKitEngine sharedBinPartQueryController:[SDUserPreference sharedUserPreference].DefaultWarehouseID bpartid:bpart_id];
+//    [coreDataGetSynch load:nil];
+//    NSNumber* status = [coreDataGetSynch status];
+//    NSString* info = [coreDataGetSynch message];
+//    if ([status isEqualToNumber:[NSNumber numberWithInt:0]]) {
+//        //alert with info
+//        NSString* message = [NSString stringWithFormat:kMessageBinPartSearchQueryFailure,info];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bin Part Search Failed" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 //        [alert show];
-//        return;
+//        
 //    }
+//
+//    
+//    AutoCompleteDataHelper* helper = [[AutoCompleteDataHelper alloc] initWithEntityName:kEntityBinPart                           withDisplayBlock:^(id object){
+//            BinPart* binPart = (BinPart*)object;
+//            NSString* display = [NSString stringWithFormat:kBinPartDisplayTemplate, [binPart  bin_code_id], [binPart qty], [binPart inv_type_id]];
+//           return display;
+//        }
+//        withBlock:    ^(BOOL status, id result)
+//                                      {
+//                                          if(status==YES)
+//                                              self.txtBin.text = [(BinPart*)result bin_code_id];
+//                                          else
+//                                              self.txtBin.text = @"";
+//                                          [self dismissViewControllerAnimated:YES completion:nil];
+//                                      }
+//                                      ];
+//    
+//    //helper.template=@"bpart_id=%@";
+//    //helper.value = bpart_id;
+//    [helper setPredicateWithTemplate:@"(bpart_id=%@) OR (bpart_id='all')" value:bpart_id];
+//    [helper addSortDescript:kSortAttributeBinPart ascending:YES];
+//    
+//    // self.modalPresentationStyle = UIModalPresentationFormSheet;
+//    AutoCompleteController* autoCompleteController = [[AutoCompleteController alloc] init];
+//    autoCompleteController.autoCompleteDelegate = helper;
+//    autoCompleteController.autoCompleteTitle = @"Please select a bin";
+//    [self presentViewController:autoCompleteController animated:YES completion:nil];
+//
+//    
+//}
+
+
+- (IBAction)btnBin:(id)sender {
+    if (!_isSynchBinPartQuery) {
+        _isSynchBinPartQuery = YES;
+        [self.activityBinPartQuery startAnimating];
+        [self hideKeyBoard];
+        NSString* bpart_id = self.txtProduct.text;
+        NSString* warehouse_id = [[SDUserPreference sharedUserPreference]DefaultWarehouseID];
+        //query the bin part relationship based on the current warehouse, it is synch call
+        CoreDataGetSynch* coreDataGetSynch =[SDRestKitEngine sharedBinPartQueryController];
+        [coreDataGetSynch addNotificationObserver:self notificationName:kNotificationNameBinPartQuery selector:@selector(synchNotifiedBinPart:)];
+        [coreDataGetSynch load:^NSString *(NSString *baseUrl, id postedObject) {
+            NSDictionary* dictionary = [NSDictionary dictionaryWithKeysAndObjects:kQueryParamWarehouseId,warehouse_id,kQueryParamBPartId,bpart_id, nil];
+            NSString* queryurl = [kUrlBaseBinPartQuery stringByAppendingQueryParameters:dictionary];
+            return queryurl;
+        }];
+        
+        
+    }
+    
+
+    
+    
+}
+
+-(void) synchNotifiedBinPart:(NSNotification *)notification
+{
+    NSString* bpart_id = self.txtProduct.text;
+    
+    
+    NSString* info = [[SDRestKitEngine sharedEngine] getNofiticationInfo:notification actionname:kNotificationNameBinPartQuery];
+    NSNumber* status = [[SDRestKitEngine sharedEngine] getNotificationStatus:notification];
+
+    if ([status isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        //alert with info
+        NSString* message = [NSString stringWithFormat:kMessageBinPartSearchQueryFailure,info];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bin Part Search Failed" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+    }
+    
+    
+    
     AutoCompleteDataHelper* helper = [[AutoCompleteDataHelper alloc] initWithEntityName:kEntityBinPart                           withDisplayBlock:^(id object){
-            BinPart* binPart = (BinPart*)object;
-            NSString* display = [NSString stringWithFormat:kBinPartDisplayTemplate, [binPart  bin_code_id], [binPart qty], [binPart inv_type_id]];
-           return display;
-        }
-        withBlock:    ^(BOOL status, id result)
+        BinPart* binPart = (BinPart*)object;
+        NSString* display = [NSString stringWithFormat:kBinPartDisplayTemplate, [binPart  bin_code_id], [binPart qty], [binPart inv_type_id]];
+        return display;
+    }
+                                                                              withBlock:    ^(BOOL status, id result)
                                       {
                                           if(status==YES)
                                               self.txtBin.text = [(BinPart*)result bin_code_id];
@@ -179,8 +290,10 @@ BOOL _isPickerShow;
     autoCompleteController.autoCompleteDelegate = helper;
     autoCompleteController.autoCompleteTitle = @"Please select a bin";
     [self presentViewController:autoCompleteController animated:YES completion:nil];
-
     
+    _isSynchBinPartQuery = NO;
+    [self.activityBinPartQuery stopAnimating];
+     [[SDRestKitEngine sharedEngine] removeNotificationObserver:self notificationName:kNotificationNameBinPartQuery];
 }
 
 - (IBAction)btnReason:(id)sender {

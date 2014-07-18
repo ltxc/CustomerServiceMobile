@@ -62,7 +62,8 @@ RPInformation* _rpInformation;
 -(RKObjectMapping *) entityMapping
 {
     RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[RPInformation class]];
-    [mapping mapAttributes:kKeyPathRPInformationCconthID,kKeyPathRPInformationDestWarehouseID,kKeyPathRPInformationPcodeID,kKeyPathRPInformationPOID,kKeyPathRPInformationPriority,kKeyPathRPInformationRequestID,kKeyPathRPInformationWarrTypeID,nil];
+    [mapping mapAttributes:kKeyPathRPInformationCconthID,kKeyPathRPInformationDestWarehouseID,kKeyPathRPInformationPcodeID,kKeyPathRPInformationPOID,kKeyPathRPInformationPriority,kKeyPathRPInformationRequestID,
+     kKeyPathRPInformationWarrTypeID,nil];
 
     return mapping;
 }

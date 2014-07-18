@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="aKN-2D-BO3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="aKN-2D-BO3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Detail View Navigation Controller-->
@@ -713,6 +713,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="EFg-Hd-Tgd"/>
                     <value key="contentSizeForViewInPopover" type="size" width="475" height="427"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="521" height="519"/>
                     <connections>
                         <outlet property="btnCancel" destination="WUx-ga-tLM" id="m17-dQ-Ydr"/>
                         <outlet property="btnSave" destination="hSJ-p2-iwq" id="SIi-kK-FpS"/>
@@ -1212,6 +1213,13 @@
                                                         <action selector="btnShipmentInstructions:" destination="Pks-XW-Kji" eventType="touchUpInside" id="UnT-Y5-922"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Shipment Alerts)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="THI-qd-ado">
+                                                    <rect key="frame" x="-1" y="34" width="183" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1820,6 +1828,13 @@
                                                         <action selector="btnShipmentInstructions:" destination="dpj-yd-Izv" eventType="touchUpInside" id="lXD-Xy-dVi"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Shipment Alerts)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dHX-c7-aQ0">
+                                                    <rect key="frame" x="4" y="34" width="183" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3334,6 +3349,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sQJ-xH-cFA"/>
+        <segue reference="AlQ-qh-NYD"/>
     </inferredMetricsTieBreakers>
 </document>

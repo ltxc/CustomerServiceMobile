@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="TzX-in-BqC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="TzX-in-BqC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Receiving Root View Controller - Receiving Transactions-->
@@ -911,6 +911,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="475" height="427"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="475" height="425"/>
                     <connections>
                         <outlet property="btnHidePicker" destination="w2v-2Q-uv7" id="hq7-Fn-Dvt"/>
                         <outlet property="lblInvType" destination="Nfa-Hj-QKm" id="wUB-Ed-vVf"/>
@@ -1279,7 +1280,7 @@
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </label>
-                                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rR7-EV-eWt">
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rR7-EV-eWt">
                                                                 <rect key="frame" x="437" y="12" width="92" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.64406825580000004" green="0.86696228779999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1334,7 +1335,7 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </label>
-                                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d5O-k7-SOR">
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d5O-k7-SOR">
                                                                         <rect key="frame" x="436" y="8" width="89" height="28"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -1411,7 +1412,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rf0-iy-diQ">
-                                <rect key="frame" x="157" y="316" width="73" height="35"/>
+                                <rect key="frame" x="157" y="323" width="73" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Cancel">
@@ -1422,7 +1423,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NqV-yf-C4w">
-                                <rect key="frame" x="245" y="316" width="73" height="35"/>
+                                <rect key="frame" x="245" y="323" width="73" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Save">
@@ -1455,6 +1456,10 @@
                                                 <outlet property="delegate" destination="CPA-Pq-BAH" id="5Zb-k6-hhk"/>
                                             </connections>
                                         </textField>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="gzd-aV-53z">
+                                            <rect key="frame" x="342" y="9" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1528,7 +1533,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="XDN-yT-Xaf">
-                                            <rect key="frame" x="309" y="4" width="22" height="22"/>
+                                            <rect key="frame" x="312" y="12" width="22" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal">
@@ -1545,7 +1550,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDy-TQ-SPs">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inv. Type:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDy-TQ-SPs">
                                 <rect key="frame" x="52" y="283" width="126" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -1562,15 +1567,15 @@
                                     <outlet property="delegate" destination="CPA-Pq-BAH" id="tGW-8o-p3w"/>
                                 </connections>
                             </pickerView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="good" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9e1-aj-d8f">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="default" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9e1-aj-d8f">
                                 <rect key="frame" x="186" y="283" width="126" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="5d7-tn-g1J">
-                                <rect key="frame" x="367" y="283" width="22" height="22"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="5d7-tn-g1J">
+                                <rect key="frame" x="320" y="287" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -1589,7 +1594,9 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="475" height="451"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="475" height="405"/>
                     <connections>
+                        <outlet property="activityBinPartQuery" destination="gzd-aV-53z" id="aMI-l6-szh"/>
                         <outlet property="btnHidePicker" destination="5d7-tn-g1J" id="vQ6-iZ-tZR"/>
                         <outlet property="lblInvType" destination="9e1-aj-d8f" id="KBS-8z-TpX"/>
                         <outlet property="txtBin" destination="3Jl-Bt-tfo" id="oLs-Z9-6is"/>
@@ -1779,6 +1786,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="475" height="451"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="475" height="405"/>
                     <connections>
                         <outlet property="lblContract" destination="Ppe-Vm-b2m" id="ILK-gb-Z3V"/>
                         <outlet property="lblDestWarehouseID" destination="FhY-Aq-KVu" id="rG9-yN-ZnT"/>

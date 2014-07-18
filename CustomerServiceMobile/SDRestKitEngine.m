@@ -237,6 +237,59 @@
     return sharedController;
 }
 
++(CoreDataGetSynch *)sharedBinPartQueryController
+{
+    static CoreDataGetSynch *sharedController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //initialize the CoreDataSynch object
+        sharedController = [[CoreDataGetSynch alloc] init:@"Bin Part QUERY"  objectStore:[[SDDataEngine sharedEngine] rkManagedObjectStore] baseURL:kUrlBaseBinPartQuery rootKeyPath:kKeyPathBinPartQuery notificationName:kNotificationNameBinPartQuery mapBlock:^(RKManagedObjectStore *objectStore) {
+            
+            RKManagedObjectMapping* mapping = [RKManagedObjectMapping mappingForClass:[BinPart class] inManagedObjectStore:objectStore];
+            
+            [mapping mapKeyPath:kKeyPathBinPartBinCodeID toAttribute:kAttributeBinPartBinCodeID];
+            [mapping mapKeyPath:kKeyPathBinPartBpartID toAttribute:kAttributeBinPartBpartID];
+            [mapping mapKeyPath:kKeyPathBinPartInvTypeID toAttribute:kAttributeBinPartInvTypeID];
+            [mapping mapKeyPath:kKeyPathBinPartLastRecDate toAttribute:kAttributeBinPartLastRecDate];
+            [mapping mapKeyPath:kKeyPathServerID toAttribute:kAttributeServerID];
+            [mapping mapKeyPath:kKeyPathKeyID toAttribute:kKeyPathKeyID];
+            [mapping mapKeyPath:kKeyPathBinPartQty toAttribute:kAttributeBinPartQty];
+            
+            mapping.primaryKeyAttribute = kKeyPathKeyID;
+            
+            return mapping;
+            
+        }
+                            
+           fetchBlock:^NSFetchRequest *(NSString *resourcePath) {
+               
+               //extract the bpartid query parameter value
+               NSDictionary* argsDict = nil;
+               RKPathMatcher* pathMatcher = [RKPathMatcher matcherWithPattern:kUrlBaseBinPartQuery];
+               BOOL match = [pathMatcher matchesPath:resourcePath tokenizeQueryStrings:YES parsedArguments:&argsDict];
+               NSString* bpartid;
+               if(match)
+               {
+                   bpartid = [argsDict objectForKey:kQueryParamBPartId];
+                   if (bpartid!=nil) {
+                       
+                       NSFetchRequest* fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"BinPart"];
+                       NSPredicate* predicate = [NSPredicate predicateWithFormat:@"(bpart_id=%@)",bpartid];
+                       [fetchRequest setPredicate:predicate];
+                       return fetchRequest;
+                   }
+                   
+               }
+               return nil;
+
+           }
+        ];
+    });
+    [sharedController setAuthentication:RKRequestAuthenticationTypeHTTPBasic username:[SDRestKitEngine sharedEngine].username password:[SDRestKitEngine sharedEngine].password];
+    return sharedController;
+
+
+}
 
 //+(QueriesSynchController *) sharedQueriesController
 //{
